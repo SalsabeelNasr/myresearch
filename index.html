@@ -1,0 +1,265 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>نتائج بحث السوق - الجهاز الهضمي</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="mobile-header">
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <span class="mobile-title">نتائج بحث السوق</span>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar">
+        <button class="close-sidebar" id="closeSidebar" aria-label="إغلاق القائمة">✕</button>
+        <div class="sidebar-header">
+          <p class="eyebrow">Market Research</p>
+          <h1>نتائج بحث السوق</h1>
+        </div>
+        <nav class="side-nav" aria-label="Main menu">
+          <button class="nav-btn is-active" data-page="dashboard">نظرة عامة</button>
+          <button class="nav-btn" data-page="doctors">الأطباء والحسابات</button>
+          <button class="nav-btn" data-page="posts">المنشورات الفيروسية</button>
+          <button class="nav-btn" data-page="topics">المواضيع المقترحة</button>
+          <button class="nav-btn" data-page="vault">مخزن البيانات</button>
+        </nav>
+      </aside>
+
+      <main class="main-content">
+        <!-- Dashboard Page -->
+        <section id="dashboard-page" class="page-content is-active">
+          <section class="hero card">
+            <h2>نظرة سريعة: قطاع أطباء الجهاز الهضمي والباطنة</h2>
+            <p>عرض شامل للمؤشرات العامة وأفضل المواضيع المقترحة لإعادة إنتاج محتوى عالي الانتشار.</p>
+            <div class="kpi-grid" id="kpiGrid"></div>
+          </section>
+
+          <section class="card coverage-card">
+            <div class="section-head">
+              <h3>اكتمال البيانات</h3>
+              <p>كل صف تم جمعه من المصادر محفوظ ومتاح في «مخزن البيانات». ده ملخص التغطية:</p>
+            </div>
+            <div class="coverage-strip" id="coverageStrip"></div>
+          </section>
+
+          <section class="card methodology-card">
+            <h2>كيف تم هذا البحث؟</h2>
+            <p class="methodology-intro">بص يا سيدي، ده ملخص البحث والخطوات اللي مشينا عليها بلغة بسيطة ومن الآخر:</p>
+            
+            <div class="methodology-step">
+              <h3>1. بدأنا بقائمة مبدئية، وتأكدنا من كل اسم</h3>
+              <p>أنت كنت مديني حوالي 50 اسم لدكاترة وعيادات جهاز هضمي وباطنة في مصر. أول مهمة كانت إننا نلاقي الصفحة الرسمية الحقيقية لكل دكتور منهم على فيسبوك أو إنستجرام، ونتأكد إن هو ده الدكتور المقصود فعلاً (نفس التخصص وجوا مصر)، مش مجرد تشابه أسماء.</p>
+              <ul>
+                <li><strong>الطريقة:</strong> دورت على جوجل، وبعدها دورت جوه فيسبوك وأنا مسجل دخول، وباللغتين العربي والإنجليزي (لأن دكاترة كتير بيسموا صفحاتهم بالإنجليزي، فالبحث بالعربي بس كان هيفوتهم).</li>
+                <li><strong>الأمانة العلمية:</strong> أي اسم معرفتش أتأكد منه بنسبة 100% شيلته عشان منخمنش، لأن أي لينك غلط كان هيبوظ الداتا كلها بعدين.</li>
+              </ul>
+            </div>
+
+            <div class="methodology-step">
+              <h3>2. صفينا الداتا وركزنا على المفيد بس</h3>
+              <p>شلت المستشفيات الكبيرة العامة والمنصات الطبية الضخمة (زي كليوباترا، وفيزيتا، و57357، وغيرهم)؛ وده لأن صفحاتهم بتنزل بوستات عن كل التخصصات، وده كان هيغطي على المحتوى الخاص بالجهاز الهضمي والباطنة اللي إحنا عايزينه. بعد التصفية دي، اتبقى معانا حوالي 36 حساب لدكاترة وعيادات متخصصين ومُركّزين في المجال.</p>
+            </div>
+
+            <div class="methodology-step">
+              <h3>3. جمعنا بوستات آخر 90 يوم</h3>
+              <p>استخدمنا خدمة كشط بيانات (Scraping) اسمها Apify، وجمعنا بيها كل البوستات اللي نزلت على الحسابات دي في الفترة الأخيرة. وجبنا لكل بوست: الكلام المكتوب، التاريخ، اللايكات، الكومنتات، الشير، المشاهدات، وعدد المتابعين. ومن هنا طلعنا بترتيب الـ "Viral" (الأكثر انتشاراً)، يعني رتبنا البوستات حسب حجم التفاعل اللي جالها.</p>
+            </div>
+
+            <div class="methodology-step">
+              <h3>4. عرفنا كل بوست بيتكلم عن إيه بالظبط</h3>
+              <ul>
+                <li><strong>المحاولة الأولى:</strong> حاولنا نفهم الموضوع من الكلام المكتوب في البوست (الـ Caption) باستخدام قائمة كلمات مفتاحية لأمراض الجهاز الهضمي بالعربي والإنجليزي (زي الارتجاع، القولون العصبي، الكبد الدهني، سرطان القولون، وهكذا).</li>
+                <li><strong>المشكلة:</strong> اكتشفنا إن بوستات كتير من اللي مكسرة الدنيا وفيروسية جداً عبارة عن فيديوهات ومكتوب عليها كلام غامض أو عام زي "نفسك أولاً 🤍"، والموضوع الطبي الحقيقي الدكتور بيقوله في الفيديو نفسه مش كاتبه!</li>
+                <li><strong>الحل:</strong> في المرحلة التانية، فرّغنا الصوت بتاع الفيديوهات والـ Reels دي (Transcribe)، وفهمنا الموضوع من الكلام اللي الدكتور بيقوله بلسانه. الخطوة دي هي اللي حوّلت بوست مجهول لبوست معروف إنه بيتكلم عن "التهاب القولون التقرحي" أو "فحص سرطان القولون".</li>
+              </ul>
+            </div>
+
+            <div class="methodology-conclusion">
+              <blockquote>
+                <strong>الخلاصة والمنطق اللي مشينا بيه:</strong><br>
+                متثقش غير في البيانات الحقيقية والمتأكد منها؛ إياك تألف لينك أو تخمن موضوع بوست؛ وروح دايماً للمصدر الأساسي للمعلومة — لو الكلام المكتوب مش موضح الفيديو بيتكلم عن إيه، اسمع الفيديو نفسه.
+              </blockquote>
+            </div>
+
+            <div class="methodology-highlight">
+              <h3>النتيجة الأبرز (The Headline Finding):</h3>
+              <p>دكتور <strong>رامي نخلة</strong> مسيطر تماماً على نسب الوصول (Reach) على المنصتين (فيسبوك وإنستجرام)، بس الملاحظ إن جزء كبير من نجاح فيديوهاته وانتشارها جاي من طريقته في حكي قصص تحفيزية وإنسانية، وبيكون قالبها وجواها الشرح الطبي.. ودي معلومة مهمة جداً ومفيدة لو بتدرس إيه نوع المحتوى اللي بينتشر بجد في المجال ده.</p>
+            </div>
+          </section>
+        </section>
+
+        <!-- Topics Page -->
+        <section id="topics-page" class="page-content">
+          <section class="card" aria-labelledby="topicsHeading">
+            <div class="section-head">
+              <h3 id="topicsHeading">مواضيع مقترحة لإعادة الإنتاج</h3>
+              <p>دي المواضيع <strong>الطبية القابلة لإعادة الإنتاج</strong> فقط، مرتبة حسب قوة النتائج (تفاعل + مشاهدات). استبعدنا الصفوف اللي مش مواضيع طبية (موسيقى/بدون كلام، صور بدون صوت، فيديوهات مش متفرّغة، ومحتوى تحفيزي/شخصي) عشان التوصية تبقى مبنية على محتوى ينفع تكرّره.</p>
+            </div>
+            <div id="topicsList" class="topics-list"></div>
+          </section>
+
+          <section class="card" aria-labelledby="topicAuditHeading">
+            <details class="audit-details">
+              <summary>
+                <span id="topicAuditHeading">التدقيق الكامل للمواضيع (كل صفوف «By audio topic»)</span>
+              </summary>
+              <div class="details-content">
+                <p class="results-count">عرض كل صفوف ملخص المواضيع من المصدر بدون استبعاد، عشان مفيش بيانات تضيع.</p>
+                <div class="table-wrap">
+                  <table class="data-table" id="topicAuditTable">
+                    <thead><tr><th>الموضوع</th><th>عدد المنشورات</th><th>التفاعل</th></tr></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+          </section>
+        </section>
+
+        <!-- Doctors Page -->
+        <section id="doctors-page" class="page-content">
+          <section class="card" aria-labelledby="doctorsHeading">
+            <div class="section-head">
+              <h3 id="doctorsHeading">الأطباء والحسابات المتاحة</h3>
+              <p>المصادر: ملف الكيانات + تقرير الفيروسية</p>
+            </div>
+            <div id="doctorsGrid" class="doctors-grid"></div>
+          </section>
+        </section>
+
+        <!-- Posts Page -->
+        <section id="posts-page" class="page-content">
+          <section class="card" aria-labelledby="postsHeading">
+            <div class="section-head">
+              <h3 id="postsHeading">المنشورات الفيروسية</h3>
+              <p>رتّب حسب أي مؤشر لقراءة الأنماط الأفضل أداءً</p>
+            </div>
+            <div class="toolbar">
+              <label>
+                ترتيب حسب
+                <select id="sortMetric">
+                  <option value="engagement">التفاعل الكلي</option>
+                  <option value="views">المشاهدات</option>
+                  <option value="likes">الإعجابات</option>
+                  <option value="comments">التعليقات</option>
+                  <option value="shares">المشاركات</option>
+                </select>
+              </label>
+              <label>
+                المنصة
+                <select id="platformFilter">
+                  <option value="all">الكل</option>
+                  <option value="Instagram">Instagram</option>
+                  <option value="Facebook">Facebook</option>
+                </select>
+              </label>
+              <label>
+                الطبيب
+                <select id="doctorFilter"><option value="all">الكل</option></select>
+              </label>
+              <label>
+                الموضوع
+                <select id="topicFilter"><option value="all">الكل</option></select>
+              </label>
+              <label>
+                التفريغ الصوتي
+                <select id="transcriptFilter">
+                  <option value="all">الكل</option>
+                  <option value="yes">يحتوي تفريغ</option>
+                  <option value="no">بدون تفريغ</option>
+                </select>
+              </label>
+              <label>
+                بحث
+                <input id="searchInput" type="search" placeholder="اسم طبيب، موضوع، أو نص التفريغ..." />
+              </label>
+            </div>
+            <p class="results-count" id="postsCount"></p>
+            <div id="postsList" class="posts-list"></div>
+          </section>
+        </section>
+
+        <!-- Data Vault Page -->
+        <section id="vault-page" class="page-content">
+          <section class="card">
+            <div class="section-head">
+              <h3>مخزن البيانات الكامل</h3>
+              <p>كل البيانات الخام زي ما اتجمعت من المصادر، بدون أي حذف. استخدم البحث للوصول السريع، والصفوف غير المرتبطة بتظهر في قسم التشخيص.</p>
+            </div>
+            <div class="coverage-strip" id="vaultCoverageStrip"></div>
+            <label class="vault-search-label">
+              بحث في كل البيانات الخام
+              <input id="vaultSearch" type="search" placeholder="ابحث في المنشورات، الحسابات، المواضيع، التفريغ..." />
+            </label>
+          </section>
+
+          <section class="card">
+            <details class="audit-details" open>
+              <summary><span>المنشورات الخام (<span id="vaultPostsCount"></span>)</span></summary>
+              <div class="details-content">
+                <div class="table-wrap">
+                  <table class="data-table" id="vaultPostsTable">
+                    <thead><tr><th>#</th><th>الحساب</th><th>المنصة</th><th>التاريخ</th><th>موضوع الصوت</th><th>التفاعل</th><th>المشاهدات</th><th>تفريغ؟</th></tr></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+          </section>
+
+          <section class="card">
+            <details class="audit-details">
+              <summary><span>الحسابات/الكيانات الخام (<span id="vaultEntitiesCount"></span>)</span></summary>
+              <div class="details-content">
+                <div class="table-wrap">
+                  <table class="data-table" id="vaultEntitiesTable">
+                    <thead><tr><th>الاسم</th><th>التخصص</th><th>المنصة</th><th>الثقة</th><th>الرابط</th></tr></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+          </section>
+
+          <section class="card">
+            <details class="audit-details">
+              <summary><span>صفوف ملخص المواضيع الخام (<span id="vaultTopicsCount"></span>)</span></summary>
+              <div class="details-content">
+                <div class="table-wrap">
+                  <table class="data-table" id="vaultTopicsTable">
+                    <thead><tr><th>الموضوع</th><th>عدد المنشورات</th><th>التفاعل</th></tr></thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </details>
+          </section>
+
+          <section class="card">
+            <details class="audit-details">
+              <summary><span>التفريغات الصوتية الكاملة (<span id="vaultTranscriptsCount"></span>)</span></summary>
+              <div class="details-content" id="vaultTranscriptsList"></div>
+            </details>
+          </section>
+        </section>
+      </main>
+    </div>
+
+    <template id="linkActionsTemplate">
+      <div class="link-actions">
+        <button class="ghost-btn open-app">Open app</button>
+        <a class="ghost-btn open-web" target="_blank" rel="noopener noreferrer">Open web</a>
+      </div>
+    </template>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
