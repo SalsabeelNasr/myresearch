@@ -212,9 +212,7 @@ function renderDoctors() {
       ? `<details class="sub-details"><summary>أفضل المنشورات المرتبطة (${formatNumber(doctor.postCount)})</summary><ul class="linked-posts">${linkedPosts}</ul></details>`
       : `<p class="muted">لا توجد منشورات فيروسية لهذا الحساب ضمن فترة الرصد.</p>`;
 
-    const photo = doctor.image
-      ? `<img class="doctor-photo" src="${escapeHtml(doctor.image)}" alt="${escapeHtml(doctor.name)}" loading="lazy" referrerpolicy="no-referrer" />`
-      : `<div class="doctor-avatar" aria-hidden="true">${initials(doctor.name)}</div>`;
+    const photo = `<div class="doctor-avatar" aria-hidden="true">${initials(doctor.name)}</div>`;
 
     return `
       <article class="doctor-card">
@@ -453,6 +451,7 @@ function renderVault() {
             <div>
               <div class="post-title">${escapeHtml(t.title) || "(بدون عنوان)"}</div>
               <div class="post-subtitle">${formatTime(t.duration)} دقيقة • <a href="${escapeHtml(t.videoUrl)}" target="_blank" rel="noopener noreferrer">المصدر</a></div>
+              ${t.description ? `<p class="vault-desc">${escapeHtml(t.description)}</p>` : ""}
             </div>
           </div>
           <details class="transcript-block">

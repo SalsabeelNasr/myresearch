@@ -569,6 +569,12 @@ select,input {
   padding: 0.8rem;
   margin-bottom: 0.8rem;
 }
+.vault-desc {
+  margin-top: 0.4rem;
+  color: var(--muted);
+  font-size: 0.82rem;
+  white-space: pre-wrap;
+}
 
 @media (min-width: 760px) {
   .coverage-strip { grid-template-columns: repeat(6, minmax(0, 1fr)); }
