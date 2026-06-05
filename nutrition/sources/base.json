@@ -647,7 +647,7 @@
    "image": "",
    "postCount": 30,
    "totalEngagement": 630,
-   "followers": 0,
+   "followers": 12813,
    "transcriptCount": 0,
    "analyzed": true,
    "excluded": false
@@ -809,7 +809,7 @@
    "image": "",
    "postCount": 30,
    "totalEngagement": 540,
-   "followers": 0,
+   "followers": 13308,
    "transcriptCount": 0,
    "analyzed": true,
    "excluded": false
@@ -887,7 +887,7 @@
    "image": "",
    "postCount": 30,
    "totalEngagement": 540,
-   "followers": 0,
+   "followers": 14979,
    "transcriptCount": 0,
    "analyzed": true,
    "excluded": false
@@ -1726,11 +1726,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 30,
+   "totalEngagement": 5010,
    "transcriptCount": 0,
    "followers": 332525,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false,
+   "note": "حساب كبير (332 ألف متابع) بس محتواه كله إعلاني — متوسط تفاعل ~167/بوست (معدل تفاعل ~0.05% فقط). نفس مشكلة curefit بالظبط. حساب diethub.ar العربي وصل ريل 11 ألف لايك (2025)."
   },
   {
    "name": "dr_maha_salem_official",

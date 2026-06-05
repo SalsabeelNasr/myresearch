@@ -105,32 +105,18 @@ window.MRPageTemplates = {
 <section class="card benchmark-intro">
   <div class="section-head">
     <h3>ترتيبنا مقابل السوق 🎯</h3>
-    <p>هنا بنقارن حساب العمل بتاعنا (<strong>Cure Fit — curefit1</strong>) بكل الحسابات اللي اتحللت في التقرير، على أساس <strong>متوسط التفاعل لكل منشور</strong> — وده مقياس عادل مش بيتأثر بعدد المتابعين. بنوضّح: إحنا فين في الترتيب؟ مين أقرب حساب لينا؟ وأنهي طبقة نقدر نوصلها فعلاً، بأمثلة محتوى ناجح.</p>
   </div>
   <div id="benchmarkBusiness"></div>
 </section>
 
 <section class="card">
-  <div class="section-head"><h3>أين نقف الآن؟</h3></div>
-  <div id="benchmarkHeadline"></div>
-</section>
-
-<section class="card">
   <div class="section-head">
-    <h3>على مستوى السوق كله (الـ108 حساب) 🌍</h3>
-    <p>عملنا مسح للمتابعين لكل الـ108 حساب في القايمة الأصلية. التفاعل اتقاس بعمق لأعلى 30. ده موقعنا في الصورة الكاملة:</p>
-  </div>
-  <div id="benchmarkFullMarket"></div>
-</section>
-
-<section class="card">
-  <div class="section-head">
-    <h3>منافسون في حجمنا بالظبط — بس تفاعلهم أعلى 🎯</h3>
-    <p>دي الحسابات اللي في نفس شريحة المتابعين بتاعتنا (8 آلاف–45 ألف)، مرتبة بمعدل الإعجاب (لايكات ÷ متابعين). نفس الحجم ونفس الإمكانيات — بس تفاعلهم أضعاف بتاعنا، وده أكبر دليل إن السقف بتاعنا هو <strong>نوع المحتوى</strong> مش حجم الجمهور. العمود «×» = تفاعلهم بيساوي كام ضعف من بتاعنا.</p>
+    <h3>ترتيب كل الحسابات المُحلَّلة + موقعنا 🎯</h3>
+    <p>كل الحسابات اللي اتعمل لها تحليل عميق، مرتبة بالتفاعل. علامة «👥 نفس حجمنا» على اللي في شريحتنا (8–45 ألف متابع)، وحسابنا متظلّل بالأصفر. «×» = تفاعلهم كام ضعف مننا.</p>
   </div>
   <div class="table-wrap">
-    <table class="data-table" id="benchmarkPeersTable">
-      <thead><tr><th>#</th><th>الحساب</th><th>متابعين</th><th>متوسط اللايكات</th><th>معدل الإعجاب</th><th>× مقارنةً بينا</th><th>ملاحظة</th></tr></thead>
+    <table class="data-table sortable" id="benchmarkPeersTable">
+      <thead><tr><th>#</th><th>الحساب</th><th>الطبقة</th><th>متابعين</th><th>تفاعل/منشور</th><th>معدل التفاعل</th><th>× تفاعلنا</th><th>ملاحظة</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
@@ -139,31 +125,10 @@ window.MRPageTemplates = {
 
 <section class="card">
   <div class="section-head">
-    <h3>سلّم الطبقات (Tiers)</h3>
-    <p>قسّمنا كل الحسابات لخمس طبقات حسب متوسط التفاعل لكل منشور. حسابنا متظلّل بالأخضر.</p>
-  </div>
-  <div id="benchmarkTiers" class="tier-ladder"></div>
-</section>
-
-<section class="card">
-  <div class="section-head">
     <h3>الطبقة اللي نقدر نوصلها — بأمثلة محتوى حقيقية ✅</h3>
     <p>دي أقوى منشورات <strong>تعليمية</strong> من الحسابات اللي في الطبقات القريبة فوقنا مباشرة (ناشئ/متوسّط). أرقامها واقعية وقابلة للوصول، وموضوعاتها في صميم تخصص العيادة (إبر GLP-1، مقاومة الأنسولين، PCOS…). دي القوالب اللي نكرّرها.</p>
   </div>
   <div id="benchmarkReachable" class="reach-grid"></div>
-</section>
-
-<section class="card">
-  <div class="section-head">
-    <h3>جيراننا في الترتيب (٥ فوقنا و٥ تحتنا)</h3>
-    <p>بدل ما نعرض القايمة كلها، دي أقرب الحسابات لينا في الترتيب — ٥ أعلى مننا و٥ أقل — عشان المقارنة تكون واضحة. حسابنا متظلّل بالأخضر.</p>
-  </div>
-  <div class="table-wrap">
-    <table class="data-table" id="benchmarkRankingTable">
-      <thead><tr><th>#</th><th>الحساب</th><th>الطبقة</th><th>متوسط التفاعل/منشور</th><th>متابعون</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
 </section>
 
 <section class="card benchmark-strategy">

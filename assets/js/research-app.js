@@ -37,10 +37,14 @@ window.MRResearchApp = (function () {
       benchmarkHeadline: document.getElementById("benchmarkHeadline"),
       benchmarkFullMarket: document.getElementById("benchmarkFullMarket"),
       benchmarkPeersTable: document.querySelector("#benchmarkPeersTable tbody"),
+      benchmarkPeersTableEl: document.getElementById("benchmarkPeersTable"),
       benchmarkPeersFoot: document.getElementById("benchmarkPeersFoot"),
       benchmarkTiers: document.getElementById("benchmarkTiers"),
       benchmarkReachable: document.getElementById("benchmarkReachable"),
       benchmarkRankingTable: document.querySelector("#benchmarkRankingTable tbody"),
+      benchmarkFullRanking: document.querySelector("#benchmarkFullRanking tbody"),
+      benchmarkFullRankingEl: document.getElementById("benchmarkFullRanking"),
+      benchmarkFullCount: document.getElementById("benchmarkFullCount"),
       sortMetric: document.getElementById("sortMetric"),
       searchInput: document.getElementById("searchInput"),
       navBtns: document.querySelectorAll(".nav-btn"),
@@ -287,91 +291,73 @@ window.MRResearchApp = (function () {
       const links = (bz.accounts || [])
         .map((a) => `<a class="chip chip--link" href="${escapeHtml(a.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(a.platform)} ↗</a>`)
         .join("");
+      const fm = b.fullMarket || {};
       els.benchmarkBusiness.innerHTML = `
       <div class="biz-card">
         <div class="biz-head">
           <div><div class="biz-name">${escapeHtml(bz.name)}</div><div class="biz-handle">@${escapeHtml(bz.handle)}</div></div>
           <span class="tier-badge tier-below">${escapeHtml(bz.tier)}</span>
         </div>
+        
         <div class="biz-metrics">
           <div class="biz-metric"><span class="bm-val">${formatNumber(bz.followers)}</span><span class="bm-lbl">متابعون</span></div>
-          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.avgEng)}</span><span class="bm-lbl">متوسط التفاعل/منشور</span></div>
-          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.avgViews)}</span><span class="bm-lbl">متوسط المشاهدات (ريلز)</span></div>
+          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.avgEng)}</span><span class="bm-lbl">تفاعل/منشور</span></div>
+          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.avgViews)}</span><span class="bm-lbl">مشاهدات (ريلز)</span></div>
           <div class="biz-metric"><span class="bm-val">${bz.engagementRatePct}%</span><span class="bm-lbl">معدل التفاعل</span></div>
+          <div class="biz-metric biz-metric--highlight"><span class="bm-val">#${fm.followersRank}<span>/${fm.total}</span></span><span class="bm-lbl">ترتيب المتابعين</span></div>
+          <div class="biz-metric biz-metric--bad"><span class="bm-val">#${b.businessRank}<span>/${b.total}</span></span><span class="bm-lbl">ترتيب التفاعل</span></div>
         </div>
-        <div class="biz-links">${links}</div>
-        <p class="biz-note">${escapeHtml(bz.note)}</p>
+
+        <div class="biz-footer">
+          <div class="biz-links">${links}</div>
+          <p class="fm-note fm-note--compact">
+            وصول حسابات في نفس حجمنا لتفاعل أضعافنا بيأكد إن الفجوة في <strong>نوع المحتوى</strong> مش حجم الجمهور — الحل في الأقسام التحت.
+          </p>
+        </div>
       </div>`;
     }
 
     if (els.benchmarkHeadline) {
-      const fLow = Math.round(b.lowestAnalyzed / bz.avgEng);
-      const fMed = Math.round(b.medianAnalyzed / bz.avgEng);
-      els.benchmarkHeadline.innerHTML = `
-      <div class="rank-headline">
-        <div class="rank-big">#${b.businessRank}<span>/ ${b.total}</span></div>
-        <div class="rank-text">
-          <p>ترتيبنا الحالي هو <strong>الأخير</strong> من بين ${b.total} حساب، على أساس متوسط التفاعل لكل منشور.</p>
-          <ul>
-            <li>أقل حساب مُحلَّل متوسطه <strong>${formatNumber(b.lowestAnalyzed)}</strong> تفاعل/منشور — أعلى مننا بحوالي <strong>×${fLow}</strong>.</li>
-            <li>وسيط السوق <strong>${formatNumber(b.medianAnalyzed)}</strong> تفاعل/منشور — أعلى مننا بحوالي <strong>×${fMed}</strong>.</li>
-            <li>أعلى حساب (${escapeHtml(topName)}) متوسطه <strong>${formatNumber(b.topAnalyzed)}</strong> تفاعل/منشور.</li>
-          </ul>
-          <p class="rank-note">الفجوة كبيرة، لكنها فجوة <strong>نوع محتوى</strong> مش حجم جمهور — الحلّ في الأقسام التحت.</p>
-        </div>
-      </div>`;
-    }
-
-    if (els.benchmarkFullMarket && b.fullMarket) {
-      const fm = b.fullMarket;
-      els.benchmarkFullMarket.innerHTML = `
-      <div class="fm-grid">
-        <div class="fm-stat"><span class="fm-val">#${fm.followersRank}<span>/ ${fm.total}</span></span><span class="fm-lbl">ترتيبنا بعدد المتابعين (وسط القايمة)</span></div>
-        <div class="fm-stat fm-stat--bad"><span class="fm-val">#${b.total}<span>/ ${b.total}</span></span><span class="fm-lbl">ترتيبنا بالتفاعل (بين الـ${b.total} المُحلَّلين بعمق)</span></div>
-      </div>
-      <p class="fm-note">${escapeHtml(fm.note)}</p>`;
+      els.benchmarkHeadline.innerHTML = "";
     }
 
     if (els.benchmarkPeersTable && b.sizePeers) {
       const sp = b.sizePeers;
-      // Insert us into the list in our correct sorted position (by like-rate) so the
-      // accounts just above (better) and just below (worse) are visible around our line.
-      const us = { handle: "Cure Fit (إحنا)", followers: sp.businessFollowers, avgLikes: sp.businessAvgLikes, likeRate: sp.businessLikeRate, xBusiness: 1, note: "👈 وضعنا الحالي", isUs: true };
-      const combined = [...sp.peers, us].sort((a, b2) => b2.likeRate - a.likeRate);
-      els.benchmarkPeersTable.innerHTML = combined.map((p, i) => {
-        const name = p.isUs ? `<strong>${escapeHtml(p.handle)}</strong>`
+      const getTierInfo = (avg) => {
+        if (avg >= 3000) return { name: "النخبة", cls: "tier-elite" };
+        if (avg >= 1500) return { name: "متقدّم", cls: "tier-advanced" };
+        if (avg >= 700) return { name: "متوسّط", cls: "tier-mid" };
+        if (avg >= 200) return { name: "ناشئ", cls: "tier-emerging" };
+        return { name: "تحت المنافسة", cls: "tier-below" };
+      };
+
+      els.benchmarkPeersTable.innerHTML = sp.peers.map((p, i) => {
+        const isHandle = /^[a-z0-9._]+$/i.test(p.handle);
+        const name = (p.isBusiness || !isHandle)
+          ? `<strong>${escapeHtml(p.handle)}</strong>`
           : `<a href="https://www.instagram.com/${escapeHtml(p.handle)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.handle)}</a>`;
-        const cls = p.isUs ? "row-us" : (p.xBusiness >= 5 && !p.note.includes("أضعف") ? "peer-role" : "");
+        const sizeBadge = p.inBand && !p.isBusiness ? ` <span class="size-badge" title="في نفس شريحة متابعينا">👥 نفس حجمنا</span>` : "";
+        const cls = p.isBusiness ? "row-us" : (p.inBand && p.xBusiness >= 5 && !(p.note || "").includes("أضعف") ? "peer-role" : "");
+        const tier = getTierInfo(p.avgEng);
+
         return `
         <tr${cls ? ` class="${cls}"` : ""}>
           <td>${i + 1}</td>
-          <td>${name}</td>
+          <td>${name}${p.isBusiness ? " (إحنا)" : ""}${sizeBadge}</td>
+          <td><span class="tier-badge ${tier.cls}">${tier.name}</span></td>
           <td>${formatNumber(p.followers)}</td>
-          <td>${p.avgLikes}</td>
+          <td>${formatNumber(p.avgEng)}</td>
           <td>${p.likeRate}%</td>
-          <td>${p.isUs ? "×1" : `<strong>×${p.xBusiness}</strong>`}</td>
-          <td>${escapeHtml(p.note)}</td>
+          <td>${p.isBusiness ? "×1" : `<strong>×${p.xBusiness}</strong>`}</td>
+          <td>${escapeHtml(p.note || (p.isBusiness ? "👈 وضعنا" : ""))}</td>
         </tr>`;
       }).join("");
+      makeSortable(els.benchmarkPeersTableEl);
       if (els.benchmarkPeersFoot) {
-        const strong = sp.peers.filter((p) => p.xBusiness >= 7 && !p.note.includes("أضعف") && !p.note.includes("صغيرة")).slice(0, 6);
-        els.benchmarkPeersFoot.innerHTML = `<strong>الخلاصة:</strong> حسابات في حجمنا بالظبط بتوصل لتفاعل أعلى مننا بـ 5 لـ 40 ضعف. أقوى القدوات للتحليل العميق بعد كده: ${strong.map((p) => escapeHtml(p.handle)).join("، ")}.`;
+        const strong = sp.peers.filter((p) => !p.isBusiness && p.inBand && p.xBusiness >= 7 && !(p.note || "").includes("صغيرة")).slice(0, 6);
+        const rankTxt = sp.businessRankInBand ? `#${sp.businessRankInBand} من ${sp.bandCount}` : "الأخير";
+        els.benchmarkPeersFoot.innerHTML = `<strong>الخلاصة:</strong> الجدول فيه كل الحسابات المُحلَّلة بعمق (${formatNumber(sp.count)}) مرتبة بالتفاعل. إحنا <strong>${rankTxt}</strong> وسط حجمنا و<strong>الأخير إجمالاً</strong>. أقوى القدوات في حجمنا: ${strong.map((p) => escapeHtml(p.handle)).join("، ")}.`;
       }
-    }
-
-    if (els.benchmarkTiers) {
-      els.benchmarkTiers.innerHTML = b.tiers
-        .map((t) => {
-          const mine = t.accounts.some((m) => m.isBusiness);
-          const chips = t.accounts
-            .map((m) => `<span class="tier-chip${m.isBusiness ? " tier-chip--me" : ""}">${escapeHtml(m.name)} · ${formatNumber(m.avgEng)}</span>`)
-            .join("");
-          return `<div class="tier-row${mine ? " tier-row--me" : ""}">
-        <div class="tier-meta"><span class="tier-name">${escapeHtml(t.name)}</span><span class="tier-range">${escapeHtml(t.range)} · ${t.count} حساب</span></div>
-        <div class="tier-chips">${chips}</div>
-      </div>`;
-        })
-        .join("");
     }
 
     if (els.benchmarkReachable) {
@@ -386,22 +372,6 @@ window.MRResearchApp = (function () {
         .join("");
     }
 
-    if (els.benchmarkRankingTable) {
-      // Show only a window of ±5 accounts around our rank (the rest is noise).
-      const idx = b.ranking.findIndex((r) => r.isBusiness);
-      const lo = Math.max(0, idx - 5);
-      const hi = Math.min(b.ranking.length, idx + 6);
-      els.benchmarkRankingTable.innerHTML = b.ranking
-        .slice(lo, hi)
-        .map((r) => `<tr class="${r.isBusiness ? "rank-me" : ""}">
-        <td>${r.rank}</td>
-        <td>${escapeHtml(r.name)}${r.isBusiness ? " <strong>(إحنا 🟢)</strong>" : ""}</td>
-        <td>${escapeHtml(r.tier)}</td>
-        <td>${formatNumber(r.avgEng)}</td>
-        <td>${formatNumber(r.followers)}</td>
-      </tr>`)
-        .join("");
-    }
   }
 
   function postMatchesFilters(post) {

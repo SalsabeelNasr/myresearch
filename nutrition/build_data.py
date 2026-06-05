@@ -347,28 +347,40 @@ def main():
                 "followersRank": 108 - fewer,            # ~ position by audience size
                 "followers": cf,
                 "engagementMeasured": len([r for r in rows if not r["isBusiness"]]),
-                "note": "كل الـ108 حساب اتعملهم مسح للمتابعين. التفاعل اتقاس بعمق لأعلى 30 حساب. حسابنا في منتصف القايمة من حيث عدد المتابعين، لكنه في القاع من حيث التفاعل — يعني عندنا جمهور بس المحتوى هو المشكلة.",
+                "note": "كل الـ108 حساب اتعملهم مسح للمتابعين. والتفاعل اتقاس بعمق لـ51 حساب. حسابنا في منتصف القايمة من حيث عدد المتابعين، لكنه في القاع من حيث التفاعل — يعني عندنا جمهور بس المحتوى هو المشكلة.",
             }
 
-        # Same-size peer benchmark: accounts in our follower band ranked by like-rate.
-        size_peers = None
+        # Same-size comparison from the FINAL deep numbers: analyzed accounts in our follower
+        # band (+ us), ranked by real avg engagement/post. This is the single comparison list.
+        notes_map = {}
         PEERS = REPO / "sources" / "peers_band.json"
         if PEERS.exists():
-            pb = json.loads(PEERS.read_text(encoding="utf-8"))
-            br = pb["businessLikeRate"]
-            plist = []
-            for p in pb["peers"]:
-                er = round(p["avgLikes"] / p["followers"] * 100, 3)
-                plist.append({**p, "likeRate": er, "xBusiness": round(er / br, 1) if br else 0})
-            plist.sort(key=lambda x: -x["likeRate"])
-            size_peers = {
-                "band": "8k–45k متابع",
-                "businessLikeRate": br,
-                "businessAvgLikes": pb["businessAvgLikes"],
-                "businessFollowers": pb["businessFollowers"],
-                "count": len(plist),
-                "peers": plist,
-            }
+            for p in json.loads(PEERS.read_text(encoding="utf-8")).get("peers", []):
+                n = (p.get("note", "").replace("✅ اتعمله تحليل عميق", "")
+                     .replace("✅ تحليل عميق", "").strip())
+                if n:
+                    notes_map[p["handle"].lower()] = n
+        allr = sorted(rows, key=lambda r: -r["avgEng"])
+        peers_out = []
+        for r in allr:
+            er = round(r["avgEng"] / r["followers"] * 100, 3) if r.get("followers") else 0
+            in_band = 8000 <= (r.get("followers") or 0) <= 45000
+            peers_out.append({
+                "handle": r["name"], "followers": r["followers"], "avgEng": r["avgEng"],
+                "likeRate": er, "xBusiness": round(r["avgEng"] / biz_eng, 1) if biz_eng else 0,
+                "isBusiness": r["isBusiness"], "inBand": in_band,
+                "note": notes_map.get(r["name"].lower(), ""),
+            })
+        band_only = [p for p in peers_out if p["inBand"]]
+        size_peers = {
+            "band": "8 آلاف–45 ألف متابع",
+            "businessAvgEng": biz_eng,
+            "businessFollowers": biz["followers"],
+            "businessRankInBand": next((i + 1 for i, p in enumerate(band_only) if p["isBusiness"]), None),
+            "bandCount": len(band_only),
+            "count": len(peers_out),
+            "peers": peers_out,
+        }
 
         benchmark = {
             "tiers": tiers,
