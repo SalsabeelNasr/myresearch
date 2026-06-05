@@ -112,7 +112,7 @@ window.MRPageTemplates = {
 <section class="card">
   <div class="section-head">
     <h3>ترتيب كل الحسابات المُحلَّلة + موقعنا 🎯</h3>
-    <p>كل الحسابات اللي اتعمل لها تحليل عميق، مرتبة بالتفاعل. علامة «👥 نفس حجمنا» على اللي في شريحتنا (8–45 ألف متابع)، وحسابنا متظلّل بالأصفر. «×» = تفاعلهم كام ضعف مننا.</p>
+    <p>نفس حجمنا = (8–45 ألف متابع)</p>
   </div>
   <div class="table-wrap">
     <table class="data-table sortable" id="benchmarkPeersTable">
