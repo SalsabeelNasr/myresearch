@@ -141,6 +141,20 @@ window.MRPageTemplates = {
 
 <section class="card">
   <div class="section-head">
+    <h3>منافسون في حجمنا بالظبط — بس تفاعلهم أعلى 🎯</h3>
+    <p>دي الحسابات اللي في نفس شريحة المتابعين بتاعتنا (8 آلاف–45 ألف)، مرتبة بمعدل الإعجاب (لايكات ÷ متابعين). نفس الحجم ونفس الإمكانيات — بس تفاعلهم أضعاف بتاعنا، وده أكبر دليل إن السقف بتاعنا هو <strong>نوع المحتوى</strong> مش حجم الجمهور. العمود «×» = تفاعلهم بيساوي كام ضعف من بتاعنا.</p>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table" id="benchmarkPeersTable">
+      <thead><tr><th>#</th><th>الحساب</th><th>متابعين</th><th>متوسط اللايكات</th><th>معدل الإعجاب</th><th>× مقارنةً بينا</th><th>ملاحظة</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+  <p class="peers-foot" id="benchmarkPeersFoot"></p>
+</section>
+
+<section class="card">
+  <div class="section-head">
     <h3>سلّم الطبقات (Tiers)</h3>
     <p>قسّمنا كل الحسابات لخمس طبقات حسب متوسط التفاعل لكل منشور. حسابنا متظلّل بالأخضر.</p>
   </div>

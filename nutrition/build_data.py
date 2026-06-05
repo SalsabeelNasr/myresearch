@@ -345,9 +345,30 @@ def main():
                 "note": "كل الـ108 حساب اتعملهم مسح للمتابعين. التفاعل اتقاس بعمق لأعلى 30 حساب. حسابنا في منتصف القايمة من حيث عدد المتابعين، لكنه في القاع من حيث التفاعل — يعني عندنا جمهور بس المحتوى هو المشكلة.",
             }
 
+        # Same-size peer benchmark: accounts in our follower band ranked by like-rate.
+        size_peers = None
+        PEERS = REPO / "sources" / "peers_band.json"
+        if PEERS.exists():
+            pb = json.loads(PEERS.read_text(encoding="utf-8"))
+            br = pb["businessLikeRate"]
+            plist = []
+            for p in pb["peers"]:
+                er = round(p["avgLikes"] / p["followers"] * 100, 3)
+                plist.append({**p, "likeRate": er, "xBusiness": round(er / br, 1) if br else 0})
+            plist.sort(key=lambda x: -x["likeRate"])
+            size_peers = {
+                "band": "8k–45k متابع",
+                "businessLikeRate": br,
+                "businessAvgLikes": pb["businessAvgLikes"],
+                "businessFollowers": pb["businessFollowers"],
+                "count": len(plist),
+                "peers": plist,
+            }
+
         benchmark = {
             "tiers": tiers,
             "fullMarket": full_market,
+            "sizePeers": size_peers,
             "business": {
                 "name": biz["name"], "handle": biz["handle"], "followers": biz["followers"],
                 "avgEng": biz_eng, "avgViews": biz_views, "sampleSize": len(sp),

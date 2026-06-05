@@ -34,6 +34,8 @@ window.MRResearchApp = (function () {
       benchmarkBusiness: document.getElementById("benchmarkBusiness"),
       benchmarkHeadline: document.getElementById("benchmarkHeadline"),
       benchmarkFullMarket: document.getElementById("benchmarkFullMarket"),
+      benchmarkPeersTable: document.querySelector("#benchmarkPeersTable tbody"),
+      benchmarkPeersFoot: document.getElementById("benchmarkPeersFoot"),
       benchmarkTiers: document.getElementById("benchmarkTiers"),
       benchmarkReachable: document.getElementById("benchmarkReachable"),
       benchmarkRankingTable: document.querySelector("#benchmarkRankingTable tbody"),
@@ -344,6 +346,26 @@ window.MRResearchApp = (function () {
         <div class="fm-stat fm-stat--bad"><span class="fm-val">#${b.total}<span>/ ${b.total}</span></span><span class="fm-lbl">ترتيبنا بالتفاعل (بين الـ${b.total} المُحلَّلين بعمق)</span></div>
       </div>
       <p class="fm-note">${escapeHtml(fm.note)}</p>`;
+    }
+
+    if (els.benchmarkPeersTable && b.sizePeers) {
+      const sp = b.sizePeers;
+      const meRow = `<tr class="rank-me"><td>—</td><td>Cure Fit (إحنا 🟢)</td><td>${formatNumber(sp.businessFollowers)}</td><td>${sp.businessAvgLikes}</td><td>${sp.businessLikeRate}%</td><td>×1</td><td>وضعنا الحالي</td></tr>`;
+      const rows = sp.peers.map((p, i) => `
+        <tr${p.xBusiness >= 5 && !p.note.includes("أضعف") ? ' class="peer-role"' : ""}>
+          <td>${i + 1}</td>
+          <td><a href="https://www.instagram.com/${escapeHtml(p.handle)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.handle)}</a></td>
+          <td>${formatNumber(p.followers)}</td>
+          <td>${p.avgLikes}</td>
+          <td>${p.likeRate}%</td>
+          <td><strong>×${p.xBusiness}</strong></td>
+          <td>${escapeHtml(p.note)}</td>
+        </tr>`).join("");
+      els.benchmarkPeersTable.innerHTML = meRow + rows;
+      if (els.benchmarkPeersFoot) {
+        const strong = sp.peers.filter((p) => p.xBusiness >= 7 && !p.note.includes("أضعف") && !p.note.includes("صغيرة")).slice(0, 6);
+        els.benchmarkPeersFoot.innerHTML = `<strong>الخلاصة:</strong> حسابات في حجمنا بالظبط بتوصل لتفاعل أعلى مننا بـ 5 لـ 40 ضعف. أقوى القدوات للتحليل العميق بعد كده: ${strong.map((p) => escapeHtml(p.handle)).join("، ")}.`;
+      }
     }
 
     if (els.benchmarkTiers) {

@@ -1,0 +1,32 @@
+{
+  "_note": "Same-size peers (followers 8k-45k, not deep-analyzed). avgLikes = mean likes over recent (2026) posts from the profile scan. Like-based engagement proxy (comments not extracted). Computed from the 108-profile scan we already ran — no extra cost.",
+  "businessLikeRate": 0.024,
+  "businessAvgLikes": 4.4,
+  "businessFollowers": 18456,
+  "peers": [
+    {"handle": "dr_aya_ali_",            "followers": 11380, "avgLikes": 38.3, "n": 9,  "note": ""},
+    {"handle": "dr.amiradiab",           "followers": 13086, "avgLikes": 49.8, "n": 6,  "note": ""},
+    {"handle": "dr.amalafarag",          "followers": 26510, "avgLikes": 53.3, "n": 8,  "note": ""},
+    {"handle": "dr.zeinab.mekhemer_",    "followers": 30522, "avgLikes": 85.6, "n": 5,  "note": ""},
+    {"handle": "dr_nardeengamel",        "followers": 15550, "avgLikes": 28.0, "n": 8,  "note": ""},
+    {"handle": "dr.ahmedabdelbaset",     "followers": 11165, "avgLikes": 21.2, "n": 11, "note": ""},
+    {"handle": "dr.aymanelsharkawy",     "followers": 14979, "avgLikes": 17.5, "n": 12, "note": ""},
+    {"handle": "dr.sarah.abdallah.sakr", "followers": 37705, "avgLikes": 42.0, "n": 8,  "note": ""},
+    {"handle": "dr.ramysaeed",           "followers": 31931, "avgLikes": 42.1, "n": 8,  "note": ""},
+    {"handle": "maianter_nutritionspecialist", "followers": 14049, "avgLikes": 15.5, "n": 4, "note": ""},
+    {"handle": "dr.nermoz_nutritionist", "followers": 12215, "avgLikes": 15.4, "n": 5,  "note": ""},
+    {"handle": "doctor_el3afia_dr_taha", "followers": 12813, "avgLikes": 12.2, "n": 10, "note": ""},
+    {"handle": "drmoatazramadan765",     "followers": 9864,  "avgLikes": 8.8,  "n": 8,  "note": ""},
+    {"handle": "dr.azza.ibrahim.clinic", "followers": 13308, "avgLikes": 8.7,  "n": 10, "note": ""},
+    {"handle": "dr.yassen_motamed",      "followers": 11638, "avgLikes": 6.8,  "n": 12, "note": ""},
+    {"handle": "i_fit_clinics",          "followers": 14949, "avgLikes": 9.8,  "n": 10, "note": ""},
+    {"handle": "dr.karim.elnagar",       "followers": 20010, "avgLikes": 3.9,  "n": 7,  "note": "أضعف مننا"},
+    {"handle": "docfayrouz_official",    "followers": 43458, "avgLikes": 12.5, "n": 8,  "note": "حساب كبير بتفاعل ضعيف"},
+    {"handle": "dr.marwaothman.official","followers": 27510, "avgLikes": 72.0, "n": 1,  "note": "عينة صغيرة"},
+    {"handle": "drtarikofficial",        "followers": 8328,  "avgLikes": 205.0,"n": 12, "note": "قدرة فيروسية: ريلز وصلت 800-1200 لايك"},
+    {"handle": "dr_emanrashad",          "followers": 33764, "avgLikes": 242.0,"n": 5,  "note": "قدرة فيروسية: ريلز 365-582 لايك"},
+    {"handle": "drheba.nutritionist",    "followers": 11334, "avgLikes": 105.7,"n": 3,  "note": "تفاعل عالي حديثاً (عينة صغيرة)"},
+    {"handle": "dr.niveenfahmy",         "followers": 20232, "avgLikes": 37.0, "n": 4,  "note": "ريل واحد فيروسي 1339 لايك"},
+    {"handle": "dr_dinazayed",           "followers": 34987, "avgLikes": 12.0, "n": 10, "note": "ريل واحد فيروسي 949 لايك"}
+  ]
+}
