@@ -1,0 +1,57 @@
+{"input":"dr_ola_mekhemer","diggCount":98,"commentCount":1,"shareCount":1,"text":"احفظوه بيعمل معجزات","isPinned":false}
+{"input":"dr_ola_mekhemer","diggCount":274,"commentCount":4,"shareCount":29,"text":"مواظبه اسبوع وهتدعولي","isPinned":false}
+{"input":"dr_ola_mekhemer","diggCount":25700,"commentCount":1204,"shareCount":30400,"text":"اقراص غسالة الأطباق هي سبب ارتشاح الأمعاء","isPinned":true}
+{"input":"dr_ola_mekhemer","diggCount":975,"commentCount":30,"shareCount":178,"text":"خل التفاح","isPinned":false}
+{"input":"dr_ola_mekhemer","diggCount":2457,"commentCount":28,"shareCount":861,"text":"see cycle دورة شهرية","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":34,"commentCount":3,"shareCount":2,"text":"بطلي رغي واتمرني كارديو تخسيس تغذية","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":20,"commentCount":2,"shareCount":0,"text":"الدايت باظ في العيد تغذيه دايت","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":14,"commentCount":0,"shareCount":0,"text":"مين فيهم الافضل مونچارو ولا ميزو ثيرابي تخسيس حقن","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":21,"commentCount":0,"shareCount":0,"text":"الدايت حرمان","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":11,"commentCount":0,"shareCount":1,"text":"ليه وزنى ثابت وهدومي بتوسع ثبات الوزن","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":35,"commentCount":2,"shareCount":0,"text":"اكبر غلطه في الدايت","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":27,"commentCount":0,"shareCount":1,"text":"سعراته خرافية والنتيجة في الشبع السكري","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":16,"commentCount":1,"shareCount":0,"text":"الكورتيزون وافضل دواء طبيعي ليه هرمون","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":30,"commentCount":10,"shareCount":0,"text":"الصيام المتقطع","isPinned":false}
+{"input":"dr.mahmoud.elzayat","diggCount":62,"commentCount":8,"shareCount":0,"text":"وزنك مبيتحركش ثبات مقاومة الانسولين","isPinned":false}
+{"input":"samsamouy","diggCount":28,"commentCount":3,"shareCount":0,"text":"ازاي تخس بسرعه دليلك الكامل لخساة الوزن","isPinned":false}
+{"input":"samsamouy","diggCount":515,"commentCount":14,"shareCount":8,"text":"الفورمه بتبدأ من المطبخ وصفة اكل","isPinned":false}
+{"input":"samsamouy","diggCount":338,"commentCount":5,"shareCount":8,"text":"البس تقيل في التمرين هتحرق دهون اكتر حرق","isPinned":false}
+{"input":"samsamouy","diggCount":1174,"commentCount":68,"shareCount":36,"text":"هل التيستيرون بيكون اعلى الصبح هرمون","isPinned":false}
+{"input":"samsamouy","diggCount":752,"commentCount":10,"shareCount":24,"text":"ايه هما اهم 6 فيتامينات مكملات","isPinned":false}
+{"input":"samsamouy","diggCount":824,"commentCount":24,"shareCount":24,"text":"عدد أيام التمرين ممكن يسرع نتيجتك","isPinned":false}
+{"input":"samsamouy","diggCount":509,"commentCount":22,"shareCount":16,"text":"ليه وجع العضلات بيظهر بعد يومين بروتين عضلات","isPinned":false}
+{"input":"samsamouy","diggCount":2378,"commentCount":42,"shareCount":255,"text":"ازاي تبني عضلات بروتين","isPinned":false}
+{"input":"samsamouy","diggCount":899,"commentCount":13,"shareCount":50,"text":"قبل سكوب الكرياتين مكملات بروتين","isPinned":false}
+{"input":"samsamouy","diggCount":440,"commentCount":8,"shareCount":6,"text":"لو نفسك تخلص من الكرش الغلطة اللي بتعملها دهون","isPinned":false}
+{"input":"samsamouy","diggCount":207,"commentCount":7,"shareCount":7,"text":"أسهل Bulking Shake تزود بيه سعراتك بروتين","isPinned":false}
+{"input":"dr_neirafahmy","diggCount":423,"commentCount":89,"shareCount":55,"text":"حقن التخسيس بديل تكميم المعدة","isPinned":false}
+{"input":"dr_neirafahmy","diggCount":969,"commentCount":40,"shareCount":34,"text":"حقن التخسيس بديل تكميم المعدة","isPinned":false}
+{"input":"dr_neirafahmy","diggCount":1054,"commentCount":76,"shareCount":29,"text":"حقن التخسيس بديل تكميم المعدة","isPinned":false}
+{"input":"dr_neirafahmy","diggCount":1086,"commentCount":49,"shareCount":31,"text":"الحقائق الصادمة تغذية علاجية","isPinned":false}
+{"input":"dr_neirafahmy","diggCount":2638,"commentCount":29,"shareCount":233,"text":"اتخلص ازاي من الماية الزايدة في جسمي بعد العيد احتباس املاح water retention","isPinned":false}
+{"input":"mohamedmassoudabb","diggCount":48,"commentCount":10,"shareCount":3,"text":"الجوع بعد الأكل شهية شبع","isPinned":false}
+{"input":"mohamedmassoudabb","diggCount":33,"commentCount":4,"shareCount":1,"text":"متلازمة تكيس المبايض pcos","isPinned":false}
+{"input":"mohamedmassoudabb","diggCount":195,"commentCount":16,"shareCount":55,"text":"يارب نفهم","isPinned":false}
+{"input":"mohamedmassoudabb","diggCount":43,"commentCount":1,"shareCount":0,"text":"دايت فصائل الدم","isPinned":false}
+{"input":"dr.diana.clinic","diggCount":15,"commentCount":1,"shareCount":0,"text":"أكاذيب غذائية منتشرة قبل ما تصدقي أي نصيحة","isPinned":false}
+{"input":"dr.diana.clinic","diggCount":32,"commentCount":2,"shareCount":0,"text":"بتعاني من ثبات الوزن مهما جربتي أنظمة دايت اسباب ثبات الوزن","isPinned":false}
+{"input":"dr.nadahefila","diggCount":24,"commentCount":1,"shareCount":3,"text":"ميزان ولا مقاسات تخسيس دايت","isPinned":false}
+{"input":"dr.nadahefila","diggCount":29,"commentCount":1,"shareCount":4,"text":"زيت حبة البركه تخسيس","isPinned":false}
+{"input":"dr.nadahefila","diggCount":38,"commentCount":5,"shareCount":8,"text":"البيض سوبر فود تخسيس","isPinned":false}
+{"input":"dr.nadahefila","diggCount":131,"commentCount":5,"shareCount":39,"text":"اللي مقتنع بنظام يمشي بيه تخسيس دايت","isPinned":false}
+{"input":"dr.nadahefila","diggCount":19,"commentCount":0,"shareCount":5,"text":"بلاش لحوم مصنعة تخسيس","isPinned":false}
+{"input":"dr.nadahefila","diggCount":28,"commentCount":2,"shareCount":4,"text":"قهوة الأبطال تخسيس","isPinned":false}
+{"input":"drwaadamin","diggCount":133,"commentCount":2,"shareCount":12,"text":"اعمل كده وانسي الجوع شهية","isPinned":false}
+{"input":"drwaadamin","diggCount":74,"commentCount":7,"shareCount":8,"text":"اسوأ عادة في اي دايت سناك","isPinned":false}
+{"input":"drwaadamin","diggCount":119,"commentCount":5,"shareCount":7,"text":"ازاي تخس وعمرك ما تزيد تاني fatloss keto","isPinned":false}
+{"input":"drwaadamin","diggCount":1462,"commentCount":37,"shareCount":91,"text":"الوجبة الفري وصفة اكل","isPinned":false}
+{"input":"drwaadamin","diggCount":141,"commentCount":6,"shareCount":9,"text":"ينفع افطر في رمضان علي تمر","isPinned":false}
+{"input":"drwaadamin","diggCount":1870,"commentCount":29,"shareCount":182,"text":"المشي بديل للجيم حرق","isPinned":false}
+{"input":"drwaadamin","diggCount":7701,"commentCount":50,"shareCount":848,"text":"ازاي تقطع السكر بالتدريج سكر محليات","isPinned":false}
+{"input":"drwaadamin","diggCount":264,"commentCount":5,"shareCount":10,"text":"بقيت بتخاف من الاكل","isPinned":false}
+{"input":"drwaadamin","diggCount":196,"commentCount":5,"shareCount":7,"text":"الحل في السيطرة علي الجوع شهية","isPinned":false}
+{"input":"dr.doaazakaria","diggCount":70,"commentCount":5,"shareCount":26,"text":"المكملات فى الامراض المناعية ايه اللى له لازمة الطب الوظيفى مكملات","isPinned":false}
+{"input":"dr.doaazakaria","diggCount":78,"commentCount":0,"shareCount":14,"text":"فوضى المكملات مكملات مالهاش لازمة الطب الوظيفى","isPinned":false}
+{"input":"dr.doaazakaria","diggCount":14,"commentCount":1,"shareCount":0,"text":"اللي خسيته رجع تاني ثبات الوزن","isPinned":false}
+{"input":"dr.doaazakaria","diggCount":5,"commentCount":3,"shareCount":0,"text":"يعني أيه الرجيم الآمن","isPinned":false}
+{"input":"dr.ahmedabdelbaset","diggCount":37,"commentCount":8,"shareCount":3,"text":"السمنة وعلاجها","isPinned":false}
