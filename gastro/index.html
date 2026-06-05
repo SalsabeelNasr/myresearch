@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>الجهاز الهضمي — نتائج بحث السوق</title>
+    <meta name="referrer" content="no-referrer" />
+    <link rel="stylesheet" href="../assets/css/base.css" />
+    <link rel="stylesheet" href="../assets/css/home.css" />
+  </head>
+  <body>
+    <div class="mobile-header">
+      <button class="menu-toggle" id="menuToggle" aria-label="فتح القائمة">
+        <svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg>
+      </button>
+      <span class="mobile-title">الجهاز الهضمي</span>
+    </div>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+    <div class="layout">
+      <aside class="sidebar" id="sidebar"></aside>
+      <main class="main-content" id="pageHost"></main>
+    </div>
+
+    <script src="../assets/js/shared/utils.js"></script>
+    <script src="../assets/js/shared/deep-links.js"></script>
+    <script src="../assets/js/shared/nav.js"></script>
+    <script src="../assets/js/shared/sidebar.js"></script>
+    <script src="../assets/js/shared/page-templates.js"></script>
+    <script src="config.js"></script>
+    <script src="data.js"></script>
+    <script src="../assets/js/research-app.js"></script>
+    <script>
+      MRSidebar.init({ current: "gastro", root: "../" });
+      MRResearchApp.init();
+    </script>
+  </body>
+</html>
