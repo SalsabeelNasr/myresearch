@@ -263,12 +263,100 @@ def main():
         vv = [p["views"] for p in sp if p.get("views", 0) > 0]
         biz_views = round(sum(vv) / len(vv)) if vv else 0
 
+        # --- Robust recent-sample metrics (median, cadence, viral-skew flag) ---------
+        # Computed from each account's UNBIASED last ~12 posts (profile scrape), NOT the
+        # cherry-picked virals. This is what protects the ranking from one-viral accounts
+        # (e.g. an account whose mean is huge but median is tiny = ⚠️ viral-driven).
+        import statistics as _st
+        RECENT = REPO / "sources" / "recent_metrics.json"
+        recent = json.loads(RECENT.read_text(encoding="utf-8")) if RECENT.exists() else {}
+        FBM = REPO / "sources" / "fb_metrics.json"
+        fbm = json.loads(FBM.read_text(encoding="utf-8")) if FBM.exists() else {}
+        TTM = REPO / "sources" / "tt_metrics.json"
+        ttm = json.loads(TTM.read_text(encoding="utf-8")) if TTM.exists() else {}
+
+        def ig_handle(d):
+            for a in d.get("accounts", []):
+                m = re.search(r"instagram\.com/([^/?#]+)", a.get("url", ""))
+                if m:
+                    return m.group(1).lower().rstrip("/")
+            return None
+
+        # curefit's own recent metrics, computed the SAME way (apples-to-apples).
+        _bz = sorted(p["engagement"] for p in sp)
+        biz_median = round(_st.median(_bz), 1)
+        _bd = sorted(p.get("date", "") for p in sp if p.get("date"))
+        if len(_bd) > 1:
+            _span = (datetime.date.fromisoformat(_bd[-1]) - datetime.date.fromisoformat(_bd[0])).days
+            biz_ppm = round(len(_bd) / (_span / 30), 1) if _span > 0 else None
+        else:
+            biz_ppm = None
+        recent[biz["handle"].lower()] = {
+            "n90": len(sp), "mean90": biz_eng, "median90": biz_median,
+            "topSharePct": round(max(_bz) / sum(_bz) * 100, 1) if sum(_bz) else 0,
+            "postsPerMonth": biz_ppm, "viralSkew": False,
+        }
+
+        # Per-platform + overall bundle (Instagram / Facebook / TikTok) keyed by IG handle.
+        def _pick(m):
+            if not (m and m.get("n90")):
+                return None
+            return {"median": m.get("median90"), "mean": m.get("mean90"),
+                    "postsPerMonth": m.get("postsPerMonth"), "n": m.get("n90") or 0,
+                    "viralSkew": bool(m.get("viralSkew"))}
+
+        def plat_bundle(h):
+            igb, fbb, ttb = _pick(recent.get(h)), _pick(fbm.get(h)), _pick(ttm.get(h))
+            present = [b for b in (igb, fbb, ttb) if b]
+            overall = None
+            if present:
+                # Overall = total typical engagement/post across the platforms the account is active on.
+                overall = {
+                    "median": round(sum(b["median"] for b in present), 1),
+                    "mean": round(sum(b["mean"] for b in present), 1),
+                    "postsPerMonth": round(sum((b["postsPerMonth"] or 0) for b in present), 1),
+                    "n": sum(b["n"] for b in present),
+                    "viralSkew": any(b["viralSkew"] for b in present),
+                    "platforms": len(present),
+                }
+            return {"ig": igb, "fb": fbb, "tt": ttb, "overall": overall}
+
+        # Per-platform follower counts (IG known; TikTok fans scraped; FB page-followers n/a for personal profiles).
+        PFOL = REPO / "sources" / "platform_followers.json"
+        pfol = json.loads(PFOL.read_text(encoding="utf-8")) if PFOL.exists() else {}
+
+        # Attach recent metrics + platform bundle + follower counts onto each analyzed doctor.
+        for d in doctors:
+            h = ig_handle(d)
+            rmd = recent.get(h)
+            if rmd and rmd.get("n90"):
+                d["recent"] = rmd
+            pb = plat_bundle(h)
+            if pb["overall"]:
+                d["platforms"] = pb
+            pf = pfol.get(h, {})
+            d["platformFollowers"] = {"ig": d.get("followers") or 0, "fb": pf.get("fb"), "tt": pf.get("tt")}
+
         def tier_of(v):
             if v >= 3000: return "النخبة"            # Elite
             if v >= 1500: return "متقدّم"            # Advanced
             if v >= 700:  return "متوسّط"            # Mid
             if v >= 200:  return "ناشئ"              # Emerging
             return "تحت خط المنافسة"                 # Below the competition line
+
+        def attach_recent(r, h):
+            r["igh"] = h
+            rm = recent.get(h, {})
+            r["recentMedian"] = rm.get("median90")
+            r["recentMean"] = rm.get("mean90")
+            r["postsPerMonth"] = rm.get("postsPerMonth")
+            r["recentN"] = rm.get("n90") or 0
+            r["topSharePct"] = rm.get("topSharePct")
+            r["viralSkew"] = bool(rm.get("viralSkew"))
+            # Robust engagement = recent median when we have a real sample, else the deep avg.
+            r["robustEng"] = rm.get("median90") if rm.get("n90") else r["avgEng"]
+            r["estimated"] = not bool(rm.get("n90"))
+            return r
 
         rows = []
         for x in doctors:
@@ -277,21 +365,22 @@ def main():
             pc = x.get("postCount") or 0
             if pc == 0:
                 continue
-            rows.append({
+            rows.append(attach_recent({
                 "name": x["name"], "handle": x["name"],
                 "avgEng": round(x.get("totalEngagement", 0) / pc),
                 "followers": x.get("followers", 0), "isBusiness": False,
-            })
-        rows.append({
+            }, ig_handle(x)))
+        rows.append(attach_recent({
             "name": biz["name"], "handle": biz["handle"], "avgEng": biz_eng,
             "followers": biz["followers"], "isBusiness": True,
-        })
-        rows.sort(key=lambda r: -r["avgEng"])
+        }, biz["handle"].lower()))
+        # Rank by the ROBUST metric (recent median), not the viral-skewed mean.
+        rows.sort(key=lambda r: -(r["robustEng"] or 0))
         for i, r in enumerate(rows, 1):
             r["rank"] = i
-            r["tier"] = tier_of(r["avgEng"])
+            r["tier"] = tier_of(r["robustEng"] or 0)
         brank = next(r["rank"] for r in rows if r["isBusiness"])
-        analyzed_engs = sorted((r["avgEng"] for r in rows if not r["isBusiness"]))
+        analyzed_engs = sorted((r["robustEng"] or 0) for r in rows if not r["isBusiness"])
 
         # Tier ladder (who sits in each tier).
         tier_order = ["النخبة", "متقدّم", "متوسّط", "ناشئ", "تحت خط المنافسة"]
@@ -299,7 +388,7 @@ def main():
                     "ناشئ": "200–700", "تحت خط المنافسة": "< 200"}
         tiers = []
         for tn in tier_order:
-            members = [{"name": r["name"], "avgEng": r["avgEng"], "isBusiness": r["isBusiness"]}
+            members = [{"name": r["name"], "avgEng": r["robustEng"] or r["avgEng"], "isBusiness": r["isBusiness"]}
                        for r in rows if r["tier"] == tn]
             tiers.append({"name": tn, "range": tier_rng[tn], "count": len(members), "accounts": members})
 
@@ -360,21 +449,28 @@ def main():
                      .replace("✅ تحليل عميق", "").strip())
                 if n:
                     notes_map[p["handle"].lower()] = n
-        allr = sorted(rows, key=lambda r: -r["avgEng"])
+        allr = sorted(rows, key=lambda r: -(r["robustEng"] or 0))
         peers_out = []
         for r in allr:
-            er = round(r["avgEng"] / r["followers"] * 100, 3) if r.get("followers") else 0
+            rob = r["robustEng"] or 0
+            er = round(rob / r["followers"] * 100, 3) if r.get("followers") else 0
             in_band = 8000 <= (r.get("followers") or 0) <= 45000
             peers_out.append({
                 "handle": r["name"], "followers": r["followers"], "avgEng": r["avgEng"],
-                "likeRate": er, "xBusiness": round(r["avgEng"] / biz_eng, 1) if biz_eng else 0,
+                "median": r["recentMedian"], "mean": r["recentMean"],
+                "postsPerMonth": r["postsPerMonth"], "n": r["recentN"],
+                "topSharePct": r["topSharePct"], "viralSkew": r["viralSkew"],
+                "estimated": r["estimated"],
+                "likeRate": er, "xBusiness": round(rob / biz_median, 1) if biz_median else 0,
                 "isBusiness": r["isBusiness"], "inBand": in_band,
+                "platforms": plat_bundle(r["igh"]),
                 "note": notes_map.get(r["name"].lower(), ""),
             })
         band_only = [p for p in peers_out if p["inBand"]]
         size_peers = {
             "band": "8 آلاف–45 ألف متابع",
             "businessAvgEng": biz_eng,
+            "businessMedian": biz_median,
             "businessFollowers": biz["followers"],
             "businessRankInBand": next((i + 1 for i, p in enumerate(band_only) if p["isBusiness"]), None),
             "bandCount": len(band_only),
@@ -388,7 +484,8 @@ def main():
             "sizePeers": size_peers,
             "business": {
                 "name": biz["name"], "handle": biz["handle"], "followers": biz["followers"],
-                "avgEng": biz_eng, "avgViews": biz_views, "sampleSize": len(sp),
+                "avgEng": biz_eng, "median": biz_median, "postsPerMonth": biz_ppm,
+                "avgViews": biz_views, "sampleSize": len(sp),
                 "accounts": biz["accounts"], "note": biz.get("note", ""),
                 "engagementRatePct": round(biz_eng / biz["followers"] * 100, 3),
                 "tier": tier_of(biz_eng),

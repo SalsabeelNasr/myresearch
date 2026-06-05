@@ -12,8 +12,11 @@ window.MRPageTemplates = {
     <label>
       رتب حسب
       <select id="doctorSortMetric">
-        <option value="followers">عدد المتابعين</option>
-        <option value="totalEngagement">إجمالي التفاعل</option>
+        <option value="overall">وسيط التفاعل — الإجمالي (كل المنصّات)</option>
+        <option value="ig">وسيط التفاعل — إنستجرام</option>
+        <option value="fb">وسيط التفاعل — فيسبوك</option>
+        <option value="tt">وسيط التفاعل — تيك توك</option>
+        <option value="followers">عدد المتابعين (إنستجرام)</option>
         <option value="postCount">المنشورات الأكثر انتشاراً</option>
       </select>
     </label>
@@ -112,11 +115,22 @@ window.MRPageTemplates = {
 <section class="card">
   <div class="section-head">
     <h3>ترتيب كل الحسابات المُحلَّلة + موقعنا 🎯</h3>
-    <p>نفس حجمنا = (8–45 ألف متابع)</p>
+    <p>نفس حجمنا = (8–45 ألف متابع). اختر المنصّة للترتيب حسب وسيط التفاعل عليها.</p>
+  </div>
+  <div class="toolbar">
+    <label>
+      المنصّة
+      <select id="benchmarkPlatform">
+        <option value="overall">الإجمالي (إنستجرام + فيسبوك + تيك توك)</option>
+        <option value="ig">إنستجرام</option>
+        <option value="fb">فيسبوك</option>
+        <option value="tt">تيك توك</option>
+      </select>
+    </label>
   </div>
   <div class="table-wrap">
     <table class="data-table sortable" id="benchmarkPeersTable">
-      <thead><tr><th>#</th><th>الحساب</th><th>الطبقة</th><th>متابعين</th><th>تفاعل/منشور</th><th>معدل التفاعل</th><th>× تفاعلنا</th><th>ملاحظة</th></tr></thead>
+      <thead><tr><th>#</th><th>الحساب</th><th>الطبقة</th><th>متابعين</th><th>وسيط التفاعل</th><th>متوسط ⚠️</th><th>نشر/شهر</th><th>× تفاعلنا</th><th>ملاحظة</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>

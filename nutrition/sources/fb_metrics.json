@@ -1,0 +1,356 @@
+{
+ "dr.janaabdelnasser": {
+  "n90": 12,
+  "mean90": 94.4,
+  "median90": 17.5,
+  "max90": 709,
+  "topSharePct": 62.6,
+  "postsPerMonth": 30.0,
+  "viralSkew": true
+ },
+ "dr_ola_mekhemer": {
+  "n90": 15,
+  "mean90": 2849.9,
+  "median90": 1682,
+  "max90": 10810,
+  "topSharePct": 25.3,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr.radwanabil": {
+  "n90": 13,
+  "mean90": 887.0,
+  "median90": 581,
+  "max90": 4107,
+  "topSharePct": 35.6,
+  "postsPerMonth": 6.0,
+  "viralSkew": false
+ },
+ "dr.riham.eliraky": {
+  "n90": 4,
+  "mean90": 16.2,
+  "median90": 13.5,
+  "max90": 35,
+  "topSharePct": 53.8,
+  "postsPerMonth": 1.5,
+  "viralSkew": true
+ },
+ "drwaadamin": {
+  "n90": 15,
+  "mean90": 2073.9,
+  "median90": 2383,
+  "max90": 5336,
+  "topSharePct": 17.2,
+  "postsPerMonth": 10.0,
+  "viralSkew": false
+ },
+ "dr.mona.el.gezeiry.nutrition": {
+  "n90": 15,
+  "mean90": 2185.7,
+  "median90": 1779,
+  "max90": 8310,
+  "topSharePct": 25.3,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr_emadslama": {
+  "n90": 9,
+  "mean90": 9003.7,
+  "median90": 3724,
+  "max90": 40123,
+  "topSharePct": 49.5,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr_neira_fahmy": {
+  "n90": 12,
+  "mean90": 719.9,
+  "median90": 187.0,
+  "max90": 4183,
+  "topSharePct": 48.4,
+  "postsPerMonth": 30.0,
+  "viralSkew": true
+ },
+ "dr.bassantzein": {
+  "n90": 5,
+  "mean90": 102.0,
+  "median90": 142,
+  "max90": 187,
+  "topSharePct": 36.7,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr.nadahefila": {
+  "n90": 0
+ },
+ "shadylabibnutrition": {
+  "n90": 6,
+  "mean90": 83.7,
+  "median90": 33.0,
+  "max90": 360,
+  "topSharePct": 71.7,
+  "postsPerMonth": 30.0,
+  "viralSkew": true
+ },
+ "dr_mahmoud.elzayat": {
+  "n90": 12,
+  "mean90": 90.1,
+  "median90": 25.0,
+  "max90": 785,
+  "topSharePct": 72.6,
+  "postsPerMonth": 12.0,
+  "viralSkew": true
+ },
+ "dr_asmaa.hesham": {
+  "n90": 9,
+  "mean90": 13.3,
+  "median90": 7,
+  "max90": 42,
+  "topSharePct": 35.0,
+  "postsPerMonth": 10.0,
+  "viralSkew": false
+ },
+ "dr.sarah_elzeheiry": {
+  "n90": 9,
+  "mean90": 79.8,
+  "median90": 49,
+  "max90": 298,
+  "topSharePct": 41.5,
+  "postsPerMonth": 15.0,
+  "viralSkew": false
+ },
+ "dr.rania.said.sadawy": {
+  "n90": 9,
+  "mean90": 569.7,
+  "median90": 295,
+  "max90": 2602,
+  "topSharePct": 50.8,
+  "postsPerMonth": 4.3,
+  "viralSkew": true
+ },
+ "drrawda_nutritionist": {
+  "n90": 6,
+  "mean90": 9.2,
+  "median90": 8.0,
+  "max90": 21,
+  "topSharePct": 38.2,
+  "postsPerMonth": 12.0,
+  "viralSkew": false
+ },
+ "dr_shorouk_sayed": {
+  "n90": 15,
+  "mean90": 5947.1,
+  "median90": 1296,
+  "max90": 41307,
+  "topSharePct": 46.3,
+  "postsPerMonth": 12.0,
+  "viralSkew": true
+ },
+ "dr.diana.clinic": {
+  "n90": 12,
+  "mean90": 67.7,
+  "median90": 52.5,
+  "max90": 157,
+  "topSharePct": 19.3,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr.doaazakaria": {
+  "n90": 15,
+  "mean90": 763.0,
+  "median90": 661,
+  "max90": 2781,
+  "topSharePct": 24.3,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr.aymanelsharkawy": {
+  "n90": 9,
+  "mean90": 21.7,
+  "median90": 23,
+  "max90": 53,
+  "topSharePct": 27.2,
+  "postsPerMonth": 15.0,
+  "viralSkew": false
+ },
+ "dr.azza.ibrahim.clinic": {
+  "n90": 12,
+  "mean90": 25.2,
+  "median90": 22.0,
+  "max90": 80,
+  "topSharePct": 26.5,
+  "postsPerMonth": 15.0,
+  "viralSkew": false
+ },
+ "doctor_el3afia_dr_taha": {
+  "n90": 6,
+  "mean90": 18.3,
+  "median90": 18.5,
+  "max90": 30,
+  "topSharePct": 27.3,
+  "postsPerMonth": 15.0,
+  "viralSkew": false
+ },
+ "dr.mohamedelshafie": {
+  "n90": 9,
+  "mean90": 332.8,
+  "median90": 94,
+  "max90": 853,
+  "topSharePct": 28.5,
+  "postsPerMonth": 30.0,
+  "viralSkew": true
+ },
+ "dr.amalafarag": {
+  "n90": 9,
+  "mean90": 6.7,
+  "median90": 7,
+  "max90": 16,
+  "topSharePct": 26.7,
+  "postsPerMonth": 15.0,
+  "viralSkew": false
+ },
+ "dr_dinazayed": {
+  "n90": 12,
+  "mean90": 151.0,
+  "median90": 5.5,
+  "max90": 1729,
+  "topSharePct": 95.4,
+  "postsPerMonth": 6.0,
+  "viralSkew": true
+ },
+ "docfayrouz_official": {
+  "n90": 9,
+  "mean90": 9.6,
+  "median90": 3,
+  "max90": 35,
+  "topSharePct": 40.7,
+  "postsPerMonth": 30.0,
+  "viralSkew": true
+ },
+ "dr.amiradiab": {
+  "n90": 12,
+  "mean90": 11.8,
+  "median90": 9.0,
+  "max90": 36,
+  "topSharePct": 25.4,
+  "postsPerMonth": 15.0,
+  "viralSkew": false
+ },
+ "dr.yassen_motamed": {
+  "n90": 0
+ },
+ "dr.marwaothman.official": {
+  "n90": 6,
+  "mean90": 37.8,
+  "median90": 33.0,
+  "max90": 66,
+  "topSharePct": 29.1,
+  "postsPerMonth": 4.3,
+  "viralSkew": false
+ },
+ "drtarikofficial": {
+  "n90": 0
+ },
+ "dr_emanrashad": {
+  "n90": 12,
+  "mean90": 6.0,
+  "median90": 2.0,
+  "max90": 21,
+  "topSharePct": 29.2,
+  "postsPerMonth": 6.0,
+  "viralSkew": true
+ },
+ "i_fit_clinics": {
+  "n90": 0
+ },
+ "drwalaaelkobessy": {
+  "n90": 12,
+  "mean90": 39.6,
+  "median90": 11.0,
+  "max90": 179,
+  "topSharePct": 37.7,
+  "postsPerMonth": 10.0,
+  "viralSkew": true
+ },
+ "nillyshams": {
+  "n90": 12,
+  "mean90": 229.5,
+  "median90": 147.0,
+  "max90": 811,
+  "topSharePct": 29.4,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr.zeinab.mekhemer_": {
+  "n90": 12,
+  "mean90": 3.2,
+  "median90": 1.0,
+  "max90": 19,
+  "topSharePct": 48.7,
+  "postsPerMonth": 7.5,
+  "viralSkew": true
+ },
+ "dr.mohamed.massoud": {
+  "n90": 15,
+  "mean90": 126.3,
+  "median90": 85,
+  "max90": 405,
+  "topSharePct": 21.4,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "drmoatazramadan765": {
+  "n90": 12,
+  "mean90": 57.9,
+  "median90": 60.0,
+  "max90": 140,
+  "topSharePct": 20.1,
+  "postsPerMonth": 7.5,
+  "viralSkew": false
+ },
+ "dr_shrouk_ali": {
+  "n90": 9,
+  "mean90": 1085.8,
+  "median90": 122,
+  "max90": 6533,
+  "topSharePct": 66.9,
+  "postsPerMonth": 30.0,
+  "viralSkew": true
+ },
+ "dr.karim.elnagar": {
+  "n90": 12,
+  "mean90": 133.6,
+  "median90": 103.5,
+  "max90": 335,
+  "topSharePct": 20.9,
+  "postsPerMonth": 7.5,
+  "viralSkew": false
+ },
+ "dr_summersheta": {
+  "n90": 12,
+  "mean90": 2963.9,
+  "median90": 2256.0,
+  "max90": 12124,
+  "topSharePct": 34.1,
+  "postsPerMonth": 7.5,
+  "viralSkew": false
+ },
+ "dr_yasmiin.3laa": {
+  "n90": 3,
+  "mean90": 10.7,
+  "median90": 9,
+  "max90": 21,
+  "topSharePct": 65.6,
+  "postsPerMonth": 7.5,
+  "viralSkew": true
+ },
+ "curefit1": {
+  "n90": 15,
+  "mean90": 12.5,
+  "median90": 7,
+  "max90": 68,
+  "topSharePct": 36.4,
+  "postsPerMonth": 15.0,
+  "viralSkew": false
+ }
+}

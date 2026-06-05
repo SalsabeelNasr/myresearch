@@ -1,0 +1,110 @@
+{
+ "dr_ola_mekhemer": {
+  "n90": 3,
+  "mean90": 175.0,
+  "median90": 118,
+  "max90": 307,
+  "topSharePct": 58.5,
+  "postsPerMonth": 4.0,
+  "viralSkew": true
+ },
+ "dr_mahmoud.elzayat": {
+  "n90": 15,
+  "mean90": 27.5,
+  "median90": 24,
+  "max90": 70,
+  "topSharePct": 16.9,
+  "postsPerMonth": 12.0,
+  "viralSkew": false
+ },
+ "dr.riham.eliraky": {
+  "n90": 15,
+  "mean90": 756.3,
+  "median90": 547,
+  "max90": 2675,
+  "topSharePct": 23.6,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr_neira_fahmy": {
+  "n90": 15,
+  "mean90": 1790.7,
+  "median90": 343,
+  "max90": 17614,
+  "topSharePct": 65.6,
+  "postsPerMonth": 30.0,
+  "viralSkew": true
+ },
+ "dr.mohamed.massoud": {
+  "n90": 15,
+  "mean90": 140.0,
+  "median90": 42,
+  "max90": 1160,
+  "topSharePct": 55.2,
+  "postsPerMonth": 30.0,
+  "viralSkew": true
+ },
+ "dr.diana.clinic": {
+  "n90": 15,
+  "mean90": 25.3,
+  "median90": 25,
+  "max90": 50,
+  "topSharePct": 13.2,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "dr.nadahefila": {
+  "n90": 7,
+  "mean90": 59.7,
+  "median90": 38,
+  "max90": 175,
+  "topSharePct": 41.9,
+  "postsPerMonth": 3.8,
+  "viralSkew": false
+ },
+ "dr.ahmedabdelbaset": {
+  "n90": 15,
+  "mean90": 23.2,
+  "median90": 21,
+  "max90": 48,
+  "topSharePct": 13.8,
+  "postsPerMonth": 10.0,
+  "viralSkew": false
+ },
+ "drwaadamin": {
+  "n90": 7,
+  "mean90": 348.9,
+  "median90": 147,
+  "max90": 1590,
+  "topSharePct": 65.1,
+  "postsPerMonth": 3.0,
+  "viralSkew": true
+ },
+ "diethubeg": {
+  "n90": 13,
+  "mean90": 16.3,
+  "median90": 16,
+  "max90": 30,
+  "topSharePct": 14.2,
+  "postsPerMonth": 12.0,
+  "viralSkew": false
+ },
+ "dr.doaazakaria": {
+  "n90": 15,
+  "mean90": 52.0,
+  "median90": 40,
+  "max90": 113,
+  "topSharePct": 14.5,
+  "postsPerMonth": 30.0,
+  "viralSkew": false
+ },
+ "curefit1": {
+  "n90": 15,
+  "mean90": 75.5,
+  "median90": 23,
+  "max90": 288,
+  "topSharePct": 25.4,
+  "postsPerMonth": 6.0,
+  "viralSkew": true
+ }
+}

@@ -146,6 +146,7 @@ h1,h2,h3,p { margin: 0; }
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
+  align-items: start;
 }
 
 .doctor-card {
@@ -289,6 +290,11 @@ h1,h2,h3,p { margin: 0; }
 
 .doctor-social-row .social-link-btn {
   min-width: 4.5rem;
+}
+
+.doctor-social-row .social-link-btn--icon-only {
+  min-width: auto;
+  padding-inline: 0.45rem;
 }
 
 .social-link-btn:hover {
@@ -1341,3 +1347,7 @@ select,input {
 .chip--pin { background: #fff3bf; color: #8a6d00; border: 1px solid #f0c000; border-radius: 999px; padding: .1rem .5rem; font-size: .78rem; }
 
 .size-badge { font-size: .68rem; background: #eef4ff; color: var(--primary); border: 1px solid var(--border); border-radius: 999px; padding: .05rem .4rem; white-space: nowrap; }
+.chip--warn { background: #fff4e5; color: #b45309; border: 1px solid #fcd9a6; }
+.chip--strong { background: #eef9f0; color: #166534; border: 1px solid #bbe5c4; font-weight: 600; }
+.skew-flag { cursor: help; }
+.peers-foot .muted, td .muted { color: var(--muted, #888); font-size: .85em; }

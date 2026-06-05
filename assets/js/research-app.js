@@ -5,7 +5,7 @@ window.MRResearchApp = (function () {
 
   let state = {
     sortMetric: "engagement",
-    doctorSortMetric: "followers",
+    doctorSortMetric: "overall",
     search: "",
     vaultSearch: "",
     currentPage: "dashboard",
@@ -38,6 +38,7 @@ window.MRResearchApp = (function () {
       benchmarkFullMarket: document.getElementById("benchmarkFullMarket"),
       benchmarkPeersTable: document.querySelector("#benchmarkPeersTable tbody"),
       benchmarkPeersTableEl: document.getElementById("benchmarkPeersTable"),
+      benchmarkPlatform: document.getElementById("benchmarkPlatform"),
       benchmarkPeersFoot: document.getElementById("benchmarkPeersFoot"),
       benchmarkTiers: document.getElementById("benchmarkTiers"),
       benchmarkReachable: document.getElementById("benchmarkReachable"),
@@ -151,20 +152,27 @@ window.MRResearchApp = (function () {
   function socialLinkButton(acc, doctor) {
     const platform = acc.platform;
     const icon = PLATFORM_ICONS[platform] || "";
-    const followers = followersForPlatform(doctor, platform);
+    const pkey = platform === "Instagram" ? "ig" : platform === "Facebook" ? "fb" : platform === "TikTok" ? "tt" : null;
+    const pf = doctor.platformFollowers || {};
+    const followers = (pkey && pf[pkey] != null) ? pf[pkey] : followersForPlatform(doctor, platform);
     const label = platform === "Instagram" ? "إنستجرام" : platform === "Facebook" ? "فيسبوك" : platform === "TikTok" ? "تيك توك" : platform;
     const slug = platform.toLowerCase();
+    const hasCount = followers > 0;
+    const countHtml = hasCount
+      ? `<span class="social-link-count">${formatNumber(followers)}</span>`
+      : "";
+    const ariaCount = hasCount ? ` — ${formatNumber(followers)} متابع` : "";
     return `
       <button
-        class="social-link-btn social-link-btn--${slug} open-app"
+        class="social-link-btn social-link-btn--${slug}${hasCount ? "" : " social-link-btn--icon-only"} open-app"
         type="button"
         data-url="${escapeHtml(acc.url)}"
         data-platform="${escapeHtml(platform)}"
         data-type="profile"
-        aria-label="${escapeHtml(label)} — ${formatNumber(followers)} متابع"
+        aria-label="${escapeHtml(label)}${ariaCount}"
       >
         ${icon}
-        <span class="social-link-count">${formatNumber(followers)}</span>
+        ${countHtml}
       </button>`;
   }
 
@@ -190,12 +198,23 @@ window.MRResearchApp = (function () {
   const DOCTOR_EXPANDER_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 9l6 6 6-6"/></svg>`;
 
   function doctorCardHtml(doctor) {
+    const pf = doctor.platforms;
+    const platChip = (lbl, m) => m
+      ? `<span class="chip" title="وسيط التفاعل/منشور على ${lbl} (آخر ${m.n} منشور) · نشر/شهر ${m.postsPerMonth != null ? m.postsPerMonth : "—"}${m.viralSkew ? " · ⚠️ متوسط متضخّم بفيرالي" : ""}">${lbl} · تفاعل/منشور: ${formatNumber(m.median)}${m.viralSkew ? " ⚠️" : ""}</span>`
+      : "";
+    const recChips = pf ? [
+      pf.overall ? `<span class="chip chip--strong" title="مجموع وسيط التفاعل عبر المنصّات النشِطة">إجمالي التفاعل/منشور: ${formatNumber(pf.overall.median)}</span>` : "",
+      platChip("إنستجرام", pf.ig),
+      platChip("فيسبوك", pf.fb),
+      platChip("تيك توك", pf.tt),
+    ].filter(Boolean) : (doctor.recent ? [
+      `<span class="chip" title="وسيط آخر ${doctor.recent.n90} منشور">وسيط التفاعل (إنستجرام): ${formatNumber(doctor.recent.median90)}</span>`,
+    ] : []);
     const metaChips = doctor.analyzed === false
       ? [`<span class="chip chip--muted">منافس محتمل — لسه متحللش</span>`]
       : [
-          `<span class="chip">متابعين: ${formatNumber(doctor.followers)}</span>`,
           `<span class="chip">منشورات منتشرة: ${formatNumber(doctor.postCount)}</span>`,
-          `<span class="chip">تفاعل: ${formatNumber(doctor.totalEngagement)}</span>`,
+          ...recChips,
         ];
     const socialLinks = doctor.accounts.length
       ? doctor.accounts.map((acc) => socialLinkButton(acc, doctor)).join("")
@@ -208,8 +227,8 @@ window.MRResearchApp = (function () {
             <div class="doctor-info">
               <details class="doctor-metrics-toggle">
                 <summary class="doctor-headline" aria-label="${metricsLabel}">
-                  <span class="doctor-name">${escapeHtml(doctor.name)}</span>
                   <span class="doctor-expander" aria-hidden="true">${DOCTOR_EXPANDER_ICON}</span>
+                  <span class="doctor-name">${escapeHtml(doctor.name)}</span>
                 </summary>
                 <div class="doctor-spec">${escapeHtml(doctor.specializations.join(" • "))}</div>
                 <div class="meta-row doctor-summary-metrics">${metaChips.join("")}</div>
@@ -232,9 +251,17 @@ window.MRResearchApp = (function () {
       .filter((d) => d.analyzed === false)
       .sort((a, b) => (b.followers || 0) - (a.followers || 0));
 
-    const metric = state.doctorSortMetric || "followers";
+    const metric = state.doctorSortMetric || "overall";
+    const platKeys = { overall: "overall", ig: "ig", fb: "fb", tt: "tt" };
+    const valOf = (d) => {
+      if (platKeys[metric]) {
+        const m = (d.platforms || {})[platKeys[metric]];
+        return m && m.median != null ? m.median : -1;
+      }
+      return d[metric] || 0;
+    };
     const sorted = analyzed.slice().sort((a, b) => {
-      const diff = (b[metric] || 0) - (a[metric] || 0);
+      const diff = valOf(b) - valOf(a);
       return diff !== 0 ? diff : (b.totalEngagement || 0) - (a.totalEngagement || 0);
     });
     els.doctorsGrid.innerHTML = sorted.map(doctorCardHtml).join("");
@@ -301,8 +328,8 @@ window.MRResearchApp = (function () {
         
         <div class="biz-metrics">
           <div class="biz-metric"><span class="bm-val">${formatNumber(bz.followers)}</span><span class="bm-lbl">متابعون</span></div>
-          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.avgEng)}</span><span class="bm-lbl">تفاعل/منشور</span></div>
-          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.avgViews)}</span><span class="bm-lbl">مشاهدات (ريلز)</span></div>
+          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.median != null ? bz.median : bz.avgEng)}</span><span class="bm-lbl">وسيط التفاعل/منشور</span></div>
+          <div class="biz-metric"><span class="bm-val">${bz.postsPerMonth != null ? bz.postsPerMonth : "—"}</span><span class="bm-lbl">نشر/شهر</span></div>
           <div class="biz-metric"><span class="bm-val">${bz.engagementRatePct}%</span><span class="bm-lbl">معدل التفاعل</span></div>
           <div class="biz-metric biz-metric--highlight"><span class="bm-val">#${fm.followersRank}<span>/${fm.total}</span></span><span class="bm-lbl">ترتيب المتابعين</span></div>
           <div class="biz-metric biz-metric--bad"><span class="bm-val">#${b.businessRank}<span>/${b.total}</span></span><span class="bm-lbl">ترتيب التفاعل</span></div>
@@ -323,6 +350,7 @@ window.MRResearchApp = (function () {
 
     if (els.benchmarkPeersTable && b.sizePeers) {
       const sp = b.sizePeers;
+      const bizMed = sp.businessMedian || 4.5;
       const getTierInfo = (avg) => {
         if (avg >= 3000) return { name: "النخبة", cls: "tier-elite" };
         if (avg >= 1500) return { name: "متقدّم", cls: "tier-advanced" };
@@ -330,33 +358,73 @@ window.MRResearchApp = (function () {
         if (avg >= 200) return { name: "ناشئ", cls: "tier-emerging" };
         return { name: "تحت المنافسة", cls: "tier-below" };
       };
+      const platLabel = { overall: "الإجمالي", ig: "إنستجرام", fb: "فيسبوك", tt: "تيك توك" };
 
-      els.benchmarkPeersTable.innerHTML = sp.peers.map((p, i) => {
-        const isHandle = /^[a-z0-9._]+$/i.test(p.handle);
-        const name = (p.isBusiness || !isHandle)
-          ? `<strong>${escapeHtml(p.handle)}</strong>`
-          : `<a href="https://www.instagram.com/${escapeHtml(p.handle)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.handle)}</a>`;
-        const sizeBadge = p.inBand && !p.isBusiness ? ` <span class="size-badge" title="في نفس شريحة متابعينا">👥 نفس حجمنا</span>` : "";
-        const cls = p.isBusiness ? "row-us" : (p.inBand && p.xBusiness >= 5 && !(p.note || "").includes("أضعف") ? "peer-role" : "");
-        const tier = getTierInfo(p.avgEng);
-
-        return `
+      const renderPeers = (platKey) => {
+        const m = (p) => (p.platforms || {})[platKey] || null;
+        // Show only accounts that actually have data on the selected platform.
+        // Show accounts that have data on the selected platform — but always keep curefit (our reference).
+        const rows = sp.peers
+          .filter((p) => { const md = m(p); return (md && md.median != null) || p.isBusiness; })
+          .sort((a, bb) => { const va = m(a) && m(a).median != null ? m(a).median : -1; const vb = m(bb) && m(bb).median != null ? m(bb).median : -1; return vb - va; });
+        let usRank = 0;
+        const usShown = rows.some((p) => p.isBusiness && m(p));
+        els.benchmarkPeersTable.innerHTML = rows.map((p, i) => {
+          if (p.isBusiness) usRank = i + 1;
+          const md = m(p);
+          const isHandle = /^[a-z0-9._]+$/i.test(p.handle);
+          const name = (p.isBusiness || !isHandle)
+            ? `<strong>${escapeHtml(p.handle)}</strong>`
+            : `<a href="https://www.instagram.com/${escapeHtml(p.handle)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.handle)}</a>`;
+          const sizeBadge = p.inBand && !p.isBusiness ? ` <span class="size-badge" title="في نفس شريحة متابعينا">👥 نفس حجمنا</span>` : "";
+          const xb = (md && md.median != null) ? Math.round(md.median / bizMed * 10) / 10 : null;
+          const cls = p.isBusiness ? "row-us" : (p.inBand && xb != null && xb >= 5 ? "peer-role" : "");
+          if (!md || md.median == null) {
+            // Only reachable for curefit on a platform we haven't measured yet.
+            return `
+        <tr class="row-us">
+          <td>${i + 1}</td>
+          <td><strong>${escapeHtml(p.handle)}</strong> (إحنا)</td>
+          <td><span class="tier-badge tier-below">—</span></td>
+          <td>${formatNumber(p.followers)}</td>
+          <td data-sort="-1" title="لسه ماكشطناش بيانات حسابنا على ${platLabel[platKey]}">—</td>
+          <td data-sort="-1">—</td>
+          <td data-sort="-1">—</td>
+          <td data-sort="-1">—</td>
+          <td>👈 وضعنا</td>
+        </tr>`;
+          }
+          const tier = getTierInfo(md.median);
+          const skew = md.viralSkew
+            ? ` <span class="skew-flag" title="المتوسط متضخّم: التفاعل جاي بمعظمه من منشور واحد فيرالي. اعتمد على الوسيط.">⚠️</span>`
+            : "";
+          const platCount = platKey === "overall" && md.platforms ? ` <span class="size-badge" title="عدد المنصّات الفعّالة">${md.platforms}🌐</span>` : "";
+          return `
         <tr${cls ? ` class="${cls}"` : ""}>
           <td>${i + 1}</td>
-          <td>${name}${p.isBusiness ? " (إحنا)" : ""}${sizeBadge}</td>
+          <td>${name}${p.isBusiness ? " (إحنا)" : ""}${sizeBadge}${platCount}</td>
           <td><span class="tier-badge ${tier.cls}">${tier.name}</span></td>
           <td>${formatNumber(p.followers)}</td>
-          <td>${formatNumber(p.avgEng)}</td>
-          <td>${p.likeRate}%</td>
-          <td>${p.isBusiness ? "×1" : `<strong>×${p.xBusiness}</strong>`}</td>
+          <td data-sort="${md.median}"><strong title="وسيط آخر ${md.n} منشور">${formatNumber(md.median)}</strong></td>
+          <td data-sort="${md.mean}">${formatNumber(md.mean)}${skew}</td>
+          <td data-sort="${md.postsPerMonth != null ? md.postsPerMonth : -1}">${md.postsPerMonth != null ? md.postsPerMonth : "—"}</td>
+          <td data-sort="${xb}">${p.isBusiness ? "×1" : `<strong>×${xb}</strong>`}</td>
           <td>${escapeHtml(p.note || (p.isBusiness ? "👈 وضعنا" : ""))}</td>
         </tr>`;
-      }).join("");
-      makeSortable(els.benchmarkPeersTableEl);
-      if (els.benchmarkPeersFoot) {
-        const strong = sp.peers.filter((p) => !p.isBusiness && p.inBand && p.xBusiness >= 7 && !(p.note || "").includes("صغيرة")).slice(0, 6);
-        const rankTxt = sp.businessRankInBand ? `#${sp.businessRankInBand} من ${sp.bandCount}` : "الأخير";
-        els.benchmarkPeersFoot.innerHTML = `<strong>الخلاصة:</strong> الجدول فيه كل الحسابات المُحلَّلة بعمق (${formatNumber(sp.count)}) مرتبة بالتفاعل. إحنا <strong>${rankTxt}</strong> وسط حجمنا و<strong>الأخير إجمالاً</strong>. أقوى القدوات في حجمنا: ${strong.map((p) => escapeHtml(p.handle)).join("، ")}.`;
+        }).join("");
+        makeSortable(els.benchmarkPeersTableEl);
+        if (els.benchmarkPeersFoot) {
+          const withData = sp.peers.filter((p) => m(p) && m(p).median != null).length;
+          const skewCount = sp.peers.filter((p) => m(p) && m(p).viralSkew).length;
+          els.benchmarkPeersFoot.innerHTML = `<strong>الخلاصة (${platLabel[platKey]}):</strong> مرتّبين بـ<strong>وسيط التفاعل</strong> (مش المتوسط) عشان منشور فيرالي واحد ميطلّعش حساب لفوق بالغلط. الـ<strong>⚠️</strong> = متوسط الحساب متضخّم بمنشور واحد (${skewCount} حساب). الجدول بيعرض بس الحسابات اللي عندها وجود على ${platLabel[platKey]} (<strong>${withData}</strong> حساب). موقعنا (curefit): <strong>${usShown ? "#" + usRank : "مش نشط على المنصّة دي"}</strong>. <br><span class="muted">«الإجمالي» = مجموع وسيط التفاعل على إنستجرام + فيسبوك + تيك توك (بيكافئ الحسابات النشطة على أكتر من منصّة). × تفاعلنا مقارنة بوسيطنا على إنستجرام (${bizMed}).</span>`;
+        }
+      };
+
+      const initPlat = (els.benchmarkPlatform && els.benchmarkPlatform.value) || "overall";
+      renderPeers(initPlat);
+      if (els.benchmarkPlatform && !els.benchmarkPlatform.dataset.bound) {
+        els.benchmarkPlatform.dataset.bound = "1";
+        els.benchmarkPlatform.addEventListener("change", (e) => renderPeers(e.target.value));
       }
     }
 
