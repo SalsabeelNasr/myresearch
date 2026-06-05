@@ -29,32 +29,8 @@ window.MRPageTemplates = {
       </select>
     </label>
     <label>
-      المنصة
-      <select id="platformFilter">
-        <option value="all">الكل</option>
-        <option value="Instagram">Instagram</option>
-        <option value="Facebook">Facebook</option>
-      </select>
-    </label>
-    <label>
-      الطبيب
-      <select id="doctorFilter"><option value="all">الكل</option></select>
-    </label>
-    <label>
-      الموضوع
-      <select id="topicFilter"><option value="all">الكل</option></select>
-    </label>
-    <label>
-      التفريغ الصوتي
-      <select id="transcriptFilter">
-        <option value="all">الكل</option>
-        <option value="yes">يحتوي تفريغ</option>
-        <option value="no">بدون تفريغ</option>
-      </select>
-    </label>
-    <label>
       بحث
-      <input id="searchInput" type="search" placeholder="اسم طبيب، موضوع، أو نص التفريغ..." />
+      <input id="searchInput" type="search" placeholder="اسم طبيب، موضوع، منصة، أو نص التفريغ..." />
     </label>
   </div>
   <p class="results-count" id="postsCount"></p>

@@ -5,10 +5,6 @@ window.MRResearchApp = (function () {
 
   let state = {
     sortMetric: "engagement",
-    platform: "all",
-    doctor: "all",
-    topic: "all",
-    transcript: "all",
     search: "",
     vaultSearch: "",
     currentPage: "dashboard",
@@ -25,10 +21,6 @@ window.MRResearchApp = (function () {
       topicsList: document.getElementById("topicsList"),
       topicAuditTable: document.querySelector("#topicAuditTable tbody"),
       sortMetric: document.getElementById("sortMetric"),
-      platformFilter: document.getElementById("platformFilter"),
-      doctorFilter: document.getElementById("doctorFilter"),
-      topicFilter: document.getElementById("topicFilter"),
-      transcriptFilter: document.getElementById("transcriptFilter"),
       searchInput: document.getElementById("searchInput"),
       navBtns: document.querySelectorAll(".nav-btn"),
       vaultCoverageStrip: document.getElementById("vaultCoverageStrip"),
@@ -195,15 +187,11 @@ window.MRResearchApp = (function () {
   }
 
   function postMatchesFilters(post) {
-    if (state.platform !== "all" && post.platform !== state.platform) return false;
-    if (state.doctor !== "all" && post.account !== state.doctor) return false;
-    if (state.topic !== "all" && post.topicAudio !== state.topic) return false;
-    if (state.transcript === "yes" && !post.transcript) return false;
-    if (state.transcript === "no" && post.transcript) return false;
     if (!state.search) return true;
     const q = state.search.toLowerCase();
     return (
       post.account.toLowerCase().includes(q) ||
+      post.platform.toLowerCase().includes(q) ||
       (post.topicAudio || "").toLowerCase().includes(q) ||
       (post.topicCaption || "").toLowerCase().includes(q) ||
       (post.caption || "").toLowerCase().includes(q) ||
@@ -248,7 +236,7 @@ window.MRResearchApp = (function () {
       els.postsCount.textContent = `عرض ${formatNumber(posts.length)} من ${formatNumber(DATA.posts.length)} منشور`;
     }
     if (!posts.length) {
-      els.postsList.innerHTML = `<div class="post-card">لا توجد نتائج مطابقة للفلاتر الحالية.</div>`;
+      els.postsList.innerHTML = `<div class="post-card">لا توجد نتائج مطابقة للبحث الحالي.</div>`;
       return;
     }
     els.postsList.innerHTML = posts.map((p) => {
@@ -261,15 +249,14 @@ window.MRResearchApp = (function () {
       return `
     <article class="post-card">
       <div class="post-header">
-        <div class="post-account-info">
-          <div class="post-date-tag">${escapeHtml(p.date)}</div>
-          <h3 class="post-title">${escapeHtml(p.topicAudio)}</h3>
-          <div class="stat-item engagement-stat" title="إجمالي التفاعل">
-            <span class="stat-value">${formatNumber(p.engagement)}</span>
-            <span class="stat-label">تفاعل</span>
-          </div>
+        <div class="post-meta-left">
+          <span class="post-rank">#${p.rank}</span>
+          <span class="post-date-tag">${escapeHtml(p.date)}</span>
         </div>
-        <div class="post-rank">#${p.rank}</div>
+        <div class="engagement-stat" title="إجمالي التفاعل">
+          <span class="stat-value">${formatNumber(p.engagement)}</span>
+          <span class="stat-label">تفاعل</span>
+        </div>
       </div>
 
       <div class="post-content">
@@ -277,25 +264,28 @@ window.MRResearchApp = (function () {
           ${tThumb}
         </div>
         <div class="post-info">
+          <h3 class="post-title">${escapeHtml(p.topicAudio)}</h3>
           <div class="post-account-name">${escapeHtml(p.account)}</div>
+          
           <div class="post-stats-grid">
             <div class="stat-item" title="إعجابات">
               <span class="stat-icon">${METRIC_ICONS.likes}</span>
               <span class="stat-value">${formatNumber(p.likes)}</span>
             </div>
-            <div class="stat-item" title="مشاركات">
-              <span class="stat-icon">${METRIC_ICONS.shares}</span>
-              <span class="stat-value">${formatNumber(p.shares)}</span>
+            <div class="stat-item" title="مشاهدات">
+              <span class="stat-icon">${METRIC_ICONS.views}</span>
+              <span class="stat-value">${formatNumber(p.views)}</span>
             </div>
             <div class="stat-item" title="تعليقات">
               <span class="stat-icon">${METRIC_ICONS.comments}</span>
               <span class="stat-value">${formatNumber(p.comments)}</span>
             </div>
-            <div class="stat-item" title="مشاهدات">
-              <span class="stat-icon">${METRIC_ICONS.views}</span>
-              <span class="stat-value">${formatNumber(p.views)}</span>
+            <div class="stat-item" title="مشاركات">
+              <span class="stat-icon">${METRIC_ICONS.shares}</span>
+              <span class="stat-value">${formatNumber(p.shares)}</span>
             </div>
           </div>
+
           <div class="post-actions">
             ${postOpenButton(p)}
           </div>
@@ -339,8 +329,6 @@ window.MRResearchApp = (function () {
           <span class="chip">تفاعل: ${formatNumber(t.engagement)}</span>
           <span class="chip">مشاهدات: ${formatNumber(t.views)}</span>
         </div>
-        <p class="topic-note">${escapeHtml(t.suggestion)}</p>
-        ${(t.examples || []).map((ex) => `<p class="topic-note">مثال: ${escapeHtml(ex)}</p>`).join("")}
         ${evidence ? `<details class="sub-details"><summary>المنشورات الداعمة لهذا الموضوع</summary><ul class="linked-posts">${evidence}</ul></details>` : ""}
       </article>`;
       }).join("");
@@ -414,28 +402,8 @@ window.MRResearchApp = (function () {
     }
   }
 
-  function populateFilters() {
-    if (!els.doctorFilter || !els.topicFilter) return;
-    els.doctorFilter.innerHTML = '<option value="all">الكل</option>';
-    els.topicFilter.innerHTML = '<option value="all">الكل</option>';
-    [...new Set(DATA.posts.map((p) => p.account))].sort().forEach((d) => {
-      const o = document.createElement("option");
-      o.value = d; o.textContent = d;
-      els.doctorFilter.appendChild(o);
-    });
-    [...new Set(DATA.posts.map((p) => p.topicAudio))].sort().forEach((t) => {
-      const o = document.createElement("option");
-      o.value = t; o.textContent = t;
-      els.topicFilter.appendChild(o);
-    });
-  }
-
   function bindPageEvents() {
     els.sortMetric?.addEventListener("change", (e) => { state.sortMetric = e.target.value; renderPosts(); });
-    els.platformFilter?.addEventListener("change", (e) => { state.platform = e.target.value; renderPosts(); });
-    els.doctorFilter?.addEventListener("change", (e) => { state.doctor = e.target.value; renderPosts(); });
-    els.topicFilter?.addEventListener("change", (e) => { state.topic = e.target.value; renderPosts(); });
-    els.transcriptFilter?.addEventListener("change", (e) => { state.transcript = e.target.value; renderPosts(); });
     els.searchInput?.addEventListener("input", (e) => { state.search = e.target.value.trim(); renderPosts(); });
     els.vaultSearch?.addEventListener("input", (e) => { state.vaultSearch = e.target.value.trim(); renderVault(); });
   }
@@ -445,7 +413,7 @@ window.MRResearchApp = (function () {
     bindPageEvents();
     if (page === "dashboard") buildKpis();
     if (page === "doctors") renderDoctors();
-    if (page === "posts") { populateFilters(); renderPosts(); }
+    if (page === "posts") { renderPosts(); }
     if (page === "topics") renderTopics();
     if (page === "vault") { renderCoverage(); renderVault(); }
   }

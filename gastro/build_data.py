@@ -352,15 +352,13 @@ for d in doctors.values():
 doctorList.sort(key=lambda x: (x["totalEngagement"], x["postCount"]), reverse=True)
 
 # ---------- Topic recommendations (clinical only) ----------
-tstats = defaultdict(lambda: {"posts": 0, "engagement": 0, "views": 0, "examples": []})
+tstats = defaultdict(lambda: {"posts": 0, "engagement": 0, "views": 0})
 for p in posts:
     t = p["topicAudio"] or "Unclassified"
     s = tstats[t]
     s["posts"] += 1
     s["engagement"] += p["engagement"]
     s["views"] += p["views"]
-    if p["caption"] and len(s["examples"]) < 2:
-        s["examples"].append(p["caption"][:120])
 recs = []
 for t, s in tstats.items():
     if not is_clinical(t):
@@ -372,8 +370,6 @@ for t, s in tstats.items():
             "engagement": s["engagement"],
             "views": s["views"],
             "score": s["engagement"] + int(0.2 * s["views"]),
-            "suggestion": "قدّم هذا الموضوع بصيغة (معلومة سريعة + حالة واقعية + توصية عملية).",
-            "examples": s["examples"],
         }
     )
 recs.sort(key=lambda x: x["score"], reverse=True)
