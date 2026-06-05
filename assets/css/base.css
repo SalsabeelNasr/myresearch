@@ -386,12 +386,80 @@ select,input {
 
 .post-content {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
 }
 
 .post-visual {
   position: relative;
   flex-shrink: 0;
+}
+
+/* Clickable thumbnail that lazy-loads the live post embed */
+.post-thumb-btn {
+  display: block;
+  position: relative;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  line-height: 0;
+}
+
+.post-thumb-btn .thumb-play {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.5rem;
+  background: rgba(15, 23, 42, 0.22);
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.post-thumb-btn:hover .thumb-play,
+.post-thumb-btn:focus-visible .thumb-play {
+  opacity: 1;
+}
+
+/* Fallback handling: hide placeholder unless there's no thumb or it failed */
+.post-thumb-btn .post-thumb-placeholder,
+.post-thumb-link .post-thumb-placeholder {
+  display: none;
+}
+
+.post-thumb-btn.no-thumb .post-thumb,
+.post-thumb-btn.thumb-failed .post-thumb,
+.post-thumb-link.thumb-failed .post-thumb {
+  display: none;
+}
+
+.post-thumb-btn.no-thumb .post-thumb-placeholder,
+.post-thumb-btn.thumb-failed .post-thumb-placeholder,
+.post-thumb-link.thumb-failed .post-thumb-placeholder {
+  display: flex;
+}
+
+/* Inline embed: expand the visual to its own full-width row */
+.post-visual.embed-active {
+  flex-basis: 100%;
+  width: 100%;
+}
+
+.post-embed {
+  width: 100%;
+  max-width: 540px;
+}
+
+.post-embed iframe {
+  width: 100%;
+  min-height: 500px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: #fff;
 }
 
 .post-thumb-link {
@@ -425,8 +493,8 @@ select,input {
 }
 
 .post-thumb-placeholder svg {
-  width: 24px;
-  height: 24px;
+  width: 38px;
+  height: 38px;
 }
 
 .post-info {

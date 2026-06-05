@@ -5,6 +5,7 @@ window.MRResearchApp = (function () {
 
   let state = {
     sortMetric: "engagement",
+    doctorSortMetric: "followers",
     search: "",
     vaultSearch: "",
     currentPage: "dashboard",
@@ -16,8 +17,14 @@ window.MRResearchApp = (function () {
     els = {
       kpiGrid: document.getElementById("kpiGrid"),
       doctorsGrid: document.getElementById("doctorsGrid"),
+      doctorSortMetric: document.getElementById("doctorSortMetric"),
       postsList: document.getElementById("postsList"),
       postsCount: document.getElementById("postsCount"),
+      postsPeriod: document.getElementById("postsPeriod"),
+      postsAccountsTable: document.querySelector("#postsAccountsTable tbody"),
+      postsTopicsList: document.getElementById("postsTopicsList"),
+      pinnedPostsTable: document.querySelector("#pinnedPostsTable tbody"),
+      pinnedTopicsList: document.getElementById("pinnedTopicsList"),
       topicsList: document.getElementById("topicsList"),
       topicAuditTable: document.querySelector("#topicAuditTable tbody"),
       sortMetric: document.getElementById("sortMetric"),
@@ -89,6 +96,7 @@ window.MRResearchApp = (function () {
   const PLATFORM_ICONS = {
     Instagram: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M7.8 2h8.4A5.8 5.8 0 0 1 22 7.8v8.4A5.8 5.8 0 0 1 16.2 22H7.8A5.8 5.8 0 0 1 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8A3.6 3.6 0 0 0 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6A3.6 3.6 0 0 0 16.4 4H7.6m9.65 1.5a1.08 1.08 0 1 1 0 2.16 1.08 1.08 0 0 1 0-2.16M12 7a5 5 0 1 1 0 10 5 5 0 0 1 0-10m0 2a3 3 0 1 0 0 6 3 3 0 0 0 0-6z"/></svg>`,
     Facebook: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M22 12a10 10 0 1 0-11.5 9.9v-7h-2.3V12h2.3V9.8c0-2.3 1.4-3.6 3.5-3.6 1 0 2 .2 2 .2v2.2h-1.1c-1.1 0-1.4.7-1.4 1.4V12h2.4l-.4 2.9h-2v7A10 10 0 0 0 22 12z"/></svg>`,
+    TikTok: `<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M16.6 5.8a4.3 4.3 0 0 1-1-2.8h-3v12.1a2.4 2.4 0 1 1-2.4-2.4c.2 0 .5 0 .7.1V9.7a5.6 5.6 0 0 0-.7-.1 5.5 5.5 0 1 0 5.5 5.5V9a7.3 7.3 0 0 0 4.3 1.4V7.4a4.3 4.3 0 0 1-3.4-1.6z"/></svg>`,
   };
 
   const METRIC_ICONS = {
@@ -120,7 +128,7 @@ window.MRResearchApp = (function () {
     const platform = acc.platform;
     const icon = PLATFORM_ICONS[platform] || "";
     const followers = followersForPlatform(doctor, platform);
-    const label = platform === "Instagram" ? "إنستجرام" : platform === "Facebook" ? "فيسبوك" : platform;
+    const label = platform === "Instagram" ? "إنستجرام" : platform === "Facebook" ? "فيسبوك" : platform === "TikTok" ? "تيك توك" : platform;
     const slug = platform.toLowerCase();
     return `
       <button
@@ -139,7 +147,7 @@ window.MRResearchApp = (function () {
   function postOpenButton(post) {
     const platform = post.platform;
     const icon = PLATFORM_ICONS[platform] || "";
-    const label = platform === "Instagram" ? "إنستجرام" : platform === "Facebook" ? "فيسبوك" : platform;
+    const label = platform === "Instagram" ? "إنستجرام" : platform === "Facebook" ? "فيسبوك" : platform === "TikTok" ? "تيك توك" : platform;
     const slug = platform.toLowerCase();
     return `
       <button
@@ -155,17 +163,84 @@ window.MRResearchApp = (function () {
       </button>`;
   }
 
+  // Build an embeddable URL for a post so it can be shown inline on demand.
+  // Returns "" when the platform/URL can't be embedded reliably.
+  function embedUrl(post) {
+    const url = (post.postUrl || "").trim();
+    if (!url) return "";
+    if (post.platform === "Instagram") {
+      const clean = url.split("?")[0].replace(/\/+$/, "");
+      return `${clean}/embed/`;
+    }
+    if (post.platform === "Facebook") {
+      return `https://www.facebook.com/plugins/post.php?href=${encodeURIComponent(url)}&show_text=true&width=500`;
+    }
+    return "";
+  }
+
+  // The card's left visual: a lightweight thumbnail that, on click, lazily
+  // swaps in the live post embed. Falls back to the platform-icon placeholder
+  // when the scraped thumbnail URL has expired (403) or is missing.
+  function postVisual(p) {
+    const embed = embedUrl(p);
+    const hasThumb = !!p.transcript?.thumbnail;
+    const playIcon = `<svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>`;
+    const placeholder = `<div class="post-thumb-placeholder">${playIcon}</div>`;
+    const img = hasThumb
+      ? `<img class="post-thumb" src="${escapeHtml(p.transcript.thumbnail)}" alt="" loading="lazy" referrerpolicy="no-referrer"
+             onerror="this.closest('.post-thumb-btn,.post-thumb-link')?.classList.add('thumb-failed')" />`
+      : "";
+
+    if (!embed) {
+      return hasThumb
+        ? `<a href="${escapeHtml(p.postUrl)}" target="_blank" rel="noopener noreferrer" class="post-thumb-link">${img}${placeholder}</a>`
+        : placeholder;
+    }
+
+    return `
+      <button type="button" class="post-thumb-btn load-embed${hasThumb ? "" : " no-thumb"}"
+              data-embed="${escapeHtml(embed)}" aria-label="عرض المنشور داخل الصفحة">
+        ${img}
+        ${placeholder}
+        <span class="thumb-play" aria-hidden="true">▶</span>
+      </button>`;
+  }
+
+  function bindEmbedButtons(container) {
+    container.querySelectorAll(".load-embed").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const embed = btn.getAttribute("data-embed");
+        const visual = btn.closest(".post-visual");
+        if (!embed || !visual) return;
+        visual.classList.add("embed-active");
+        visual.innerHTML = `
+          <div class="post-embed">
+            <iframe src="${escapeHtml(embed)}" loading="lazy" frameborder="0" scrolling="no"
+                    allowtransparency="true" allow="encrypted-media" title="منشور"></iframe>
+          </div>`;
+      });
+    });
+  }
+
   function renderDoctors() {
     if (!els.doctorsGrid) return;
     if (!DATA.doctors.length) {
       els.doctorsGrid.innerHTML = emptyState("لا توجد حسابات بعد. سيتم عرض الأطباء والحسابات عند اكتمال جمع البيانات.");
       return;
     }
-    els.doctorsGrid.innerHTML = DATA.doctors.map((doctor) => {
-      const metaChips = [
-        `<span class="chip">منشورات فيروسية: ${formatNumber(doctor.postCount)}</span>`,
-        `<span class="chip">تفاعل: ${formatNumber(doctor.totalEngagement)}</span>`,
-      ];
+    const metric = state.doctorSortMetric || "followers";
+    const sorted = DATA.doctors.slice().sort((a, b) => {
+      const diff = (b[metric] || 0) - (a[metric] || 0);
+      return diff !== 0 ? diff : (b.totalEngagement || 0) - (a.totalEngagement || 0);
+    });
+    els.doctorsGrid.innerHTML = sorted.map((doctor) => {
+      const metaChips = doctor.analyzed === false
+        ? [`<span class="chip chip--muted">منافس محتمل — لم يُحلّل بعد</span>`]
+        : [
+            `<span class="chip">متابعون: ${formatNumber(doctor.followers)}</span>`,
+            `<span class="chip">منشورات فيروسية: ${formatNumber(doctor.postCount)}</span>`,
+            `<span class="chip">تفاعل: ${formatNumber(doctor.totalEngagement)}</span>`,
+          ];
 
       const socialLinks = doctor.accounts.length
         ? doctor.accounts.map((acc) => socialLinkButton(acc, doctor)).join("")
@@ -235,17 +310,24 @@ window.MRResearchApp = (function () {
     if (els.postsCount) {
       els.postsCount.textContent = `عرض ${formatNumber(posts.length)} من ${formatNumber(DATA.posts.length)} منشور`;
     }
+    if (els.postsPeriod) {
+      const m = DATA.meta || {};
+      els.postsPeriod.textContent = (m.dateFrom && m.dateTo)
+        ? `🗓️ فترة التحليل: من ${m.dateFrom} إلى ${m.dateTo} — بناءً على آخر منشورات الحسابات وقت السحب عبر Apify`
+        : "";
+    }
     if (!posts.length) {
       els.postsList.innerHTML = `<div class="post-card">لا توجد نتائج مطابقة للبحث الحالي.</div>`;
       return;
     }
     els.postsList.innerHTML = posts.map((p) => {
-      const tThumb = p.transcript?.thumbnail
-        ? `<a href="${escapeHtml(p.postUrl)}" target="_blank" rel="noopener noreferrer" class="post-thumb-link">
-             <img class="post-thumb" src="${escapeHtml(p.transcript.thumbnail)}" alt="" loading="lazy" referrerpolicy="no-referrer" />
-           </a>`
-        : `<div class="post-thumb-placeholder">${PLATFORM_ICONS[p.platform] || ""}</div>`;
-      
+      const tThumb = postVisual(p);
+      const hasAudio = p.topicSource === "audio" && p.topicAudio && p.topicAudio !== "—";
+      const hasCaption = p.topicCaption && p.topicCaption !== "Unclassified" && p.topicCaption !== "—";
+      const topicLabel = hasAudio
+        ? p.topicAudio
+        : (hasCaption ? p.topicCaption : "غير مصنّف — الموضوع في الفيديو (يحتاج تفريغ صوتي)");
+
       return `
     <article class="post-card">
       <div class="post-header">
@@ -264,7 +346,7 @@ window.MRResearchApp = (function () {
           ${tThumb}
         </div>
         <div class="post-info">
-          <h3 class="post-title">${escapeHtml(p.topicAudio)}</h3>
+          <h3 class="post-title">${escapeHtml(topicLabel)}</h3>
           <div class="post-account-name">${escapeHtml(p.account)}</div>
           
           <div class="post-stats-grid">
@@ -307,6 +389,39 @@ window.MRResearchApp = (function () {
     </article>`;
     }).join("");
     bindOpenAppButtons(els.postsList);
+    bindEmbedButtons(els.postsList);
+  }
+
+  function topicCardHtml(t, i) {
+    return `
+      <article class="topic-card">
+        <div class="topic-name">${i + 1}. ${escapeHtml(t.topic)}</div>
+        <div class="meta-row">
+          <span class="chip">مشاهدات: ${formatNumber(t.views)}</span>
+          <span class="chip">تفاعل: ${formatNumber(t.engagement)}</span>
+          <span class="chip">منشورات: ${formatNumber(t.posts)}</span>
+          <span class="chip">قوة الموضوع: ${formatNumber(t.score)}</span>
+        </div>
+        ${t.suggestion ? `<p class="muted">${escapeHtml(t.suggestion)}</p>` : ""}
+      </article>`;
+  }
+
+  // Posts page only: the pinned/evergreen POSTS table (recent posts are in renderPosts;
+  // accounts live on the doctors page; topic recommendations live on the topics page).
+  function renderPinnedPosts() {
+    if (!els.pinnedPostsTable) return;
+    const pinned = DATA.pinnedPosts || [];
+    els.pinnedPostsTable.innerHTML = pinned.length
+      ? pinned.map((p, i) => {
+          const lab = (p.topicSource === "audio" && p.topicAudio && p.topicAudio !== "—")
+            ? p.topicAudio
+            : (p.topicCaption && p.topicCaption !== "Unclassified" ? p.topicCaption : "غير مصنّف");
+          const link = p.postUrl
+            ? `<a href="${escapeHtml(p.postUrl)}" target="_blank" rel="noopener">فتح ↗</a>`
+            : `<span class="muted">—</span>`;
+          return `<tr><td>${i + 1}</td><td>${escapeHtml(p.account)}</td><td>${escapeHtml(p.date || "")}</td><td>${escapeHtml(lab)}</td><td>${formatNumber(p.views)}</td><td>${formatNumber(p.engagement)}</td><td>${link}</td></tr>`;
+        }).join("")
+      : `<tr><td colspan="7" class="muted">لا توجد منشورات مثبّتة.</td></tr>`;
   }
 
   function renderTopics() {
@@ -332,6 +447,12 @@ window.MRResearchApp = (function () {
         ${evidence ? `<details class="sub-details"><summary>المنشورات الداعمة لهذا الموضوع</summary><ul class="linked-posts">${evidence}</ul></details>` : ""}
       </article>`;
       }).join("");
+    }
+    if (els.pinnedTopicsList) {
+      const pt = DATA.pinnedTopics || [];
+      els.pinnedTopicsList.innerHTML = pt.length
+        ? pt.map(topicCardHtml).join("")
+        : emptyState("لا توجد مواضيع دائمة بعد.");
     }
     if (els.topicAuditTable) {
       els.topicAuditTable.innerHTML = (DATA.topicAudit || [])
@@ -404,6 +525,7 @@ window.MRResearchApp = (function () {
 
   function bindPageEvents() {
     els.sortMetric?.addEventListener("change", (e) => { state.sortMetric = e.target.value; renderPosts(); });
+    els.doctorSortMetric?.addEventListener("change", (e) => { state.doctorSortMetric = e.target.value; renderDoctors(); });
     els.searchInput?.addEventListener("input", (e) => { state.search = e.target.value.trim(); renderPosts(); });
     els.vaultSearch?.addEventListener("input", (e) => { state.vaultSearch = e.target.value.trim(); renderVault(); });
   }
@@ -413,7 +535,7 @@ window.MRResearchApp = (function () {
     bindPageEvents();
     if (page === "dashboard") buildKpis();
     if (page === "doctors") renderDoctors();
-    if (page === "posts") { renderPosts(); }
+    if (page === "posts") { renderPosts(); renderPinnedPosts(); }
     if (page === "topics") renderTopics();
     if (page === "vault") { renderCoverage(); renderVault(); }
   }

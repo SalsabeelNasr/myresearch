@@ -8,6 +8,17 @@ window.MRPageTemplates = {
     <h3 id="doctorsHeading">الأطباء والحسابات المتاحة</h3>
     <p>المصادر: ملف الكيانات + تقرير الفيروسية</p>
   </div>
+  <div class="toolbar">
+    <label>
+      ترتيب حسب
+      <select id="doctorSortMetric">
+        <option value="followers">عدد المتابعين</option>
+        <option value="totalEngagement">التفاعل الكلي</option>
+        <option value="postCount">المنشورات الفيروسية</option>
+        <option value="transcriptCount">عدد التفريغات</option>
+      </select>
+    </label>
+  </div>
   <div id="doctorsGrid" class="doctors-grid"></div>
 </section>`,
 
@@ -16,6 +27,7 @@ window.MRPageTemplates = {
   <div class="section-head">
     <h3 id="postsHeading">المنشورات الفيروسية</h3>
     <p>رتّب حسب أي مؤشر لقراءة الأنماط الأفضل أداءً</p>
+    <p class="analysis-period" id="postsPeriod"></p>
   </div>
   <div class="toolbar">
     <label>
@@ -35,6 +47,19 @@ window.MRPageTemplates = {
   </div>
   <p class="results-count" id="postsCount"></p>
   <div id="postsList" class="posts-list"></div>
+</section>
+
+<section class="card" aria-labelledby="pinnedHeading" id="pinnedSection">
+  <div class="section-head">
+    <h3 id="pinnedHeading">المنشورات المثبّتة (Evergreen)</h3>
+    <p>دي منشورات الحساب <strong>مثبّتة بإيده</strong> على رأس بروفايله (مش بالضرورة حديثة — بعضها من 2024). جمّعت مشاهدات على مدى طويل، فاستبعدناها من ترتيب «الأداء الحالي» عشان ما تضخّمش الأرقام. مواضيعها الدائمة موجودة في صفحة «المواضيع».</p>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table" id="pinnedPostsTable">
+      <thead><tr><th>#</th><th>الحساب</th><th>التاريخ</th><th>الموضوع</th><th>المشاهدات</th><th>التفاعل</th><th>الرابط</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
 </section>`,
 
   topics: `
@@ -44,6 +69,14 @@ window.MRPageTemplates = {
     <p>دي المواضيع <strong>الطبية القابلة لإعادة الإنتاج</strong> فقط، مرتبة حسب قوة النتائج (تفاعل + مشاهدات). استبعدنا الصفوف اللي مش مواضيع طبية (موسيقى/بدون كلام، صور بدون صوت، فيديوهات مش متفرّغة، ومحتوى تحفيزي/شخصي) عشان التوصية تبقى مبنية على محتوى ينفع تكرّره.</p>
   </div>
   <div id="topicsList" class="topics-list"></div>
+</section>
+
+<section class="card" aria-labelledby="pinnedTopicsHeading">
+  <div class="section-head">
+    <h3 id="pinnedTopicsHeading">مواضيع دائمة (Evergreen) يُرجّح نجاحها</h3>
+    <p>مواضيع المنشورات المثبّتة — اختيار أصحاب الحسابات لأفضل محتواهم، فهي مرشّحات قوية للمحتوى دائم الجاذبية (مستقلة عن ترتيب الأداء الحالي).</p>
+  </div>
+  <div id="pinnedTopicsList" class="topics-list"></div>
 </section>
 
 <section class="card" aria-labelledby="topicAuditHeading">
