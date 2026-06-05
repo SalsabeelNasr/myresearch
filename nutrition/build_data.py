@@ -48,7 +48,7 @@ CLIN = [
     (r"حرق|الايض|الأيض|metabolism", "Metabolism"),
     (r"مونجارو|اوزمبك|ozempic|wegovy|ابر|حقن|ببتيد|peptide|glp|تنحيف", "GLP-1 / weight-loss injections"),
     (r"شبع|شهية|الجوع|appetite|satiety", "Appetite & satiety"),
-    (r"لقيمات|فثلث|ثلث للطعام|الكميات|portion|moderation|حجم الوجبة|نصف الكمية", "Portion control / moderation"),
+    (r"لقيمات|فثلث|ثلث للطعام|كميات|كميتك|portion|moderation|حجم الوجبة|نصف الكمية|تحدد كمي", "Portion control / moderation"),
     (r"بالليل|قبل النوم|اكل بالليل|الاكل بالليل|late.?night|سهر|آخر الليل", "Late-night eating & sleep"),
     (r"سكر|محلي|محليات|sugar|sweetener", "Sugar & sweeteners"),
     (r"عيش|خبز|نشويات|كارب|bread|carb", "Bread & carbs (comparison)"),
@@ -58,8 +58,10 @@ CLIN = [
     (r"دهون حشوية|الحشوية|visceral|الكرش|كرش|دهون البطن", "Belly & visceral fat"),
     (r"الديدان|الجرثومة|طفيليات|h\.?\s*pylori|بكتيريا المعدة", "Gut parasites / H. pylori"),
     (r"مرارة|gall\s*bladder|كبد دهني|الكبد الدهني|fatty liver", "Liver & gallbladder"),
-    (r"دواء.{0,6}وزن|أدوية.{0,6}وزن|حبوب.{0,6}تخسيس|حبوب.{0,6}وزن", "Weight-gain/loss drugs (warning)"),
+    (r"(دوا|دواء|أدوية|حبوب).{0,14}(وزن|تخسيس)|weight.?gain drugs", "Weight-gain/loss drugs (warning)"),
     (r"اكل صحي|أكل صحي|نظام غذائي|نمط حياة صحي|دايت صحي|اختيارات.{0,8}دايت|أنظمة دايت", "Healthy eating / diet basics"),
+    (r"زيادة الوزن|نظام وجبات|اكتساب وزن|weight.?gain|تسمين|للنحاف|زود وزنك", "Weight gain / muscle meal plan"),
+    (r"خروجات|عزومات|مطاعم|اكل بره|eating.?out|الأكل بالخارج|سفر|مناسبات", "Eating out / social meals"),
     (r"دوره|الدورة|period|menstr", "Cycle / menstrual health"),
     (r"نوم|sleep", "Sleep & stress"),
     (r"بروتين|protein", "Protein"),
@@ -179,6 +181,12 @@ def main():
             p["topicSource"] = "audio"
         elif p.get("topicSource") != "audio":
             p["topicAudio"] = "—"
+
+    # Backfill caption topics with the CURRENT classifier — fills "Unclassified" gaps from
+    # captions that have usable keywords (without overriding already-good labels).
+    for p in posts:
+        if p.get("topicCaption") in (None, "", "Unclassified"):
+            p["topicCaption"] = classify(p.get("caption", ""))[0]
 
     # Effective topic per post: prefer the spoken (audio) topic, else the caption topic.
     def eff_topic(p):
