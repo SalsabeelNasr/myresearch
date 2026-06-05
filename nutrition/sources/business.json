@@ -5,22 +5,107 @@
   "followers": 18456,
   "postsCountTotal": 282,
   "accounts": [
-    { "platform": "Instagram", "url": "https://www.instagram.com/curefit1", "confidence": "18,456 متابع" },
-    { "platform": "Facebook", "url": "https://www.facebook.com/profile.php?id=100076252099360", "confidence": "صفحة فيسبوك" }
+    {
+      "platform": "Instagram",
+      "url": "https://www.instagram.com/curefit1",
+      "confidence": "18,456 متابع"
+    },
+    {
+      "platform": "Facebook",
+      "url": "https://www.facebook.com/profile.php?id=100076252099360",
+      "confidence": "صفحة فيسبوك"
+    },
+    {
+      "platform": "TikTok",
+      "url": "https://www.tiktok.com/@curefit0",
+      "confidence": "—"
+    }
   ],
   "note": "حساب العيادة (العمل محل التقييم في تقرير التغذية). المحتوى الحالي شبه كله إعلانات/عروض للعيادة وحقن التخسيس، بلهجة مصرية تسويقية — وده السبب الأساسي في ضعف التفاعل مقارنة بأطباء المحتوى التعليمي.",
   "samplePosts": [
-    { "shortcode": "DZKqfn3iocz", "type": "image", "engagement": 2, "views": 0, "date": "2026-06-04" },
-    { "shortcode": "DZC7SAol42W", "type": "video", "engagement": 4, "views": 149, "date": "2026-06-01" },
-    { "shortcode": "DY9TX61DvCt", "type": "video", "engagement": 5, "views": 150, "date": "2026-05-30" },
-    { "shortcode": "DY4JqWak58n", "type": "image", "engagement": 2, "views": 0, "date": "2026-05-28" },
-    { "shortcode": "DYzs0UnjT9M", "type": "image", "engagement": 8, "views": 0, "date": "2026-05-26" },
-    { "shortcode": "DYwQ9lbAsAu", "type": "video", "engagement": 5, "views": 206, "date": "2026-05-25" },
-    { "shortcode": "DYj3515mxw3", "type": "video", "engagement": 3, "views": 208, "date": "2026-05-20" },
-    { "shortcode": "DYWdrBDDYPw", "type": "video", "engagement": 8, "views": 417, "date": "2026-05-15" },
-    { "shortcode": "DYRUBG8jQEv", "type": "carousel", "engagement": 5, "views": 0, "date": "2026-05-13" },
-    { "shortcode": "DYO2CQVDi8N", "type": "video", "engagement": 6, "views": 1791, "date": "2026-05-12" },
-    { "shortcode": "DYCeOyaF5fF", "type": "image", "engagement": 4, "views": 0, "date": "2026-05-07" },
-    { "shortcode": "DX_ShAXDmA4", "type": "video", "engagement": 3, "views": 362, "date": "2026-05-06" }
+    {
+      "shortcode": "DZKqfn3iocz",
+      "type": "image",
+      "engagement": 2,
+      "views": 0,
+      "date": "2026-06-04"
+    },
+    {
+      "shortcode": "DZC7SAol42W",
+      "type": "video",
+      "engagement": 4,
+      "views": 149,
+      "date": "2026-06-01"
+    },
+    {
+      "shortcode": "DY9TX61DvCt",
+      "type": "video",
+      "engagement": 5,
+      "views": 150,
+      "date": "2026-05-30"
+    },
+    {
+      "shortcode": "DY4JqWak58n",
+      "type": "image",
+      "engagement": 2,
+      "views": 0,
+      "date": "2026-05-28"
+    },
+    {
+      "shortcode": "DYzs0UnjT9M",
+      "type": "image",
+      "engagement": 8,
+      "views": 0,
+      "date": "2026-05-26"
+    },
+    {
+      "shortcode": "DYwQ9lbAsAu",
+      "type": "video",
+      "engagement": 5,
+      "views": 206,
+      "date": "2026-05-25"
+    },
+    {
+      "shortcode": "DYj3515mxw3",
+      "type": "video",
+      "engagement": 3,
+      "views": 208,
+      "date": "2026-05-20"
+    },
+    {
+      "shortcode": "DYWdrBDDYPw",
+      "type": "video",
+      "engagement": 8,
+      "views": 417,
+      "date": "2026-05-15"
+    },
+    {
+      "shortcode": "DYRUBG8jQEv",
+      "type": "carousel",
+      "engagement": 5,
+      "views": 0,
+      "date": "2026-05-13"
+    },
+    {
+      "shortcode": "DYO2CQVDi8N",
+      "type": "video",
+      "engagement": 6,
+      "views": 1791,
+      "date": "2026-05-12"
+    },
+    {
+      "shortcode": "DYCeOyaF5fF",
+      "type": "image",
+      "engagement": 4,
+      "views": 0,
+      "date": "2026-05-07"
+    },
+    {
+      "shortcode": "DX_ShAXDmA4",
+      "type": "video",
+      "engagement": 3,
+      "views": 362,
+      "date": "2026-05-06"
+    }
   ]
 }
