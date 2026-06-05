@@ -5,35 +5,43 @@ window.MRPageTemplates = {
   doctors: `
 <section class="card" aria-labelledby="doctorsHeading">
   <div class="section-head">
-    <h3 id="doctorsHeading">الأطباء والحسابات المتاحة</h3>
-    <p>المصادر: ملف الكيانات + تقرير الفيروسية</p>
+    <h3 id="doctorsHeading">الأطباء والحسابات اللي تم تحليلها</h3>
+    <p>المصادر: ملف البيانات + تقرير الانتشار</p>
   </div>
   <div class="toolbar">
     <label>
-      ترتيب حسب
+      رتب حسب
       <select id="doctorSortMetric">
         <option value="followers">عدد المتابعين</option>
-        <option value="totalEngagement">التفاعل الكلي</option>
-        <option value="postCount">المنشورات الفيروسية</option>
-        <option value="transcriptCount">عدد التفريغات</option>
+        <option value="totalEngagement">إجمالي التفاعل</option>
+        <option value="postCount">المنشورات الأكثر انتشاراً</option>
+        <option value="transcriptCount">عدد النصوص المفرغة</option>
       </select>
     </label>
   </div>
   <div id="doctorsGrid" class="doctors-grid"></div>
+</section>
+
+<section class="card" aria-labelledby="competitorsHeading" id="competitorsSection">
+  <div class="section-head">
+    <h3 id="competitorsHeading">منافسون محتملون — لم يُحلّلوا بعد (<span id="competitorsCount"></span>)</h3>
+    <p>حسابات أضفتها كمنافسين محتملين بس لسه متعملّهمش تحليل عميق (ماصرفناش رصيد Apify على كشط محتواهم). معروضين هنا منفصلين عشان أرقام التحليل تفضل دقيقة. كل حساب وروابطه على المنصّات المختلفة تحت بعض.</p>
+  </div>
+  <div id="competitorsGrid" class="doctors-grid"></div>
 </section>`,
 
   posts: `
 <section class="card" aria-labelledby="postsHeading">
   <div class="section-head">
-    <h3 id="postsHeading">المنشورات الفيروسية</h3>
-    <p>رتّب حسب أي مؤشر لقراءة الأنماط الأفضل أداءً</p>
+    <h3 id="postsHeading">المنشورات الأكثر انتشاراً</h3>
+    <p>رتب حسب أي مؤشر عشان تفهم أنماط المحتوى الأفضل أداءً</p>
     <p class="analysis-period" id="postsPeriod"></p>
   </div>
   <div class="toolbar">
     <label>
-      ترتيب حسب
+      رتب حسب
       <select id="sortMetric">
-        <option value="engagement">التفاعل الكلي</option>
+        <option value="engagement">إجمالي التفاعل</option>
         <option value="views">المشاهدات</option>
         <option value="likes">الإعجابات</option>
         <option value="comments">التعليقات</option>
@@ -41,18 +49,31 @@ window.MRPageTemplates = {
       </select>
     </label>
     <label>
-      بحث
-      <input id="searchInput" type="search" placeholder="اسم طبيب، موضوع، منصة، أو نص التفريغ..." />
+      ابحث هنا
+      <input id="searchInput" type="search" placeholder="اسم الطبيب، الموضوع، المنصة، أو نص الفيديو..." />
     </label>
   </div>
   <p class="results-count" id="postsCount"></p>
   <div id="postsList" class="posts-list"></div>
 </section>
 
+<section class="card" aria-labelledby="olderHeading" id="olderSection">
+  <div class="section-head">
+    <h3 id="olderHeading">منشورات قديمة حققت انتشار (أكتر من 90 يوم)</h3>
+    <p>دي منشورات مش مثبتة وأقدم من 90 يوم، بس احتفظنا بيها لأن تفاعلها كان عالي وبتعتبر دليل مفيد للمواضيع الناجحة، لكنها مش داخلة في ترتيب الأداء الحالي.</p>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table" id="olderPostsTable">
+      <thead><tr><th>#</th><th>الحساب</th><th>التاريخ</th><th>الموضوع</th><th>المشاهدات</th><th>التفاعل</th><th>الرابط</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
 <section class="card" aria-labelledby="pinnedHeading" id="pinnedSection">
   <div class="section-head">
-    <h3 id="pinnedHeading">المنشورات المثبّتة (Evergreen)</h3>
-    <p>دي منشورات الحساب <strong>مثبّتة بإيده</strong> على رأس بروفايله (مش بالضرورة حديثة — بعضها من 2024). جمّعت مشاهدات على مدى طويل، فاستبعدناها من ترتيب «الأداء الحالي» عشان ما تضخّمش الأرقام. مواضيعها الدائمة موجودة في صفحة «المواضيع».</p>
+    <h3 id="pinnedHeading">المنشورات المثبتة (Evergreen)</h3>
+    <p>دي المنشورات اللي صاحب الحساب ثبتها في بروفايله (مش شرط تكون جديدة). جمعت مشاهدات كتير على مدار وقت طويل، فعشان كدة استبعدناها من ترتيب الأداء الحالي عشان الأرقام تكون دقيقة. مواضيعها موجودة في صفحة «المواضيع».</p>
   </div>
   <div class="table-wrap">
     <table class="data-table" id="pinnedPostsTable">
@@ -65,16 +86,16 @@ window.MRPageTemplates = {
   topics: `
 <section class="card" aria-labelledby="topicsHeading">
   <div class="section-head">
-    <h3 id="topicsHeading">مواضيع مقترحة لإعادة الإنتاج</h3>
-    <p>دي المواضيع <strong>الطبية القابلة لإعادة الإنتاج</strong> فقط، مرتبة حسب قوة النتائج (تفاعل + مشاهدات). استبعدنا الصفوف اللي مش مواضيع طبية (موسيقى/بدون كلام، صور بدون صوت، فيديوهات مش متفرّغة، ومحتوى تحفيزي/شخصي) عشان التوصية تبقى مبنية على محتوى ينفع تكرّره.</p>
+    <h3 id="topicsHeading">مواضيع مقترحة لصناعة المحتوى</h3>
+    <p>دي المواضيع الطبية اللي نقدر ننتج زيها، مترتبة حسب قوة النتائج (تفاعل ومشاهدات). استبعدنا الفيديوهات اللي مش طبية أو اللي من غير صوت عشان تكون التوصيات مركزة على محتوى مفيد وقابل للتكرار.</p>
   </div>
   <div id="topicsList" class="topics-list"></div>
 </section>
 
 <section class="card" aria-labelledby="pinnedTopicsHeading">
   <div class="section-head">
-    <h3 id="pinnedTopicsHeading">مواضيع دائمة (Evergreen) يُرجّح نجاحها</h3>
-    <p>مواضيع المنشورات المثبّتة — اختيار أصحاب الحسابات لأفضل محتواهم، فهي مرشّحات قوية للمحتوى دائم الجاذبية (مستقلة عن ترتيب الأداء الحالي).</p>
+    <h3 id="pinnedTopicsHeading">مواضيع دايمة (Evergreen) فرصة نجاحها كبيرة</h3>
+    <p>دي مواضيع المنشورات المثبتة، وهي اختيار أصحاب الحسابات لأفضل محتوى عندهم، وبتعتبر مرشحات قوية لمحتوى بيفضل جذاب للجمهور لفترة طويلة.</p>
   </div>
   <div id="pinnedTopicsList" class="topics-list"></div>
 </section>
@@ -82,10 +103,10 @@ window.MRPageTemplates = {
 <section class="card" aria-labelledby="topicAuditHeading">
   <details class="audit-details">
     <summary>
-      <span id="topicAuditHeading">التدقيق الكامل للمواضيع (كل صفوف «By audio topic»)</span>
+      <span id="topicAuditHeading">مراجعة كاملة للمواضيع (بناءً على موضوع الصوت)</span>
     </summary>
     <div class="details-content">
-      <p class="results-count">عرض كل صفوف ملخص المواضيع من المصدر بدون استبعاد، عشان مفيش بيانات تضيع.</p>
+      <p class="results-count">عرض كل البيانات الخاصة بملخص المواضيع بدون استثناء، عشان نضمن إن مفيش معلومة تضيع.</p>
       <div class="table-wrap">
         <table class="data-table" id="topicAuditTable">
           <thead><tr><th>الموضوع</th><th>عدد المنشورات</th><th>التفاعل</th></tr></thead>
@@ -96,16 +117,86 @@ window.MRPageTemplates = {
   </details>
 </section>`,
 
+  benchmark: `
+<section class="card benchmark-intro">
+  <div class="section-head">
+    <h3>ترتيبنا مقابل السوق 🎯</h3>
+    <p>هنا بنقارن حساب العمل بتاعنا (<strong>Cure Fit — curefit1</strong>) بكل الحسابات اللي اتحللت في التقرير، على أساس <strong>متوسط التفاعل لكل منشور</strong> — وده مقياس عادل مش بيتأثر بعدد المتابعين. بنوضّح: إحنا فين في الترتيب؟ مين أقرب حساب لينا؟ وأنهي طبقة نقدر نوصلها فعلاً، بأمثلة محتوى ناجح.</p>
+  </div>
+  <div id="benchmarkBusiness"></div>
+</section>
+
+<section class="card">
+  <div class="section-head"><h3>أين نقف الآن؟</h3></div>
+  <div id="benchmarkHeadline"></div>
+</section>
+
+<section class="card">
+  <div class="section-head">
+    <h3>على مستوى السوق كله (الـ108 حساب) 🌍</h3>
+    <p>عملنا مسح للمتابعين لكل الـ108 حساب في القايمة الأصلية. التفاعل اتقاس بعمق لأعلى 30. ده موقعنا في الصورة الكاملة:</p>
+  </div>
+  <div id="benchmarkFullMarket"></div>
+</section>
+
+<section class="card">
+  <div class="section-head">
+    <h3>سلّم الطبقات (Tiers)</h3>
+    <p>قسّمنا كل الحسابات لخمس طبقات حسب متوسط التفاعل لكل منشور. حسابنا متظلّل بالأخضر.</p>
+  </div>
+  <div id="benchmarkTiers" class="tier-ladder"></div>
+</section>
+
+<section class="card">
+  <div class="section-head">
+    <h3>الطبقة اللي نقدر نوصلها — بأمثلة محتوى حقيقية ✅</h3>
+    <p>دي أقوى منشورات <strong>تعليمية</strong> من الحسابات اللي في الطبقات القريبة فوقنا مباشرة (ناشئ/متوسّط). أرقامها واقعية وقابلة للوصول، وموضوعاتها في صميم تخصص العيادة (إبر GLP-1، مقاومة الأنسولين، PCOS…). دي القوالب اللي نكرّرها.</p>
+  </div>
+  <div id="benchmarkReachable" class="reach-grid"></div>
+</section>
+
+<section class="card">
+  <div class="section-head">
+    <h3>جيراننا في الترتيب (٥ فوقنا و٥ تحتنا)</h3>
+    <p>بدل ما نعرض القايمة كلها، دي أقرب الحسابات لينا في الترتيب — ٥ أعلى مننا و٥ أقل — عشان المقارنة تكون واضحة. حسابنا متظلّل بالأخضر.</p>
+  </div>
+  <div class="table-wrap">
+    <table class="data-table" id="benchmarkRankingTable">
+      <thead><tr><th>#</th><th>الحساب</th><th>الطبقة</th><th>متوسط التفاعل/منشور</th><th>متابعون</th></tr></thead>
+      <tbody></tbody>
+    </table>
+  </div>
+</section>
+
+<section class="card benchmark-strategy">
+  <div class="section-head"><h3>الخلاصة وخطة الوصول 🧭</h3></div>
+  <div class="methodology-conclusion">
+    <blockquote>
+      الفجوة الحالية مش بسبب قلة المتابعين — هي بسبب <strong>نوع المحتوى</strong>. حسابنا حالياً شبه كله إعلانات وعروض للعيادة، والجمهور بيتفاعل مع <strong>المحتوى التعليمي</strong> اللي بيشرح معلومة بتهمّه. كل الحسابات اللي فوقنا بتعمل ريلز تعليمية بهوك فضول في أول 3 ثواني.
+    </blockquote>
+  </div>
+  <div class="methodology-step">
+    <h3>الخطوات العملية:</h3>
+    <ul>
+      <li><strong>حوّل النسبة:</strong> بدل ٩٠٪ إعلانات، اعمل ٨٠٪ محتوى تعليمي (ريلز) + ٢٠٪ عروض. التعليمي هو اللي بيوصل وبيبني ثقة قبل ما يحجز.</li>
+      <li><strong>كرّر القوالب الواقعية اللي فوق:</strong> ابدأ بمواضيع طبقتي «ناشئ ومتوسّط» (إبر التخسيس، مقاومة الأنسولين، PCOS، مقارنة النشويات) — دي أهداف قابلة للوصول خلال شهور، مش حسابات المليون متابع.</li>
+      <li><strong>الشكل:</strong> ريلز رأسي، هوك فضول في أول جملة، شرح بنقاط، وخاتمة آمنة «تحت إشراف طبي» (التزام كامل بحائط الامتثال — من غير وعود بنتائج مضمونة).</li>
+      <li><strong>اللهجة:</strong> عامية مصرية بسيطة وودودة (زي كل الحسابات الناجحة في القايمة — الجمهور مصري) — المشكلة مش في اللهجة، المشكلة في الأسلوب الإعلاني. حوّل النبرة من «إعلان عيادة» لـ«دكتور بيشرح معلومة بتهمّك».</li>
+      <li><strong>الهدف الأول:</strong> الخروج من «تحت خط المنافسة» للطبقة «ناشئ» (٢٠٠+ تفاعل/منشور) — ده يحتاج تقريباً ×٤٠ من المتوسط الحالي، وبيتحقق بتغيير نوع المحتوى مش بالإعلانات.</li>
+    </ul>
+  </div>
+</section>`,
+
   vault: `
 <section class="card">
   <div class="section-head">
-    <h3>مخزن البيانات الكامل</h3>
-    <p>كل البيانات الخام زي ما اتجمعت من المصادر، بدون أي حذف. استخدم البحث للوصول السريع.</p>
+    <h3>مخزن البيانات الشامل</h3>
+    <p>كل البيانات زي ما اتجمعت من المصادر بدون أي تعديل أو حذف. تقدر تستخدم البحث عشان توصل للي محتاجه بسرعة.</p>
   </div>
   <div class="coverage-strip" id="vaultCoverageStrip"></div>
   <label class="vault-search-label">
-    بحث في كل البيانات الخام
-    <input id="vaultSearch" type="search" placeholder="ابحث في المنشورات، الحسابات، المواضيع، التفريغ..." />
+    ابحث في كل البيانات
+    <input id="vaultSearch" type="search" placeholder="ابحث في المنشورات، الحسابات، المواضيع، أو النصوص..." />
   </label>
 </section>
 
@@ -115,7 +206,7 @@ window.MRPageTemplates = {
     <div class="details-content">
       <div class="table-wrap">
         <table class="data-table" id="vaultPostsTable">
-          <thead><tr><th>#</th><th>الحساب</th><th>المنصة</th><th>التاريخ</th><th>موضوع الصوت</th><th>التفاعل</th><th>المشاهدات</th><th>تفريغ؟</th></tr></thead>
+          <thead><tr><th>#</th><th>الحساب</th><th>المنصة</th><th>التاريخ</th><th>موضوع الصوت</th><th>التفاعل</th><th>المشاهدات</th><th>فيه نص؟</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
@@ -125,7 +216,7 @@ window.MRPageTemplates = {
 
 <section class="card">
   <details class="audit-details">
-    <summary><span>الحسابات/الكيانات الخام (<span id="vaultEntitiesCount"></span>)</span></summary>
+    <summary><span>الحسابات والكيانات الخام (<span id="vaultEntitiesCount"></span>)</span></summary>
     <div class="details-content">
       <div class="table-wrap">
         <table class="data-table" id="vaultEntitiesTable">

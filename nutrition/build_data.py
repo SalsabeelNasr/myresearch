@@ -137,23 +137,34 @@ def main():
         pinned_set = set(json.loads(PINNED.read_text(encoding="utf-8")))
         print(f"Pinned shortcodes loaded: {len(pinned_set)}")
 
+    # Also load any repo-committed transcripts (sources/transcripts.json: {shortcode: text}).
+    TRANSCRIPTS_JSON = REPO / "sources" / "transcripts.json"
+    if TRANSCRIPTS_JSON.exists():
+        tj = json.loads(TRANSCRIPTS_JSON.read_text(encoding="utf-8"))
+        for sc, txt in tj.items():
+            transcripts.setdefault(sc, txt)
+        print(f"Repo transcripts loaded: {len(tj)} from transcripts.json")
+
     matched = 0          # posts matched to a transcript CSV row
     audio_classified = 0  # posts with a real (audio-derived) topic = overrides + transcript matches
     for p in posts:
         sc = shortcode(p.get("postUrl", ""))
+        txt = transcripts.get(sc)
+        if txt:  # attach the spoken text to the post even if topic comes from an override
+            p["transcript"] = {"text": txt, "segments": [], "matchedBy": "video-url"}
         if sc in overrides:
             p["topicAudio"] = overrides[sc]["topic"]
             p["topicSource"] = "audio"
             audio_classified += 1
+            if txt:
+                matched += 1
             continue
-        txt = transcripts.get(sc)
         if txt:
             matched += 1
             audio_classified += 1
             topic, _ = classify(txt)
             p["topicAudio"] = topic
             p["topicSource"] = "audio"
-            p["transcript"] = {"text": txt, "segments": [], "matchedBy": "video-url"}
         elif p.get("topicSource") != "audio":
             p["topicAudio"] = "—"
 
@@ -204,25 +215,154 @@ def main():
         )
         return audit, recs
 
-    # Split: pinned/evergreen posts vs recent posts. Pinned posts are an account's own
-    # hand-picked highlights (often a year old) that accumulate views — they skew a
-    # "current performance" ranking, so they get their own list and analysis.
-    recent_posts, pinned_posts = [], []
+    # Split off pinned/evergreen posts (an account's own hand-picked highlights, often a
+    # year old, that accumulate views and skew a "current" ranking).
+    non_pinned, pinned_posts = [], []
     for p in posts:
         sc = shortcode(p.get("postUrl", ""))
         p["pinned"] = sc in pinned_set
-        (pinned_posts if p["pinned"] else recent_posts).append(p)
-    for i, p in enumerate(recent_posts, 1):
+        (pinned_posts if p["pinned"] else non_pinned).append(p)
+
+    # Topic intel uses ALL non-pinned posts so no data is lost.
+    topicAudit, topicRecommendations = analyze(non_pinned)
+    _, pinnedTopics = analyze(pinned_posts)
+
+    # Strict last-90-days window, relative to the most recent scraped post (≈ the scrape date).
+    WINDOW = 90
+    _alldates = [p.get("date") for p in non_pinned if p.get("date")]
+    ref = max(_alldates) if _alldates else datetime.date.today().isoformat()
+    cutoff = (datetime.date.fromisoformat(ref) - datetime.timedelta(days=WINDOW)).isoformat()
+    current_posts = [p for p in non_pinned if p.get("date", "") >= cutoff]
+    older_posts = [p for p in non_pinned if p.get("date", "") < cutoff]  # high-engagement but >90d — kept, not lost
+    for i, p in enumerate(current_posts, 1):
+        p["rank"] = i
+    for i, p in enumerate(older_posts, 1):
         p["rank"] = i
     for i, p in enumerate(pinned_posts, 1):
         p["rank"] = i
 
-    topicAudit, topicRecommendations = analyze(recent_posts)
-    _, pinnedTopics = analyze(pinned_posts)
+    _cd = sorted(p.get("date") for p in current_posts if p.get("date"))
+    date_from = _cd[0] if _cd else cutoff
+    date_to = _cd[-1] if _cd else ref
 
-    _dates = sorted(p.get("date") for p in recent_posts if p.get("date"))
-    date_from = _dates[0] if _dates else ""
-    date_to = _dates[-1] if _dates else ""
+    # -------------------------------------------------------------------
+    # Benchmark: rank the business (curefit) vs the analyzed accounts on
+    # AVG engagement/post — a fair, size-independent metric.
+    # -------------------------------------------------------------------
+    BUSINESS = REPO / "sources" / "business.json"
+    benchmark = None
+    if BUSINESS.exists():
+        biz = json.loads(BUSINESS.read_text(encoding="utf-8"))
+        sp = biz["samplePosts"]
+        biz_eng = round(sum(p["engagement"] for p in sp) / len(sp), 1)
+        vv = [p["views"] for p in sp if p.get("views", 0) > 0]
+        biz_views = round(sum(vv) / len(vv)) if vv else 0
+
+        def tier_of(v):
+            if v >= 3000: return "النخبة"            # Elite
+            if v >= 1500: return "متقدّم"            # Advanced
+            if v >= 700:  return "متوسّط"            # Mid
+            if v >= 200:  return "ناشئ"              # Emerging
+            return "تحت خط المنافسة"                 # Below the competition line
+
+        rows = []
+        for x in doctors:
+            if x.get("analyzed") is False:
+                continue
+            pc = x.get("postCount") or 0
+            if pc == 0:
+                continue
+            rows.append({
+                "name": x["name"], "handle": x["name"],
+                "avgEng": round(x.get("totalEngagement", 0) / pc),
+                "followers": x.get("followers", 0), "isBusiness": False,
+            })
+        rows.append({
+            "name": biz["name"], "handle": biz["handle"], "avgEng": biz_eng,
+            "followers": biz["followers"], "isBusiness": True,
+        })
+        rows.sort(key=lambda r: -r["avgEng"])
+        for i, r in enumerate(rows, 1):
+            r["rank"] = i
+            r["tier"] = tier_of(r["avgEng"])
+        brank = next(r["rank"] for r in rows if r["isBusiness"])
+        analyzed_engs = sorted((r["avgEng"] for r in rows if not r["isBusiness"]))
+
+        # Tier ladder (who sits in each tier).
+        tier_order = ["النخبة", "متقدّم", "متوسّط", "ناشئ", "تحت خط المنافسة"]
+        tier_rng = {"النخبة": "≥ 3000", "متقدّم": "1500–3000", "متوسّط": "700–1500",
+                    "ناشئ": "200–700", "تحت خط المنافسة": "< 200"}
+        tiers = []
+        for tn in tier_order:
+            members = [{"name": r["name"], "avgEng": r["avgEng"], "isBusiness": r["isBusiness"]}
+                       for r in rows if r["tier"] == tn]
+            tiers.append({"name": tn, "range": tier_rng[tn], "count": len(members), "accounts": members})
+
+        # Realistic "reach-up" examples: top EDUCATIONAL viral posts from the emerging/mid
+        # tiers (just above the business), so curefit sees concrete templates that work and
+        # are realistically within reach. Max 2 per account, 6 total.
+        NON = {"Music / no speech", "Greeting / occasion", "Motivational", "Off-topic",
+               "Personal story / community", "Storytelling / community", "Religious / occasion",
+               "Motivational / community", "Motivational / trend", "Unclassified",
+               "Recipe / cooking", "Brand / product promo (peanut butter)",
+               "Brand / product promo (healthy chocolate)"}
+        reach_names = {r["name"] for r in rows
+                       if not r["isBusiness"] and biz_eng < r["avgEng"] <= 1500}
+        avg_by_name = {r["name"]: r["avgEng"] for r in rows}
+        tier_by_name = {r["name"]: r["tier"] for r in rows}
+        cands = [p for p in posts
+                 if p.get("account") in reach_names and eff_topic(p) not in NON
+                 and "promo" not in eff_topic(p).lower()]
+        cands.sort(key=lambda p: -p.get("engagement", 0))
+        reachable, per_acc = [], defaultdict(int)
+        for p in cands:
+            acc = p.get("account")
+            if per_acc[acc] >= 2:
+                continue
+            per_acc[acc] += 1
+            reachable.append({
+                "account": acc, "avgEng": avg_by_name.get(acc, 0), "tier": tier_by_name.get(acc, ""),
+                "exampleTopic": eff_topic(p), "exampleEng": p.get("engagement", 0),
+                "exampleViews": p.get("views", 0), "exampleUrl": p.get("postUrl", ""),
+            })
+            if len(reachable) >= 6:
+                break
+
+        # Full-market context: we profile-scraped all 108 accounts for followers.
+        # Engagement was deep-measured for the 30 (+ business); curefit sits mid-pack on
+        # audience size but rock-bottom on engagement — a content-type gap, not a reach gap.
+        full_market = None
+        FOLLOWERS108 = REPO / "sources" / "profiles108_followers.json"
+        if FOLLOWERS108.exists():
+            f108 = json.loads(FOLLOWERS108.read_text(encoding="utf-8"))
+            cf = biz["followers"]
+            fewer = sum(1 for v in f108.values() if 0 < v < cf)
+            full_market = {
+                "total": 108,
+                "followersRank": 108 - fewer,            # ~ position by audience size
+                "followers": cf,
+                "engagementMeasured": len([r for r in rows if not r["isBusiness"]]),
+                "note": "كل الـ108 حساب اتعملهم مسح للمتابعين. التفاعل اتقاس بعمق لأعلى 30 حساب. حسابنا في منتصف القايمة من حيث عدد المتابعين، لكنه في القاع من حيث التفاعل — يعني عندنا جمهور بس المحتوى هو المشكلة.",
+            }
+
+        benchmark = {
+            "tiers": tiers,
+            "fullMarket": full_market,
+            "business": {
+                "name": biz["name"], "handle": biz["handle"], "followers": biz["followers"],
+                "avgEng": biz_eng, "avgViews": biz_views, "sampleSize": len(sp),
+                "accounts": biz["accounts"], "note": biz.get("note", ""),
+                "engagementRatePct": round(biz_eng / biz["followers"] * 100, 3),
+                "tier": tier_of(biz_eng),
+            },
+            "ranking": rows,
+            "businessRank": brank,
+            "total": len(rows),
+            "lowestAnalyzed": analyzed_engs[0],
+            "medianAnalyzed": analyzed_engs[len(analyzed_engs) // 2],
+            "topAnalyzed": analyzed_engs[-1],
+            "reachable": reachable,
+        }
 
     data = {
         "meta": {
@@ -231,13 +371,16 @@ def main():
             "totalDoctors": len(doctors),
             "dateFrom": date_from,
             "dateTo": date_to,
+            "windowDays": WINDOW,
         },
         "doctors": doctors,
-        "posts": recent_posts,
+        "posts": current_posts,
+        "olderPosts": older_posts,
         "pinnedPosts": pinned_posts,
         "topicRecommendations": topicRecommendations,
         "pinnedTopics": pinnedTopics,
         "topicAudit": topicAudit,
+        "benchmark": benchmark,
         "transcripts": [{"shortcode": sc, "text": txt} for sc, txt in transcripts.items()],
         "coverage": {
             "totalPosts": base.get("meta_total", len(posts)),
@@ -248,15 +391,53 @@ def main():
             "transcriptsMatched": matched,
             "transcriptsUnmatched": max(0, len(transcripts) - matched),
             "pinnedPosts": len(pinned_posts),
+            "olderPosts": len(older_posts),
             "doctorsWithoutPosts": 0,
         },
-        "raw": {"posts": [], "entities": [], "topics": [], "transcripts": []},
+        "raw": {
+            # Vault = the full, untrimmed record of everything we collected.
+            "posts": [
+                {
+                    "Rank": str(p.get("rank", "")), "Account": p.get("account", ""),
+                    "Platform": p.get("platform", ""), "Date": p.get("date", ""),
+                    "Topic (from audio)": p.get("topicAudio", "—"),
+                    "Topic (from caption)": p.get("topicCaption", ""),
+                    "Caption": p.get("caption", ""), "Views": str(p.get("views", 0)),
+                    "Likes": str(p.get("likes", 0)), "Comments": str(p.get("comments", 0)),
+                    "Shares": str(p.get("shares", 0)), "Engagement": str(p.get("engagement", 0)),
+                    "Followers": str(p.get("followers", 0)), "URL": p.get("postUrl", ""),
+                }
+                for p in posts
+            ],
+            "entities": [
+                {
+                    "Name": d.get("name", ""),
+                    "Specialization": " • ".join(d.get("specializations", [])),
+                    "Platform": a.get("platform", ""), "URL": a.get("url", ""),
+                    "Confidence": a.get("confidence", ""),
+                }
+                for d in doctors for a in d.get("accounts", [])
+            ],
+            "topics": topicAudit,
+            "transcripts": [
+                {
+                    "videoUrl": p.get("postUrl", ""),
+                    "title": f"Video by {p.get('account', '')}",
+                    "description": p.get("caption", ""),
+                    "duration": 0,
+                    "thumbnail": "",
+                    "text": (p.get("transcript") or {}).get("text", ""),
+                    "segments": [],
+                }
+                for p in posts if (p.get("transcript") or {}).get("text")
+            ],
+        },
     }
     OUT.write_text("const DATA = " + json.dumps(data, ensure_ascii=False) + ";\n", encoding="utf-8")
     print(
-        f"nutrition/data.js written — {len(recent_posts)} recent posts, "
-        f"{len(pinned_posts)} pinned, {len(topicRecommendations)} recent topic recs, "
-        f"{len(pinnedTopics)} pinned topic recs."
+        f"nutrition/data.js written — {len(current_posts)} current (last {WINDOW}d, {date_from}..{date_to}), "
+        f"{len(older_posts)} older high-engagement, {len(pinned_posts)} pinned; "
+        f"{len(topicRecommendations)} topic recs."
     )
 
 

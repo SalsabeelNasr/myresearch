@@ -1,0 +1,5060 @@
+{
+ "doctors": [
+  {
+   "name": "dr.nadahefila",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.nadahefila/",
+     "confidence": "HIGH (519K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 234294,
+   "followers": 518991,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_eman_alshafey",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_eman_alshafey/",
+     "confidence": "HIGH (62K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 134569,
+   "followers": 62292,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_ola_mekhemer",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_ola_mekhemer/",
+     "confidence": "HIGH (1307K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 29,
+   "totalEngagement": 129531,
+   "followers": 1307329,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_emadslama",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_emadslama/",
+     "confidence": "HIGH (411K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 118239,
+   "followers": 411000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_summersheta",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_summersheta/",
+     "confidence": "HIGH (709K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 29,
+   "totalEngagement": 113421,
+   "followers": 708562,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dralaasabry.nourish",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dralaasabry.nourish/",
+     "confidence": "HIGH (106K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 28,
+   "totalEngagement": 100721,
+   "followers": 106000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "drwaadamin",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drwaadamin/",
+     "confidence": "HIGH (483K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 24,
+   "totalEngagement": 67508,
+   "followers": 482536,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.janaabdelnasser",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.janaabdelnasser/",
+     "confidence": "HIGH (21K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 65008,
+   "followers": 21000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dt.maryam.belal",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dt.maryam.belal/",
+     "confidence": "HIGH (56K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 55992,
+   "followers": 55800,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.moeatiya",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.moeatiya/",
+     "confidence": "HIGH (51K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 37780,
+   "followers": 51200,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.mona.el.gezeiry.nutrition",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.mona.el.gezeiry.nutrition/",
+     "confidence": "HIGH (161K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 37590,
+   "followers": 161000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.radwanabil",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.radwanabil/",
+     "confidence": "HIGH (204K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 19,
+   "totalEngagement": 36825,
+   "followers": 204000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.mohamed.massoud",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.mohamed.massoud/",
+     "confidence": "HIGH (31K followers)"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@mohamedmassoudabb",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 29,
+   "totalEngagement": 25855,
+   "followers": 30700,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.riham.eliraky",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.riham.eliraky/",
+     "confidence": "HIGH (303K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 28,
+   "totalEngagement": 25219,
+   "followers": 303000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.bassantzein",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.bassantzein/",
+     "confidence": "HIGH (45K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 22552,
+   "followers": 45300,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_neira_fahmy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_neira_fahmy/",
+     "confidence": "HIGH (46K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 27,
+   "totalEngagement": 21384,
+   "followers": 46300,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_shrouk_ali",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_shrouk_ali/",
+     "confidence": "HIGH (432K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 26,
+   "totalEngagement": 20956,
+   "followers": 432000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.rahmaayman",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.rahmaayman/",
+     "confidence": "HIGH (65K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 20738,
+   "followers": 64600,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_asmaa.hesham",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_asmaa.hesham/",
+     "confidence": "HIGH (772K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 26,
+   "totalEngagement": 20470,
+   "followers": 771836,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_mahmoud.elzayat",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_mahmoud.elzayat/",
+     "confidence": "HIGH (14K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 16249,
+   "followers": 13800,
+   "transcriptCount": 0
+  },
+  {
+   "name": "shadylabibnutrition",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/shadylabibnutrition/",
+     "confidence": "HIGH (275K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 18,
+   "totalEngagement": 16011,
+   "followers": 275000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_yasmiin.3laa",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_yasmiin.3laa/",
+     "confidence": "HIGH (4K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 14304,
+   "followers": 4001,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.rania.said.sadawy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.rania.said.sadawy/",
+     "confidence": "HIGH (356K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 12978,
+   "followers": 356000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr_shorouk_sayed",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_shorouk_sayed/",
+     "confidence": "HIGH (125K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 9573,
+   "followers": 125000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "muhammadnadyofficial",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/muhammadnadyofficial/",
+     "confidence": "HIGH (467K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 29,
+   "totalEngagement": 9336,
+   "followers": 467400,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.sarah_elzeheiry",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.sarah_elzeheiry/",
+     "confidence": "HIGH (214K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 26,
+   "totalEngagement": 9037,
+   "followers": 214000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "drrawda_nutritionist",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drrawda_nutritionist/",
+     "confidence": "HIGH (196K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 29,
+   "totalEngagement": 6171,
+   "followers": 196000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.diana.clinic",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.diana.clinic/",
+     "confidence": "HIGH (7K followers)"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/dr.diana.clinic1",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@dr.diana.clinic",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 30,
+   "totalEngagement": 3204,
+   "followers": 7300,
+   "transcriptCount": 0
+  },
+  {
+   "name": "dr.mohamedelshafie",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.mohamedelshafie/",
+     "confidence": "HIGH (133K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 26,
+   "totalEngagement": 1253,
+   "followers": 133000,
+   "transcriptCount": 0
+  },
+  {
+   "name": "elset_eldoctora",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/elset_eldoctora/",
+     "confidence": "HIGH (10K followers)"
+    }
+   ],
+   "image": "",
+   "postCount": 21,
+   "totalEngagement": 1114,
+   "followers": 10200,
+   "transcriptCount": 0
+  },
+  {
+   "name": "NSD Clinic",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/nsd.clinic/",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Heba Maheer",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/Hebaaamaheeeeer",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/profile.php?id=61571474592472",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Ahmed Abdelbaset",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.ahmedabdelbaset",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@drahmedabdelbaset",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/profile.php?id=61566545565331",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Mohab Yehya",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/Dr.mohabyehya",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Rania Yousry",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.rania_yousry",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/dr.rania.yousry",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@dr.rania_yousry",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Taha (El-3afia)",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/doctor_el3afia_dr_taha",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/profile.php?id=61576999485217",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/profile.php?id=61583910586537",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Nourhan Safwat",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/Dr.Nourhan.Sawirs",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@Dr.Nourhan.Safwat",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Doaa Zakaria",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.doaazakaria",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/doctor.doaa.zakaria",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Elsayed Abotorkya",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/abotorkyapt2",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/profile.php?id=61587052714454",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drrelsayedabotorkya",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Moataz Ramadan",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drmoatazramadan",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/DrMoatazRamadan",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@dr.moatazramadan",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Sara Aziz",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.saraaziz",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/dr.saraaziz",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@dr.saraaziz",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Azza Ibrahim",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.azza.ibrahim.clinic",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/Dr.AzzaIbrahimClinic",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Mohamed Husin",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.mohamed_husin",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/dr.mohamed.husin.nutritionist",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@dr_mohamed_husin",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Nancy Gamil",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drnancygamil/",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/Drnancygamil",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Ayman Elsharkawy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.aymanelsharkawy",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/aymanelsharkawy4",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Sara Shawki",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.sarashawki/",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/dr.sarashawki",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "Dr. Fayrouz Magdy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/DrFayrouzMagdy",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@fayrouzmagdy4",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "د. محمد نبيل عمارة",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/profile.php?id=100075657296584",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "followers": 0,
+   "transcriptCount": 0,
+   "analyzed": false
+  },
+  {
+   "name": "dr_sara_albosaty_clinic",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_sara_albosaty_clinic",
+     "confidence": "1,959 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 1959,
+   "analyzed": false
+  },
+  {
+   "name": "nutritionist_mariammedhat",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/nutritionist_mariammedhat",
+     "confidence": "من قائمة الـ108"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 0,
+   "analyzed": false
+  },
+  {
+   "name": "drnardinnabil_nutritionist",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drnardinnabil_nutritionist",
+     "confidence": "5,818 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 5818,
+   "analyzed": false
+  },
+  {
+   "name": "couch_monia",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/couch_monia",
+     "confidence": "821 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 821,
+   "analyzed": false
+  },
+  {
+   "name": "dr.yassen_motamed",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.yassen_motamed",
+     "confidence": "11,638 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 11638,
+   "analyzed": false
+  },
+  {
+   "name": "dr_amrelshorbagy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_amrelshorbagy",
+     "confidence": "5,463 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 5463,
+   "analyzed": false
+  },
+  {
+   "name": "dr.sarah.abdallah.sakr",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.sarah.abdallah.sakr",
+     "confidence": "37,705 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 37705,
+   "analyzed": false
+  },
+  {
+   "name": "dr.menna.elhabashy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.menna.elhabashy",
+     "confidence": "1,783 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 1783,
+   "analyzed": false
+  },
+  {
+   "name": "dr.nourhan_mohamed",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.nourhan_mohamed",
+     "confidence": "121,541 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 121541,
+   "analyzed": false
+  },
+  {
+   "name": "dr.ayanasr",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.ayanasr",
+     "confidence": "من قائمة الـ108"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 0,
+   "analyzed": false
+  },
+  {
+   "name": "dt.thekhadija_",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dt.thekhadija_",
+     "confidence": "27,103 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 27103,
+   "analyzed": false
+  },
+  {
+   "name": "drthabetshokry",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drthabetshokry",
+     "confidence": "1,256 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 1256,
+   "analyzed": false
+  },
+  {
+   "name": "dr_thomas_amgad",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_thomas_amgad",
+     "confidence": "627 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 627,
+   "analyzed": false
+  },
+  {
+   "name": "dr.amalafarag",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.amalafarag",
+     "confidence": "26,510 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 26510,
+   "analyzed": false
+  },
+  {
+   "name": "dr.nutrition_egypt_dnpeg",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.nutrition_egypt_dnpeg",
+     "confidence": "6,340 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 6340,
+   "analyzed": false
+  },
+  {
+   "name": "dr.ayoshaaa",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.ayoshaaa",
+     "confidence": "3,890 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 3890,
+   "analyzed": false
+  },
+  {
+   "name": "dr.eman.holistic.nutritionist",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.eman.holistic.nutritionist",
+     "confidence": "من قائمة الـ108"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 0,
+   "analyzed": false
+  },
+  {
+   "name": "dr.azza.matter",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.azza.matter",
+     "confidence": "4,186 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 4186,
+   "analyzed": false
+  },
+  {
+   "name": "dr.nermoz_nutritionist",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.nermoz_nutritionist",
+     "confidence": "12,215 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 12215,
+   "analyzed": false
+  },
+  {
+   "name": "dr_dinazayed",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_dinazayed",
+     "confidence": "34,987 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 34987,
+   "analyzed": false
+  },
+  {
+   "name": "dr_aya_ali_",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_aya_ali_",
+     "confidence": "11,380 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 11380,
+   "analyzed": false
+  },
+  {
+   "name": "dr_farahmehany",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_farahmehany",
+     "confidence": "7,302 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 7302,
+   "analyzed": false
+  },
+  {
+   "name": "dr_maimagdy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_maimagdy",
+     "confidence": "202,571 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 202571,
+   "analyzed": false
+  },
+  {
+   "name": "dr_reham_elsherbeiny",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_reham_elsherbeiny",
+     "confidence": "11,137 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 11137,
+   "analyzed": false
+  },
+  {
+   "name": "drheba.nutritionist",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drheba.nutritionist",
+     "confidence": "11,334 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 11334,
+   "analyzed": false
+  },
+  {
+   "name": "maianter_nutritionspecialist",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/maianter_nutritionspecialist",
+     "confidence": "14,049 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 14049,
+   "analyzed": false
+  },
+  {
+   "name": "dr_wallid_shamhot",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_wallid_shamhot",
+     "confidence": "187,669 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 187669,
+   "analyzed": false
+  },
+  {
+   "name": "dr.amiradiab",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.amiradiab",
+     "confidence": "13,086 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 13086,
+   "analyzed": false
+  },
+  {
+   "name": "drraniaelalfy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drraniaelalfy",
+     "confidence": "91,720 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 91720,
+   "analyzed": false
+  },
+  {
+   "name": "docelmearag_official",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/docelmearag_official",
+     "confidence": "71,154 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 71154,
+   "analyzed": false
+  },
+  {
+   "name": "dr.merna_hosny",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.merna_hosny",
+     "confidence": "6,025 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 6025,
+   "analyzed": false
+  },
+  {
+   "name": "dr.nadawasfy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.nadawasfy",
+     "confidence": "4,399 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 4399,
+   "analyzed": false
+  },
+  {
+   "name": "dr.ramysaeed",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.ramysaeed",
+     "confidence": "31,931 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 31931,
+   "analyzed": false
+  },
+  {
+   "name": "dr_nardeengamel",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_nardeengamel",
+     "confidence": "15,550 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 15550,
+   "analyzed": false
+  },
+  {
+   "name": "bynadadowidar",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/bynadadowidar",
+     "confidence": "60,289 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 60289,
+   "analyzed": false
+  },
+  {
+   "name": "dr.nihal.ghoneimy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.nihal.ghoneimy",
+     "confidence": "51,804 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 51804,
+   "analyzed": false
+  },
+  {
+   "name": "nutritionist_mai_gamal",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/nutritionist_mai_gamal",
+     "confidence": "من قائمة الـ108"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 0,
+   "analyzed": false
+  },
+  {
+   "name": "dr.niveenfahmy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.niveenfahmy",
+     "confidence": "20,232 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 20232,
+   "analyzed": false
+  },
+  {
+   "name": "dr.alassal",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.alassal",
+     "confidence": "1,896 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 1896,
+   "analyzed": false
+  },
+  {
+   "name": "nehal_elkoshairy_nutritionist",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/nehal_elkoshairy_nutritionist",
+     "confidence": "73,276 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 73276,
+   "analyzed": false
+  },
+  {
+   "name": "i_fit_clinics",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/i_fit_clinics",
+     "confidence": "14,949 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 14949,
+   "analyzed": false
+  },
+  {
+   "name": "diethubeg",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/diethubeg",
+     "confidence": "332,525 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 332525,
+   "analyzed": false
+  },
+  {
+   "name": "dr_maha_salem_official",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_maha_salem_official",
+     "confidence": "406,350 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 406350,
+   "analyzed": false
+  },
+  {
+   "name": "docfayrouz_official",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/docfayrouz_official",
+     "confidence": "43,458 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 43458,
+   "analyzed": false
+  },
+  {
+   "name": "dr.karim.elnagar",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.karim.elnagar",
+     "confidence": "20,010 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 20010,
+   "analyzed": false
+  },
+  {
+   "name": "dr_mariam.mashhour",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_mariam.mashhour",
+     "confidence": "184,374 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 184374,
+   "analyzed": false
+  },
+  {
+   "name": "dr.mo.essam",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.mo.essam",
+     "confidence": "186,248 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 186248,
+   "analyzed": false
+  },
+  {
+   "name": "dr.marwaothman.official",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.marwaothman.official",
+     "confidence": "27,510 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 27510,
+   "analyzed": false
+  },
+  {
+   "name": "drhishamalwaseif",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drhishamalwaseif",
+     "confidence": "64,754 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 64754,
+   "analyzed": false
+  },
+  {
+   "name": "drtarikofficial",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drtarikofficial",
+     "confidence": "8,328 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 8328,
+   "analyzed": false
+  },
+  {
+   "name": "dr_rowan_samer",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_rowan_samer",
+     "confidence": "215,633 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 215633,
+   "analyzed": false
+  },
+  {
+   "name": "dr.sara_el_toukhy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.sara_el_toukhy",
+     "confidence": "98,333 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 98333,
+   "analyzed": false
+  },
+  {
+   "name": "dr.yara_shabeeb",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.yara_shabeeb",
+     "confidence": "2,243 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 2243,
+   "analyzed": false
+  },
+  {
+   "name": "dr_emanrashad",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_emanrashad",
+     "confidence": "33,764 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 33764,
+   "analyzed": false
+  },
+  {
+   "name": "health_nutrition_thess",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/health_nutrition_thess",
+     "confidence": "27,435 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 27435,
+   "analyzed": false
+  },
+  {
+   "name": "eat_fit_clinic",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/eat_fit_clinic",
+     "confidence": "5,227 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 5227,
+   "analyzed": false
+  },
+  {
+   "name": "dr.ayat.mustafa_nutrition",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.ayat.mustafa_nutrition",
+     "confidence": "267,720 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 267720,
+   "analyzed": false
+  },
+  {
+   "name": "menna_fitstation",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/menna_fitstation",
+     "confidence": "من قائمة الـ108"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 0,
+   "analyzed": false
+  },
+  {
+   "name": "dr_hanan_alhussiny_official",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_hanan_alhussiny_official",
+     "confidence": "74,116 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 74116,
+   "analyzed": false
+  },
+  {
+   "name": "dr.zeinab.mekhemer_",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.zeinab.mekhemer_",
+     "confidence": "30,522 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 30522,
+   "analyzed": false
+  },
+  {
+   "name": "gohealthyclinic_dr.dinaselim",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/gohealthyclinic_dr.dinaselim",
+     "confidence": "5,410 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 5410,
+   "analyzed": false
+  },
+  {
+   "name": "dr_passant_a_saleh",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_passant_a_saleh",
+     "confidence": "405,225 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 405225,
+   "analyzed": false
+  },
+  {
+   "name": "dr.moataz.hegazy",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.moataz.hegazy",
+     "confidence": "89,727 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 89727,
+   "analyzed": false
+  },
+  {
+   "name": "dryasmin_clinic",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dryasmin_clinic",
+     "confidence": "6,759 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 6759,
+   "analyzed": false
+  },
+  {
+   "name": "dr.saramekky",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr.saramekky",
+     "confidence": "202,916 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 202916,
+   "analyzed": false
+  },
+  {
+   "name": "drmoatazramadan765",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drmoatazramadan765",
+     "confidence": "9,864 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 9864,
+   "analyzed": false
+  },
+  {
+   "name": "dr_mhussein",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dr_mhussein",
+     "confidence": "1,753 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 1753,
+   "analyzed": false
+  },
+  {
+   "name": "drabdelfatahdiet",
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drabdelfatahdiet",
+     "confidence": "72,356 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 72356,
+   "analyzed": false
+  }
+ ],
+ "posts": [
+  {
+   "rank": 1,
+   "account": "dr_eman_alshafey",
+   "platform": "Instagram",
+   "date": "2024-11-25",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ الامراض مش بتتكون بين يوم وليلة .. تكرار الخطأ على مدار سنين بيرصل لنتيجة صعب التعامل معاها بعد كدة 🚨 د إيمان الشافعي Diet right team⁩⁩⁩⁩⁩⁩⁩",
+   "views": 4437784,
+   "likes": 119395,
+   "comments": 629,
+   "shares": 0,
+   "engagement": 120024,
+   "followers": 62292,
+   "postUrl": "https://www.instagram.com/p/DCylh1DO7yB/",
+   "transcript": null
+  },
+  {
+   "rank": 2,
+   "account": "dr_emadslama",
+   "platform": "Instagram",
+   "date": "2026-02-20",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "سبب غير متوقع لانتشار تضخم البروستاتا😱نهانا عنه الرسول‼️ عادة يومية ممكن تسبب لك مشاكل للبروستاتا! ⚠️ ناصح كان مستسهل الموضوع، بس حكيم صدمه بحقائق علمية العلم ",
+   "views": 5006331,
+   "likes": 81522,
+   "comments": 650,
+   "shares": 0,
+   "engagement": 82172,
+   "followers": 411000,
+   "postUrl": "https://www.instagram.com/p/DU_2A6wiKNc/",
+   "transcript": null
+  },
+  {
+   "rank": 3,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-16",
+   "topicAudio": "—",
+   "topicCaption": "Sugar & sweeteners",
+   "topicSource": "caption",
+   "caption": "أفضل سكر عالأرض✅ وفرتهولكوا على @herbal.doses . . . #دايت #diet #healthy #weightloss #healthylifestyle",
+   "views": 1517023,
+   "likes": 73876,
+   "comments": 2649,
+   "shares": 0,
+   "engagement": 76525,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXMGoqaj95k/",
+   "transcript": null
+  },
+  {
+   "rank": 4,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2024-10-25",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "تامن حلقه من سلسلة حلقات حمل صحي💚 الأكله ال كان بيحبها الرسول عليه الصلاة والسلام💚 شوربة اليقطين كنز لكل حامل ✅ المكونات: نص ثمرة يقطين بصله جزره قطعة زنجبيل ",
+   "views": 1338996,
+   "likes": 58761,
+   "comments": 300,
+   "shares": 0,
+   "engagement": 59061,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DBi1pYtNhPO/",
+   "transcript": null
+  },
+  {
+   "rank": 5,
+   "account": "dralaasabry.nourish",
+   "platform": "Instagram",
+   "date": "2025-06-17",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "البنات في التلاتينات الجزء الاول بتعملي كام حاجة من النقاط دي في ال٣٠ ؟",
+   "views": 205973,
+   "likes": 44968,
+   "comments": 679,
+   "shares": 0,
+   "engagement": 45647,
+   "followers": 106000,
+   "postUrl": "https://www.instagram.com/p/DLA937lzHaj/",
+   "transcript": null
+  },
+  {
+   "rank": 6,
+   "account": "dr.moeatiya",
+   "platform": "Instagram",
+   "date": "2025-07-01",
+   "topicAudio": "—",
+   "topicCaption": "Motivational",
+   "topicSource": "caption",
+   "caption": "إيجابية، لطيفة، متواضعة وضحكتها ما بتهزرش هاد سر حبنا وحبكم ل الراقية @yasmine_sabri تشرفنا بزيارتها اليوم بعيادة @dao_dubai #ياسمين #dubai #aesthetic #dermatol",
+   "views": 303213,
+   "likes": 33374,
+   "comments": 486,
+   "shares": 0,
+   "engagement": 33860,
+   "followers": 51200,
+   "postUrl": "https://www.instagram.com/p/DLkIAvdPR4g/",
+   "transcript": null
+  },
+  {
+   "rank": 7,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-30",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "ما بعد الطيبات‼️ . . . #دايت #تخسيس #healthy #healthylifestyle #weightlosstips",
+   "views": 548562,
+   "likes": 31401,
+   "comments": 1037,
+   "shares": 0,
+   "engagement": 32438,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXv_cAmh_lC/",
+   "transcript": null
+  },
+  {
+   "rank": 8,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2024-08-08",
+   "topicAudio": "—",
+   "topicCaption": "Metabolism",
+   "topicSource": "caption",
+   "caption": "حرقك ضعيف ليه⁉️⁉️⁉️ . . . #دايت #دايت_صحي #تخسيس #تخسيس_الوزن #تخسيس_البطن #تغذية #diet #weightlossjourney #weight #healthy #healthylifestyle",
+   "views": 804158,
+   "likes": 26457,
+   "comments": 434,
+   "shares": 0,
+   "engagement": 26891,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/C-aMFkNstEH/",
+   "transcript": null
+  },
+  {
+   "rank": 9,
+   "account": "drwaadamin",
+   "platform": "Instagram",
+   "date": "2024-11-25",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "فراخ بانيه صحية😍❤️",
+   "views": 167450,
+   "likes": 6559,
+   "comments": 19710,
+   "shares": 0,
+   "engagement": 26269,
+   "followers": 482536,
+   "postUrl": "https://www.instagram.com/p/DCyz2uhMRSm/",
+   "transcript": null
+  },
+  {
+   "rank": 10,
+   "account": "dr_emadslama",
+   "platform": "Instagram",
+   "date": "2026-03-26",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "سبب وإعجاز علمي غير متوقع😱لصلاه الفجر💪#_dr_emad_slama #_دكتورعمادسلامه #_الشفا_خانه #صحة #عماد_سلامة",
+   "views": 553123,
+   "likes": 23430,
+   "comments": 534,
+   "shares": 0,
+   "engagement": 23964,
+   "followers": 411000,
+   "postUrl": "https://www.instagram.com/p/DWWVsuyiBHF/",
+   "transcript": null
+  },
+  {
+   "rank": 11,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-12",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "فاللهم .. 💚",
+   "views": 128904,
+   "likes": 20852,
+   "comments": 270,
+   "shares": 0,
+   "engagement": 21122,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYP6T8LtXUG/",
+   "transcript": null
+  },
+  {
+   "rank": 12,
+   "account": "dr.riham.eliraky",
+   "platform": "Instagram",
+   "date": "2025-10-30",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "The wait is almost over… In just 2 days, the world’s eyes turn to Egypt. From the land where it all began , Egypt dazzles the world with the Grand Egyptian Muse",
+   "views": 0,
+   "likes": 19160,
+   "comments": 44,
+   "shares": 0,
+   "engagement": 19204,
+   "followers": 303000,
+   "postUrl": "https://www.instagram.com/p/DQcNrYcio9L/",
+   "transcript": null
+  },
+  {
+   "rank": 13,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-22",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "الاعتدال يا جماعة🤝 . . . #دايت #diet #healthy #weightloss #healthylifestyle",
+   "views": 261181,
+   "likes": 16600,
+   "comments": 877,
+   "shares": 0,
+   "engagement": 17477,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXbltZQDyUV/",
+   "transcript": null
+  },
+  {
+   "rank": 14,
+   "account": "dralaasabry.nourish",
+   "platform": "Instagram",
+   "date": "2025-07-04",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "استنوا الجزء الثالث 🤝 دي نصائح ما بعد الثلاثين 🤓و دة جزء الثاني #ابوظبي #الامارات #nourish #دبي #صحة #ابوظبي🇦🇪 بتعملي كام حاجة من النصائح دي ؟",
+   "views": 95353,
+   "likes": 14202,
+   "comments": 373,
+   "shares": 0,
+   "engagement": 14575,
+   "followers": 106000,
+   "postUrl": "https://www.instagram.com/p/DLsTHpyIioJ/",
+   "transcript": null
+  },
+  {
+   "rank": 15,
+   "account": "dr.mohamed.massoud",
+   "platform": "Instagram",
+   "date": "2025-12-27",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "😅😅",
+   "views": 443819,
+   "likes": 14015,
+   "comments": 210,
+   "shares": 0,
+   "engagement": 14225,
+   "followers": 30700,
+   "postUrl": "https://www.instagram.com/p/DSxIXuCjZ8V/",
+   "transcript": null
+  },
+  {
+   "rank": 16,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-01-30",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "قدر ولطف #دايت #تخسيس #صحي #اكسبلور #explore",
+   "views": 251834,
+   "likes": 13504,
+   "comments": 406,
+   "shares": 0,
+   "engagement": 13910,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DUJzaj7CImr/",
+   "transcript": null
+  },
+  {
+   "rank": 17,
+   "account": "dr_yasmiin.3laa",
+   "platform": "Instagram",
+   "date": "2026-05-13",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "مش كفاية عبث بقى والا ايه؟! #nutrition #تغذیه #تغذية_صحية",
+   "views": 531042,
+   "likes": 11536,
+   "comments": 1637,
+   "shares": 0,
+   "engagement": 13173,
+   "followers": 4001,
+   "postUrl": "https://www.instagram.com/p/DYSQYa7I_rA/",
+   "transcript": null
+  },
+  {
+   "rank": 18,
+   "account": "dr.bassantzein",
+   "platform": "Instagram",
+   "date": "2025-07-30",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ ( وَآخِرُ دَعْوَاهُمْ أَنِ الْحَمْدُ لِلَّهِ رَبِّ الْعَالَمِينَ ) الحمد لله انتهيت من دراسة دبلومة التغذيه العلاجيه علي خير اللهم وفقني لما تحب وترضي ♥️ Offi",
+   "views": 0,
+   "likes": 12954,
+   "comments": 50,
+   "shares": 0,
+   "engagement": 13004,
+   "followers": 45300,
+   "postUrl": "https://www.instagram.com/p/DMvE804ofIK/",
+   "transcript": null
+  },
+  {
+   "rank": 19,
+   "account": "dr_mahmoud.elzayat",
+   "platform": "Instagram",
+   "date": "2025-11-23",
+   "topicAudio": "—",
+   "topicCaption": "Bread & carbs (comparison)",
+   "topicSource": "caption",
+   "caption": "ايه افضل انواع العيش ( الخبز ) للدايت ولحالتنا الصحيه 🍞🥖 قولي في الكومنتات انت بتاكل انهي نوع فيهم ؟ #دايت #تخسيس #weightlossdiet #dr_mahmoudelzayat #عيش",
+   "views": 206596,
+   "likes": 12338,
+   "comments": 341,
+   "shares": 0,
+   "engagement": 12679,
+   "followers": 13800,
+   "postUrl": "https://www.instagram.com/p/DRZ5WbxjD9j/",
+   "transcript": null
+  },
+  {
+   "rank": 20,
+   "account": "dralaasabry.nourish",
+   "platform": "Instagram",
+   "date": "2026-01-09",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "حمد الله عل سلامة 😁 ان شاء الله الي جي احسن و باقي الدول هتقلد بس تقليد مفيد المرة دي 🤩 #صحة #معلومات #علم #غذاء #nourish #ابوظبي🇦🇪 #الامارات #السعودية #الد",
+   "views": 168097,
+   "likes": 11560,
+   "comments": 196,
+   "shares": 0,
+   "engagement": 11756,
+   "followers": 106000,
+   "postUrl": "https://www.instagram.com/p/DTTSYeuk0j8/",
+   "transcript": null
+  },
+  {
+   "rank": 21,
+   "account": "drwaadamin",
+   "platform": "Instagram",
+   "date": "2025-06-16",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Let me bless your life with Vow🍫❤️ There is the surprise I have been hiding for a while, and God knows what it took to get here. I have always loved Chocolate,",
+   "views": 63801,
+   "likes": 10610,
+   "comments": 818,
+   "shares": 0,
+   "engagement": 11428,
+   "followers": 482536,
+   "postUrl": "https://www.instagram.com/p/DK9fi2csAco/",
+   "transcript": null
+  },
+  {
+   "rank": 22,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-25",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "بطلوا تعملوا للقرف سعر🤝 . . . #دايت #تخسيس #healthy #diet #healthylifestyle",
+   "views": 175801,
+   "likes": 10403,
+   "comments": 594,
+   "shares": 0,
+   "engagement": 10997,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXjHbPvR2Wi/",
+   "transcript": null
+  },
+  {
+   "rank": 23,
+   "account": "dt.maryam.belal",
+   "platform": "Instagram",
+   "date": "2026-03-30",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "💌 @dt.maryam.belal . #اكل_صحي #حياة_صحية #healthylifestyle #healthyfood",
+   "views": 37192,
+   "likes": 10858,
+   "comments": 69,
+   "shares": 0,
+   "engagement": 10927,
+   "followers": 55800,
+   "postUrl": "https://www.instagram.com/p/DWgfUM4jcTP/",
+   "transcript": null
+  },
+  {
+   "rank": 24,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-01-16",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "❌ المشكلة مش في الصيام ❌ المشكلة في الدايت اللي مع الصيام أي نظام غذائي قاسي أو عشوائي ضغط على الجسم لكن: ضغط حرمان غذائي غير محسوب + ضغط صيام جاف/متقطع ارتفاع ",
+   "views": 182699,
+   "likes": 8717,
+   "comments": 1983,
+   "shares": 0,
+   "engagement": 10700,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DTkl8OkiAwX/",
+   "transcript": null
+  },
+  {
+   "rank": 25,
+   "account": "dt.maryam.belal",
+   "platform": "Instagram",
+   "date": "2026-02-04",
+   "topicAudio": "—",
+   "topicCaption": "Appetite & satiety",
+   "topicSource": "caption",
+   "caption": "الصيام بيساعد اجسامنا على تحسين حساسية الإنسولين وتنظيم الشهية وتقليل الأكل العاطفي وبيعطي الجهاز الهضمي فرصة ليرتاح رمضان شهر مبارك لتزكية النفس وضبط الشهوات و",
+   "views": 0,
+   "likes": 10575,
+   "comments": 44,
+   "shares": 0,
+   "engagement": 10619,
+   "followers": 55800,
+   "postUrl": "https://www.instagram.com/p/DUWCdF4jWfI/",
+   "transcript": null
+  },
+  {
+   "rank": 26,
+   "account": "dr.mohamed.massoud",
+   "platform": "Instagram",
+   "date": "2026-04-12",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "#fyp",
+   "views": 192010,
+   "likes": 8820,
+   "comments": 345,
+   "shares": 0,
+   "engagement": 9165,
+   "followers": 30700,
+   "postUrl": "https://www.instagram.com/p/DXBvgVlDckl/",
+   "transcript": null
+  },
+  {
+   "rank": 27,
+   "account": "dr.radwanabil",
+   "platform": "Instagram",
+   "date": "2026-03-12",
+   "topicAudio": "—",
+   "topicCaption": "GLP-1 / weight-loss injections",
+   "topicSource": "caption",
+   "caption": "تحبوا نتكلم عن ايه, يالا اختارو شوفوا الريدز اللي جايه و مستنيه اسئلتكم #مونجارو #mounjaro @myjourney.eg",
+   "views": 240262,
+   "likes": 9002,
+   "comments": 120,
+   "shares": 0,
+   "engagement": 9122,
+   "followers": 204000,
+   "postUrl": "https://www.instagram.com/p/DVyRMLsjFsd/",
+   "transcript": null
+  },
+  {
+   "rank": 28,
+   "account": "dralaasabry.nourish",
+   "platform": "Instagram",
+   "date": "2025-07-19",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "⁨ تمرينات منزلية سهلة و مؤثرة على زيادة الكتلة العضلية 💪🏼 فوائد تمرينات المقاومة اليومية: ١- زيادة القوة العضلية ٢- علاج مقاومة الانسولين في العضلات ٣- بناء ع",
+   "views": 210421,
+   "likes": 8470,
+   "comments": 287,
+   "shares": 0,
+   "engagement": 8757,
+   "followers": 106000,
+   "postUrl": "https://www.instagram.com/p/DMTYrCdIdXm/",
+   "transcript": null
+  },
+  {
+   "rank": 29,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-05-10",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "اساس علاج مقاومة الإنسولين هو تغيير نمط حياتك للنمط الصحي ✅ متسمعوش لحد يقولك تعايش معاها تأقلم معاها مش بتتعالج .. دي اي كلام ❌ مقاومة الانسولين بتتعالج وبشكل ",
+   "views": 724515,
+   "likes": 8201,
+   "comments": 170,
+   "shares": 0,
+   "engagement": 8371,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DYLBAkGMw_e/",
+   "transcript": null
+  },
+  {
+   "rank": 30,
+   "account": "dt.maryam.belal",
+   "platform": "Instagram",
+   "date": "2026-05-19",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Daily routine vlog 💫 الحمد لله 💌 @dt.maryam.belal . . #اكل_صحي #healthylifestyle #تطوير_الذات #فطور #healthy",
+   "views": 23917,
+   "likes": 8264,
+   "comments": 39,
+   "shares": 0,
+   "engagement": 8303,
+   "followers": 55800,
+   "postUrl": "https://www.instagram.com/p/DYhoF41N72q/",
+   "transcript": null
+  },
+  {
+   "rank": 31,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-05-19",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "لا تعليق‼️ . . . #دايت #diet #weightloss #healthylifestyle #healthy",
+   "views": 126905,
+   "likes": 7591,
+   "comments": 519,
+   "shares": 0,
+   "engagement": 8110,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DYhAuj8vAvO/",
+   "transcript": null
+  },
+  {
+   "rank": 32,
+   "account": "dr.radwanabil",
+   "platform": "Instagram",
+   "date": "2026-03-03",
+   "topicAudio": "—",
+   "topicCaption": "GLP-1 / weight-loss injections",
+   "topicSource": "caption",
+   "caption": "اكتبولي بقاة 😆و فضفضوا #مونجارو #ريتاتروتيد #mounjaro",
+   "views": 453467,
+   "likes": 7749,
+   "comments": 135,
+   "shares": 0,
+   "engagement": 7884,
+   "followers": 204000,
+   "postUrl": "https://www.instagram.com/p/DVbyuO8DVZ8/",
+   "transcript": null
+  },
+  {
+   "rank": 33,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-15",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "عادات ملهاش لازمة❌ . . . #دايت #تخسيس #diet #healthy #healthylifestyle",
+   "views": 106948,
+   "likes": 7485,
+   "comments": 115,
+   "shares": 0,
+   "engagement": 7600,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXJfngAj-Fx/",
+   "transcript": null
+  },
+  {
+   "rank": 34,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-01-18",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "😂 #دايت #تخسيس #صحي #اكسبلور #explore",
+   "views": 169847,
+   "likes": 7367,
+   "comments": 184,
+   "shares": 0,
+   "engagement": 7551,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DTqylQEDAxD/",
+   "transcript": null
+  },
+  {
+   "rank": 35,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-04-28",
+   "topicAudio": "—",
+   "topicCaption": "Sleep & stress",
+   "topicSource": "caption",
+   "caption": "Huawei Band 11 Series It tracks & improve your workouts, sleep, emotions & overall health accurately. Watch Experience & Band Comfort, Buy Now! #HUAWEIBand11Pro",
+   "views": 566136,
+   "likes": 7223,
+   "comments": 123,
+   "shares": 0,
+   "engagement": 7346,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DXru3YvCDzi/",
+   "transcript": null
+  },
+  {
+   "rank": 36,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-03-07",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "If you think medium rare steak is “blood” we need to talk 🥩 اقتنعت؟",
+   "views": 207769,
+   "likes": 7090,
+   "comments": 65,
+   "shares": 0,
+   "engagement": 7155,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DVl4LBciBQk/",
+   "transcript": null
+  },
+  {
+   "rank": 37,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-21",
+   "topicAudio": "—",
+   "topicCaption": "Motivational",
+   "topicSource": "caption",
+   "caption": "من النهارده لحد يوم عرفه متحرمش نفسك من الدعوات دي 💚 #د_علا_مخيمر",
+   "views": 100504,
+   "likes": 6918,
+   "comments": 61,
+   "shares": 0,
+   "engagement": 6979,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYnMLCotuR4/",
+   "transcript": null
+  },
+  {
+   "rank": 38,
+   "account": "dr_emadslama",
+   "platform": "Instagram",
+   "date": "2026-02-19",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "خطوره بالغه عند تناول الزبادي‼️علي السحور❌احذر هذه العاده الخطيره🔥#_dr_emad_slama #_دكتورعمادسلامه #_الشفا_خانه #دكتور_عماد_سلامة #صحة",
+   "views": 200216,
+   "likes": 6484,
+   "comments": 330,
+   "shares": 0,
+   "engagement": 6814,
+   "followers": 411000,
+   "postUrl": "https://www.instagram.com/p/DU9Sz8pCB8t/",
+   "transcript": null
+  },
+  {
+   "rank": 39,
+   "account": "dr_shorouk_sayed",
+   "platform": "Instagram",
+   "date": "2025-06-27",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "بذور الشيا و فوايد بذور الشيا واجابات كل الأسئلة عن بذور الشيا .. وليه كل مجتمعات التغذية بتنصح ببذور الشيا #دايت #تخسيس #healthylifestyle #نمط_حياة_صحي #صحة #ا",
+   "views": 67672,
+   "likes": 6356,
+   "comments": 350,
+   "shares": 0,
+   "engagement": 6706,
+   "followers": 125000,
+   "postUrl": "https://www.instagram.com/p/DLZauAJsgR5/",
+   "transcript": null
+  },
+  {
+   "rank": 40,
+   "account": "dralaasabry.nourish",
+   "platform": "Instagram",
+   "date": "2026-05-18",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "استنوا تفاصيل اكتر عن طريقة العلاج المظبوطة من المتخصصين لتكيسات المبايض و مقاومة الانسولين🤝#pcos #pmos #weightlossdiet #insulineresistant #womensupportingwome",
+   "views": 90588,
+   "likes": 6520,
+   "comments": 135,
+   "shares": 0,
+   "engagement": 6655,
+   "followers": 106000,
+   "postUrl": "https://www.instagram.com/p/DYeSCCVomw9/",
+   "transcript": null
+  },
+  {
+   "rank": 41,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-04-16",
+   "topicAudio": "—",
+   "topicCaption": "Appetite & satiety",
+   "topicSource": "caption",
+   "caption": "شوفي الفيديو قبل ما تطلبي فطار بكرة ليه الفول خدعة لو عايزة تشبعي اكتر او تخسي !",
+   "views": 182220,
+   "likes": 6421,
+   "comments": 90,
+   "shares": 0,
+   "engagement": 6511,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DXNA-SliGad/",
+   "transcript": null
+  },
+  {
+   "rank": 42,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-17",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "جربوا الميكس ده✅هتلاقوا كل المكونات عندي ف @herbal.doses . . . #دايت #تخسيس #healthy #دايت_صحي #healthylifestyle",
+   "views": 122812,
+   "likes": 6122,
+   "comments": 243,
+   "shares": 0,
+   "engagement": 6365,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXOpz4gj8Zp/",
+   "transcript": null
+  },
+  {
+   "rank": 43,
+   "account": "dr_eman_alshafey",
+   "platform": "Instagram",
+   "date": "2024-12-01",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ ⁨ تخيلي ممكن تكون بتحصلك او لأي سيدة تعرفيها من غير ما تاخد بالها شير الفيديو عشان تساعدي ✅🙏 د ايمان الشافعي تغيرات بسيطة تعمل فرق كب",
+   "views": 914118,
+   "likes": 6098,
+   "comments": 129,
+   "shares": 0,
+   "engagement": 6227,
+   "followers": 62292,
+   "postUrl": "https://www.instagram.com/p/DDCzKKJuzmg/",
+   "transcript": null
+  },
+  {
+   "rank": 44,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-20",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "الحمدلله وفرتلكوا نوع زيت زيتون ممتاز في @herbal.doses 🤍 . . . #دايت #تخسيس #diet #healthy #healthylifestyle",
+   "views": 126296,
+   "likes": 5949,
+   "comments": 201,
+   "shares": 0,
+   "engagement": 6150,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXWVJPaj2Ju/",
+   "transcript": null
+  },
+  {
+   "rank": 45,
+   "account": "dt.maryam.belal",
+   "platform": "Instagram",
+   "date": "2026-04-28",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "وجباتي الصحية للأسابيع الماضية 💕 ‏@dt.maryam.belal طريقة الوافل الصحي 🧇🍓 ٣ معالق من طحين الحمص او طحين الحبة الكاملة بيضة ٣٠ مل حليب كامل الدسم نصف علبة لبن ",
+   "views": 0,
+   "likes": 6098,
+   "comments": 48,
+   "shares": 0,
+   "engagement": 6146,
+   "followers": 55800,
+   "postUrl": "https://www.instagram.com/p/DXr34b1ja9t/",
+   "transcript": null
+  },
+  {
+   "rank": 46,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-05-30",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Visceral fat الدهون الحشوية ايه نوع بطنك؟",
+   "views": 216842,
+   "likes": 5605,
+   "comments": 437,
+   "shares": 0,
+   "engagement": 6042,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DY-Ew40I-4s/",
+   "transcript": null
+  },
+  {
+   "rank": 47,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-02-28",
+   "topicAudio": "—",
+   "topicCaption": "Metabolism",
+   "topicSource": "caption",
+   "caption": "لما الجسم يبدأ في حرق السكر الزائد هتظهر علامات واضحة خاصة في الايام الاولي من اتباعك لنظام غذائي مثلا صيام متقطع فهتظهر عندك العلامات دي 👇🏻 ١- انخفاض الشهية ",
+   "views": 483140,
+   "likes": 5436,
+   "comments": 170,
+   "shares": 0,
+   "engagement": 5606,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DVSWe1GjBX2/",
+   "transcript": null
+  },
+  {
+   "rank": 48,
+   "account": "dr_shrouk_ali",
+   "platform": "Instagram",
+   "date": "2026-05-19",
+   "topicAudio": "—",
+   "topicCaption": "Hormonal health",
+   "topicSource": "caption",
+   "caption": "“أوميجا 3: صديقة البنات رقم 1 لصحة الهرمونات!” . تعالوا نعرف ليه لازم كل بنت تاخد omega 3؟",
+   "views": 0,
+   "likes": 2422,
+   "comments": 3085,
+   "shares": 0,
+   "engagement": 5507,
+   "followers": 432000,
+   "postUrl": "https://www.instagram.com/p/DYiA8stDdVT/",
+   "transcript": null
+  },
+  {
+   "rank": 49,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-05-20",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "ابلع العافية",
+   "views": 121828,
+   "likes": 5102,
+   "comments": 190,
+   "shares": 0,
+   "engagement": 5292,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DYkVI2Qo1kL/",
+   "transcript": null
+  },
+  {
+   "rank": 50,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-27",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "مسرطنات مجموعة أولى‼️ . . . #دايت #diet #healthy #healthylifestyle #weightloss",
+   "views": 82977,
+   "likes": 5249,
+   "comments": 42,
+   "shares": 0,
+   "engagement": 5291,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXoTi6aj_WZ/",
+   "transcript": null
+  },
+  {
+   "rank": 51,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-04-12",
+   "topicAudio": "—",
+   "topicCaption": "Sugar & sweeteners",
+   "topicSource": "caption",
+   "caption": "Diet friendly sushi ! 🍣 Ingredients: 100 G Egyptian rice (add vinegar and stevia sugar) 100 G smoked salmon 100 G avocado 30 G cream cheese Nori seaweed Calori",
+   "views": 112829,
+   "likes": 5209,
+   "comments": 38,
+   "shares": 0,
+   "engagement": 5247,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DXCNPoCCCnm/",
+   "transcript": null
+  },
+  {
+   "rank": 52,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-01-10",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ ⁨ ⁨ ١- التعب والإرهاق المستمر حتي لو بتنامي كويس ٢-زيادة في الوزن او ثباته رغم قلة الاكل ٣- مشاكل في البشرة ( حبوب / احمرار / اكزيما ) ٤-ضعف التركيز وضبابية ا",
+   "views": 544803,
+   "likes": 4826,
+   "comments": 380,
+   "shares": 0,
+   "engagement": 5206,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DTWPB4mDFQb/",
+   "transcript": null
+  },
+  {
+   "rank": 53,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-04-02",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "مشروبات بسيطة… لكن تأثيرها على الكحة والبلغم والتنفس أقوى مما تتخيل ! *الاعشاب مساعد لتهدئة الاعراض وليست بديل للأدوية او استشارة طبيب متخصص* اختار نوع مشروب او",
+   "views": 94196,
+   "likes": 4943,
+   "comments": 22,
+   "shares": 0,
+   "engagement": 4965,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DWojrZSiJ7Q/",
+   "transcript": null
+  },
+  {
+   "rank": 54,
+   "account": "dr.rahmaayman",
+   "platform": "Instagram",
+   "date": "2024-12-30",
+   "topicAudio": "—",
+   "topicCaption": "PCOS / ovarian health",
+   "topicSource": "caption",
+   "caption": "البلاستيك فيه مادة اسمها ال BPA اسمه الاستروجين الكاذب واللي ليها علاقة قوووية بتكيس المبايض 1️⃣ بيلخبط مستقبلات الاستروجين في جسمنا واللي موجودين في المبايض - ",
+   "views": 171114,
+   "likes": 4816,
+   "comments": 93,
+   "shares": 0,
+   "engagement": 4909,
+   "followers": 64600,
+   "postUrl": "https://www.instagram.com/p/DENhJ7jOtQ1/",
+   "transcript": null
+  },
+  {
+   "rank": 55,
+   "account": "dr.riham.eliraky",
+   "platform": "Instagram",
+   "date": "2025-09-05",
+   "topicAudio": "—",
+   "topicCaption": "Cycle / menstrual health",
+   "topicSource": "caption",
+   "caption": "⁨ ايه اكتر حاجه فيهم مبتستغنيش عنها كل يوم ! 😮 كتير من الستات بيأكلوا صحي لكن لسه بيعانوا من: تقلبات مزاجية 😩 اضطراب في الدورة الشهرية 🩸 كسل وتعب على طول 💤 ",
+   "views": 0,
+   "likes": 4783,
+   "comments": 100,
+   "shares": 0,
+   "engagement": 4883,
+   "followers": 303000,
+   "postUrl": "https://www.instagram.com/p/DOOKzWhCqZi/",
+   "transcript": null
+  },
+  {
+   "rank": 56,
+   "account": "dt.maryam.belal",
+   "platform": "Instagram",
+   "date": "2026-03-15",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "وجباتي الصحية للأسابيع الماضية 💕 @dt.maryam.belal . . #اكل #تغذية #حياة_صحية #دايت #اكل_صحي #وصفات #healthfood #healthyeating #healthy #healthylifestyle #healt",
+   "views": 0,
+   "likes": 4852,
+   "comments": 30,
+   "shares": 0,
+   "engagement": 4882,
+   "followers": 55800,
+   "postUrl": "https://www.instagram.com/p/DV6jeBFjZyO/",
+   "transcript": null
+  },
+  {
+   "rank": 57,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-04-26",
+   "topicAudio": "—",
+   "topicCaption": "Metabolism",
+   "topicSource": "caption",
+   "caption": "METABOLIC FLEXIBILITY | مرونة الحرق هي اللي بتخليك في طاقة مستمرة من غير ما يتحكم فيك الاكل ! Join us in summer challenge!",
+   "views": 58277,
+   "likes": 3865,
+   "comments": 992,
+   "shares": 0,
+   "engagement": 4857,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DXmvvw5CNnF/",
+   "transcript": null
+  },
+  {
+   "rank": 58,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-17",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "أعظم أيام في السنه ! #د_علا_مخيمر",
+   "views": 43889,
+   "likes": 4781,
+   "comments": 69,
+   "shares": 0,
+   "engagement": 4850,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYb9eNatmLk/",
+   "transcript": null
+  },
+  {
+   "rank": 59,
+   "account": "muhammadnadyofficial",
+   "platform": "Instagram",
+   "date": "2026-05-20",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "مفيش مبروك يا فوندم و لا ايه ؟؟❤️🔥☝️💪🏼",
+   "views": 0,
+   "likes": 4508,
+   "comments": 118,
+   "shares": 0,
+   "engagement": 4626,
+   "followers": 467400,
+   "postUrl": "https://www.instagram.com/p/DYknGnTEYWL/",
+   "transcript": null
+  },
+  {
+   "rank": 60,
+   "account": "shadylabibnutrition",
+   "platform": "Instagram",
+   "date": "2026-01-12",
+   "topicAudio": "—",
+   "topicCaption": "Bread & carbs (comparison)",
+   "topicSource": "caption",
+   "caption": "أنا قلتلك على ٣ عادات بسيطة بتخليني آكل العيش كل يوم من غير ما أزيد في الوزن… بس تطبيقهم فعلاً هو اللي بيعمل الفرق. في الريل شرحت العادات، لكن الحقيقة؟ العادات ",
+   "views": 120161,
+   "likes": 4017,
+   "comments": 562,
+   "shares": 0,
+   "engagement": 4579,
+   "followers": 275000,
+   "postUrl": "https://www.instagram.com/p/DTaq-4CCpur/",
+   "transcript": null
+  },
+  {
+   "rank": 61,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-01-28",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ هتستغل قبل وبعد رمضان ولا هتفضل بطوطه 😐⁩",
+   "views": 114065,
+   "likes": 4490,
+   "comments": 48,
+   "shares": 0,
+   "engagement": 4538,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DUD-W45COxf/",
+   "transcript": null
+  },
+  {
+   "rank": 62,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-04-10",
+   "topicAudio": "—",
+   "topicCaption": "Bread & carbs (comparison)",
+   "topicSource": "caption",
+   "caption": "Carb cycling 💪🏻 Have you ever achieved 10% body",
+   "views": 119572,
+   "likes": 3944,
+   "comments": 538,
+   "shares": 0,
+   "engagement": 4482,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DW9dqTViFEV/",
+   "transcript": null
+  },
+  {
+   "rank": 63,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-05-06",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "الميكس الأعظم ل تنظيم السوائل ✅ موجود دلوقتي ف @herbal.doses . . . . #دايت #healthy #healthylifestyle #تخسيس #healthylifestyle",
+   "views": 110799,
+   "likes": 3994,
+   "comments": 304,
+   "shares": 0,
+   "engagement": 4298,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DX_bJNPPNL4/",
+   "transcript": null
+  },
+  {
+   "rank": 64,
+   "account": "dr.radwanabil",
+   "platform": "Instagram",
+   "date": "2026-05-08",
+   "topicAudio": "—",
+   "topicCaption": "GLP-1 / weight-loss injections",
+   "topicSource": "caption",
+   "caption": "مين حصل و بيحصل معاه كدا؟؟!! #mounjaro #درضوى_نبيل # ويجوفي #wegovy #مونجارو @dr.radwanabil",
+   "views": 179335,
+   "likes": 4256,
+   "comments": 40,
+   "shares": 0,
+   "engagement": 4296,
+   "followers": 204000,
+   "postUrl": "https://www.instagram.com/p/DYFcTR6NSbA/",
+   "transcript": null
+  },
+  {
+   "rank": 65,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-03-24",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Exactly.",
+   "views": 0,
+   "likes": 4224,
+   "comments": 36,
+   "shares": 0,
+   "engagement": 4260,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DWRox_YiC1R/",
+   "transcript": null
+  },
+  {
+   "rank": 66,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2024-12-07",
+   "topicAudio": "—",
+   "topicCaption": "Sugar & sweeteners",
+   "topicSource": "caption",
+   "caption": "بتشربوا كام معلقة سكر وانتوا مش حاسيين ⁉️⁉️⁉️ . . . #دايت #تخسيس #diet #تخسيس_الوزن #دايت_صحي #healthy #weightloss #تغذية #healthylifestyle #weightlosstips",
+   "views": 133058,
+   "likes": 4069,
+   "comments": 164,
+   "shares": 0,
+   "engagement": 4233,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DDReP8AOvhQ/",
+   "transcript": null
+  },
+  {
+   "rank": 67,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "سوبر فور عالريق✅ . . #دايت #diet #healthy #healthylifestyle #weightlosstips",
+   "views": 104560,
+   "likes": 4132,
+   "comments": 89,
+   "shares": 0,
+   "engagement": 4221,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DYwXV5tPJ0r/",
+   "transcript": null
+  },
+  {
+   "rank": 68,
+   "account": "shadylabibnutrition",
+   "platform": "Instagram",
+   "date": "2026-04-19",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ فى اختيرات كتيره صحيه بديله للحلويات والاكلات اللي مليان سعرات كل اللى عليك تختار صح #اكل_صحي #رجيم_صحي⁩",
+   "views": 60665,
+   "likes": 4123,
+   "comments": 49,
+   "shares": 0,
+   "engagement": 4172,
+   "followers": 275000,
+   "postUrl": "https://www.instagram.com/p/DXUQQT3jkqq/",
+   "transcript": null
+  },
+  {
+   "rank": 69,
+   "account": "dr.radwanabil",
+   "platform": "Instagram",
+   "date": "2026-03-31",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "أنا و اسئله مريومه 🥰🥰 @mariam_7atem14 #دايت_مش_نكد #درضوىنبيل #mounjaro #ويجوفي #تخسيس⁩",
+   "views": 104879,
+   "likes": 3990,
+   "comments": 43,
+   "shares": 0,
+   "engagement": 4033,
+   "followers": 204000,
+   "postUrl": "https://www.instagram.com/p/DWkGpkIDfP3/",
+   "transcript": null
+  },
+  {
+   "rank": 70,
+   "account": "shadylabibnutrition",
+   "platform": "Instagram",
+   "date": "2026-05-11",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "كل ماتعرف أكتر حتختار أحسن وحتحدد كمياتك على حسب أولوياتك",
+   "views": 0,
+   "likes": 3973,
+   "comments": 54,
+   "shares": 0,
+   "engagement": 4027,
+   "followers": 275000,
+   "postUrl": "https://www.instagram.com/p/DYNkctVjSGA/",
+   "transcript": null
+  },
+  {
+   "rank": 71,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-04-04",
+   "topicAudio": "—",
+   "topicCaption": "Thyroid",
+   "topicSource": "caption",
+   "caption": "٤ مدمرات للغدة الدرقية لازم توقفها فورا ١-السهر وقلة نوم الغدة الدرقية تحتاج لنوم عميق ومنتظم عشان تشتغل بكفاءة ٢-شرب القهوة عالريق او بعد الدواء مباشرة للأسف د",
+   "views": 330422,
+   "likes": 3740,
+   "comments": 191,
+   "shares": 0,
+   "engagement": 3931,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DWucKe6DGLk/",
+   "transcript": null
+  },
+  {
+   "rank": 72,
+   "account": "dr.mona.el.gezeiry.nutrition",
+   "platform": "Instagram",
+   "date": "2026-05-08",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 32401,
+   "likes": 3779,
+   "comments": 132,
+   "shares": 0,
+   "engagement": 3911,
+   "followers": 161000,
+   "postUrl": "https://www.instagram.com/p/DYEeVREIKwA/",
+   "transcript": null
+  },
+  {
+   "rank": 73,
+   "account": "muhammadnadyofficial",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "الحمد لله ربنا اتم عليا الحج اول ما اتخرجت في ٢٠٠٧ و اخر عمرة عملتها من ٣ سنين قبل مرض امي و عدم قدرتها على الحركة الفترة دي فترة دعاء و ايام مفترجة لكن ساعات ب",
+   "views": 0,
+   "likes": 3806,
+   "comments": 54,
+   "shares": 0,
+   "engagement": 3860,
+   "followers": 467400,
+   "postUrl": "https://www.instagram.com/p/DYxuUZrjkUb/",
+   "transcript": null
+  },
+  {
+   "rank": 74,
+   "account": "dt.maryam.belal",
+   "platform": "Instagram",
+   "date": "2025-12-25",
+   "topicAudio": "—",
+   "topicCaption": "Protein",
+   "topicSource": "caption",
+   "caption": "البدائل ⬇️ بروتينات حقيقية 🥩 دجاج أو لحوم طبيعية تونة أو سردين محفوظ بالماء أو الزيت بيض بقوليات: حمص / فول / عدس بدائل قهوة سريعة التحضير او الكابتشينو ☕️ قهو",
+   "views": 92863,
+   "likes": 3693,
+   "comments": 63,
+   "shares": 0,
+   "engagement": 3756,
+   "followers": 55800,
+   "postUrl": "https://www.instagram.com/p/DSslXf1jYHE/",
+   "transcript": null
+  },
+  {
+   "rank": 75,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-28",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "القرفة السيلاني✅ من @herbal.doses . . #دايت #تخسيس #healthy #healthylifestyle #weightloss",
+   "views": 56105,
+   "likes": 3488,
+   "comments": 154,
+   "shares": 0,
+   "engagement": 3642,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXq0eRpj7ys/",
+   "transcript": null
+  },
+  {
+   "rank": 76,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2025-01-12",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "RULES ARE SIMPLE! STICK TO THE PLAN! Intermittent fasting + workout Join us 🤼! New year, new you!!",
+   "views": 169341,
+   "likes": 3457,
+   "comments": 115,
+   "shares": 0,
+   "engagement": 3572,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DEugFcWs9dp/",
+   "transcript": null
+  },
+  {
+   "rank": 77,
+   "account": "dralaasabry.nourish",
+   "platform": "Instagram",
+   "date": "2026-04-03",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "⁨ تمرينات المقاومة تعالج السكري ، مقاومة الانسولين ، الساركوبينيا (تكسير العضلات الذاتي) ، الفايبروميلجيا ، تحسّن القدرة القلبية و ترفع معدلات الايض (حرق الجسم)",
+   "views": 74655,
+   "likes": 3367,
+   "comments": 151,
+   "shares": 0,
+   "engagement": 3518,
+   "followers": 106000,
+   "postUrl": "https://www.instagram.com/p/DWrNKUbiLtk/",
+   "transcript": null
+  },
+  {
+   "rank": 78,
+   "account": "dr_shrouk_ali",
+   "platform": "Instagram",
+   "date": "2026-05-24",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "بخطوة واحدة هتزودي وزنك ٤ كيلو ف مدة قياسية اوي ! 👀",
+   "views": 27102,
+   "likes": 1075,
+   "comments": 2252,
+   "shares": 0,
+   "engagement": 3327,
+   "followers": 432000,
+   "postUrl": "https://www.instagram.com/p/DYue7joN4Fl/",
+   "transcript": null
+  },
+  {
+   "rank": 79,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-03-16",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Kahk season !",
+   "views": 75879,
+   "likes": 3244,
+   "comments": 65,
+   "shares": 0,
+   "engagement": 3309,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DV9RgZNCKas/",
+   "transcript": null
+  },
+  {
+   "rank": 80,
+   "account": "dr_asmaa.hesham",
+   "platform": "Instagram",
+   "date": "2026-05-13",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "💔❤️‍🩹🫀",
+   "views": 0,
+   "likes": 2787,
+   "comments": 446,
+   "shares": 0,
+   "engagement": 3233,
+   "followers": 771836,
+   "postUrl": "https://www.instagram.com/p/DYShp5hAm_l/",
+   "transcript": null
+  },
+  {
+   "rank": 81,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-05-04",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "كفاية ناس تستفيد على حساب صحتكوا وحياتكوا❌ . . . #دايت #تخسيس #healthy #healthylifestyle #weightloss",
+   "views": 163121,
+   "likes": 3128,
+   "comments": 65,
+   "shares": 0,
+   "engagement": 3193,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DX6SDO1B_ly/",
+   "transcript": null
+  },
+  {
+   "rank": 82,
+   "account": "dr.bassantzein",
+   "platform": "Instagram",
+   "date": "2025-01-26",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "ادعو لبابا حبيبي بالرحمه والمغفره والجنه ربنا يجمعنا بيك يا حبيبي يارب كلنا في الجنه بازن الله ويصبرنا علي فراقك ويجعل مأواك الجنه يا حبيبي يارب يجعلك مع النبين",
+   "views": 0,
+   "likes": 3045,
+   "comments": 140,
+   "shares": 0,
+   "engagement": 3185,
+   "followers": 45300,
+   "postUrl": "https://www.instagram.com/p/DFSzqYWoC8t/",
+   "transcript": null
+  },
+  {
+   "rank": 83,
+   "account": "drwaadamin",
+   "platform": "Instagram",
+   "date": "2026-03-06",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "اوعي تعمل كده عشان تخس اسرع!",
+   "views": 61829,
+   "likes": 3083,
+   "comments": 72,
+   "shares": 0,
+   "engagement": 3155,
+   "followers": 482536,
+   "postUrl": "https://www.instagram.com/p/DVjUOq-jd3Y/",
+   "transcript": null
+  },
+  {
+   "rank": 84,
+   "account": "drwaadamin",
+   "platform": "Instagram",
+   "date": "2026-05-05",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "ليه لازم تبطل سناكس",
+   "views": 49686,
+   "likes": 3071,
+   "comments": 72,
+   "shares": 0,
+   "engagement": 3143,
+   "followers": 482536,
+   "postUrl": "https://www.instagram.com/p/DX9FwjlNjMW/",
+   "transcript": null
+  },
+  {
+   "rank": 85,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-16",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ كفايه أشباه جبنه ‼️ لو حابين الڤيديو الجاي أعملكم جوله في أنواع الجبن الحيواني الطبيعيه اكتبولي في الكومنتس لو متحمسين 💚 #د_علا_مخيمر⁩",
+   "views": 127538,
+   "likes": 2975,
+   "comments": 114,
+   "shares": 0,
+   "engagement": 3089,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYZK4hJtRHQ/",
+   "transcript": null
+  },
+  {
+   "rank": 86,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-02-05",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Paleo diet",
+   "views": 160472,
+   "likes": 2980,
+   "comments": 99,
+   "shares": 0,
+   "engagement": 3079,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DUYyPJGCKXD/",
+   "transcript": null
+  },
+  {
+   "rank": 87,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-05-05",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ MOVE ! تتوقع اكلت ايه قبل تمرين النهاردة؟⁩",
+   "views": 84766,
+   "likes": 2947,
+   "comments": 72,
+   "shares": 0,
+   "engagement": 3019,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DX9cvKyo3TE/",
+   "transcript": null
+  },
+  {
+   "rank": 88,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-02-20",
+   "topicAudio": "—",
+   "topicCaption": "Bread & carbs (comparison)",
+   "topicSource": "caption",
+   "caption": "الناس بتجمع دهون ونشويات لأن المخ مبرمج يطارد الطاقة الكثيفة (fat + carb dopamine bomb) خليك واعي واستغل رمضان صح 🌙",
+   "views": 58799,
+   "likes": 2937,
+   "comments": 46,
+   "shares": 0,
+   "engagement": 2983,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DU_bK35CBO7/",
+   "transcript": null
+  },
+  {
+   "rank": 89,
+   "account": "dr.sarah_elzeheiry",
+   "platform": "Instagram",
+   "date": "2026-05-10",
+   "topicAudio": "—",
+   "topicCaption": "Anemia / iron absorption",
+   "topicSource": "caption",
+   "caption": "مكونات سلطة رفع الحديد 💪🏼 للفرد: ١٠٠جم لحم بقري مشوي - ٢.٦مجم حديد ١٠٠جم بنجر مسلوق - ٠،٩مجم حديد ٥٠جم سبانخ فريش ١.٣مجم حديد ٥٠جم جرجير ٠،٨ مجم حديد ٢٠جم pum",
+   "views": 49615,
+   "likes": 2882,
+   "comments": 52,
+   "shares": 0,
+   "engagement": 2934,
+   "followers": 214000,
+   "postUrl": "https://www.instagram.com/p/DYKhivIMVkn/",
+   "transcript": null
+  },
+  {
+   "rank": 90,
+   "account": "dr_asmaa.hesham",
+   "platform": "Instagram",
+   "date": "2026-05-15",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "ايام قليلة وهيكون بين ايديكم جودة المنتج المستورد بأيادي مصرية 🇪🇬تفتكروا هنسمي البيبي ايه😃 اه ما ده ابننا الرابع 🥹",
+   "views": 45955,
+   "likes": 2233,
+   "comments": 595,
+   "shares": 0,
+   "engagement": 2828,
+   "followers": 771836,
+   "postUrl": "https://www.instagram.com/p/DYWt96Qinro/",
+   "transcript": null
+  },
+  {
+   "rank": 91,
+   "account": "drrawda_nutritionist",
+   "platform": "Instagram",
+   "date": "2025-12-29",
+   "topicAudio": "—",
+   "topicCaption": "GLP-1 / weight-loss injections",
+   "topicSource": "caption",
+   "caption": "صدمه من تاني جرعه ببتيد ٣",
+   "views": 235942,
+   "likes": 2272,
+   "comments": 538,
+   "shares": 0,
+   "engagement": 2810,
+   "followers": 196000,
+   "postUrl": "https://www.instagram.com/p/DS21ITmjC7P/",
+   "transcript": null
+  },
+  {
+   "rank": 92,
+   "account": "dr.mona.el.gezeiry.nutrition",
+   "platform": "Instagram",
+   "date": "2026-05-15",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 45498,
+   "likes": 2720,
+   "comments": 88,
+   "shares": 0,
+   "engagement": 2808,
+   "followers": 161000,
+   "postUrl": "https://www.instagram.com/p/DYWhQcSIB2e/",
+   "transcript": null
+  },
+  {
+   "rank": 93,
+   "account": "dr.rania.said.sadawy",
+   "platform": "Instagram",
+   "date": "2026-05-18",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 75804,
+   "likes": 2635,
+   "comments": 151,
+   "shares": 0,
+   "engagement": 2786,
+   "followers": 356000,
+   "postUrl": "https://www.instagram.com/p/DYd_LbCI7y6/",
+   "transcript": null
+  },
+  {
+   "rank": 94,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "يوم عرفه ..🥺💚 #د_علا_مخيمر #وزع_طاقه",
+   "views": 23142,
+   "likes": 2605,
+   "comments": 59,
+   "shares": 0,
+   "engagement": 2664,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYwuna_tWnG/",
+   "transcript": null
+  },
+  {
+   "rank": 95,
+   "account": "dr_neira_fahmy",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "كل سنة وانتم طيبين يحبايبي ويارب ينعاد عليكم وع حبايبكم بكل خير 🫶💙 Here's your reminder to enjoy eid with your family💙💙#viral_video #dr_neira_fahmy #فرصتك_ل",
+   "views": 57626,
+   "likes": 2591,
+   "comments": 66,
+   "shares": 0,
+   "engagement": 2657,
+   "followers": 46300,
+   "postUrl": "https://www.instagram.com/p/DYxX0qSt8IT/",
+   "transcript": null
+  },
+  {
+   "rank": 96,
+   "account": "drwaadamin",
+   "platform": "Instagram",
+   "date": "2026-05-15",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "اهم حاجة في وجبة الفطار",
+   "views": 39995,
+   "likes": 2583,
+   "comments": 71,
+   "shares": 0,
+   "engagement": 2654,
+   "followers": 482536,
+   "postUrl": "https://www.instagram.com/p/DYXDX81NsCT/",
+   "transcript": null
+  },
+  {
+   "rank": 97,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-05-13",
+   "topicAudio": "—",
+   "topicCaption": "Metabolism",
+   "topicSource": "caption",
+   "caption": "يعني ايه معدل الحرق؟ . . . . هو مجموع : اللي بتحرقه وانت نايم بتحرقه وانت بتاكل بتحرقه وانت بتمشي بتحرقه في التمرين",
+   "views": 54108,
+   "likes": 2612,
+   "comments": 39,
+   "shares": 0,
+   "engagement": 2651,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DYSTAsEoPQa/",
+   "transcript": null
+  },
+  {
+   "rank": 98,
+   "account": "dr.diana.clinic",
+   "platform": "Instagram",
+   "date": "2026-01-26",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "جمالك الطبيعي واختيارك للأجراء المناسب ليكي هوا السر",
+   "views": 308725,
+   "likes": 2602,
+   "comments": 19,
+   "shares": 0,
+   "engagement": 2621,
+   "followers": 7300,
+   "postUrl": "https://www.instagram.com/p/DT-7QMZgtzN/",
+   "transcript": null
+  },
+  {
+   "rank": 99,
+   "account": "dr_asmaa.hesham",
+   "platform": "Instagram",
+   "date": "2026-05-23",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "\"ان تتم عاماً جديداً وأنت ممتن لكل خذلان، وكل تعب، وكل معركة خضتها وحدك.. فهذا هو الانتصار الحقيقي. اشتغلتُ على نفسي كثيراً، وعبرتُ جسوراً من القلق، واليوم أحتف",
+   "views": 0,
+   "likes": 2227,
+   "comments": 381,
+   "shares": 0,
+   "engagement": 2608,
+   "followers": 771836,
+   "postUrl": "https://www.instagram.com/p/DYsI0X_iCCj/",
+   "transcript": null
+  },
+  {
+   "rank": 100,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "احفظوه .. وابعتوه لحبايبكم .. 🫂 #د_علا_مخيمر #وزع_طاقه",
+   "views": 41690,
+   "likes": 2525,
+   "comments": 48,
+   "shares": 0,
+   "engagement": 2573,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYxcELHN_hq/",
+   "transcript": null
+  },
+  {
+   "rank": 101,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-04-08",
+   "topicAudio": "—",
+   "topicCaption": "Hormonal health",
+   "topicSource": "caption",
+   "caption": "تنظيم مستويات هرمون الكورتيزول (هرمون القلق والتوتر ) يعتمد كبير على تهدئة الجهاز العصبي وتقليل الالتهابات. و موجودة مشروبات طبيعية أثبتت الدراسات فعاليتها في ا",
+   "views": 129245,
+   "likes": 2509,
+   "comments": 59,
+   "shares": 0,
+   "engagement": 2568,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DW2sOcHDOWG/",
+   "transcript": null
+  },
+  {
+   "rank": 102,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-03-14",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Rice cake challenge | Eid edition Duration: 7-21 days",
+   "views": 59484,
+   "likes": 2520,
+   "comments": 43,
+   "shares": 0,
+   "engagement": 2563,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DV38tAMCNYS/",
+   "transcript": null
+  },
+  {
+   "rank": 103,
+   "account": "dr.radwanabil",
+   "platform": "Instagram",
+   "date": "2026-02-27",
+   "topicAudio": "—",
+   "topicCaption": "GLP-1 / weight-loss injections",
+   "topicSource": "caption",
+   "caption": "عاوزين تشوفو الأيام التانية ؟ هاتلاقوها على التيك توك #مونجارو #mounjaro #ابر_التخسيس #retatrutide #درضوىنبيل",
+   "views": 140410,
+   "likes": 2478,
+   "comments": 22,
+   "shares": 0,
+   "engagement": 2500,
+   "followers": 204000,
+   "postUrl": "https://www.instagram.com/p/DVRDERwjIuY/",
+   "transcript": null
+  },
+  {
+   "rank": 104,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-01-14",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "It’s not the coffee. It’s the untracked insulin signal behind it بتحسب بتشرب ايه في يومك؟",
+   "views": 54982,
+   "likes": 2434,
+   "comments": 55,
+   "shares": 0,
+   "engagement": 2489,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DTfnAY2iATI/",
+   "transcript": null
+  },
+  {
+   "rank": 105,
+   "account": "dralaasabry.nourish",
+   "platform": "Instagram",
+   "date": "2025-08-17",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "اسهل مشروب تحضره في البيت . فوائد كتير ، رخيص و طعمه حلو 😋#ابوظبي #الامارات #صحة #دبي #ابوظبي🇦🇪 #العين #الشارقة #nourish #مصر #الخُبر",
+   "views": 50650,
+   "likes": 2398,
+   "comments": 75,
+   "shares": 0,
+   "engagement": 2473,
+   "followers": 106000,
+   "postUrl": "https://www.instagram.com/p/DNd_6Oro6nv/",
+   "transcript": null
+  },
+  {
+   "rank": 106,
+   "account": "dr.mona.el.gezeiry.nutrition",
+   "platform": "Instagram",
+   "date": "2026-04-10",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 16741,
+   "likes": 2379,
+   "comments": 73,
+   "shares": 0,
+   "engagement": 2452,
+   "followers": 161000,
+   "postUrl": "https://www.instagram.com/p/DW8opsKjKZj/",
+   "transcript": null
+  },
+  {
+   "rank": 107,
+   "account": "dr_neira_fahmy",
+   "platform": "Instagram",
+   "date": "2026-05-02",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "بما أن pt1 عجبكم بالشكل دا 🫶❤️❤️❤️ فانتظروا اجزاء كتير من الـ serie دي مش هتخليك متحير وانت بتاكل اي حاجه حرفيا ✅♥️ مرجع لاي حد محتاج يركز ع بدايل صحية ف اكله✅",
+   "views": 47389,
+   "likes": 2354,
+   "comments": 65,
+   "shares": 0,
+   "engagement": 2419,
+   "followers": 46300,
+   "postUrl": "https://www.instagram.com/p/DX1-LhvN_Jw/",
+   "transcript": null
+  },
+  {
+   "rank": 108,
+   "account": "drwaadamin",
+   "platform": "Instagram",
+   "date": "2026-05-26",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "كل سنة وانتوا طيبين",
+   "views": 60892,
+   "likes": 2363,
+   "comments": 42,
+   "shares": 0,
+   "engagement": 2405,
+   "followers": 482536,
+   "postUrl": "https://www.instagram.com/p/DYzmI4ANIlV/",
+   "transcript": null
+  },
+  {
+   "rank": 109,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-02-17",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Paleo reset - Ramadan edition 🌙 Start Your Ramadan Reset Limited consultations available 📞+20 106 627 9707 📞+20 109 570 3573 📞+20 128 221 6058",
+   "views": 33092,
+   "likes": 2372,
+   "comments": 21,
+   "shares": 0,
+   "engagement": 2393,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DU3Td8XCCKY/",
+   "transcript": null
+  },
+  {
+   "rank": 110,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-13",
+   "topicAudio": "—",
+   "topicCaption": "PCOS / ovarian health",
+   "topicSource": "caption",
+   "caption": "⁨ مبقاش اسمها تكيسات مبايض خلاص !⁩ سبب تغيير الاسم لأن مصطلح تكيس المبايض يعتبر غير دقيق ويوحي إن المشكلة بس عبارة عن أكياس على المبيض، بينما الحقيقة إن الحالة ",
+   "views": 0,
+   "likes": 2262,
+   "comments": 110,
+   "shares": 0,
+   "engagement": 2372,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYRpdL6ghYM/",
+   "transcript": null
+  },
+  {
+   "rank": 111,
+   "account": "dr.mona.el.gezeiry.nutrition",
+   "platform": "Instagram",
+   "date": "2026-04-29",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 15990,
+   "likes": 2257,
+   "comments": 90,
+   "shares": 0,
+   "engagement": 2347,
+   "followers": 161000,
+   "postUrl": "https://www.instagram.com/p/DXuNAqJjA6d/",
+   "transcript": null
+  },
+  {
+   "rank": 112,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-26",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "⁨ زي دلوقتي في نفس الساعه دي ونفس التوقيت دا كنت هناك .. في درجة حراره فوق ال ٤٥ درجه …نسينا الاكل والشرب والتعب والاجهاد ..فاكره اني أول ما دخلت عرفه السنه ال ",
+   "views": 0,
+   "likes": 2304,
+   "comments": 40,
+   "shares": 0,
+   "engagement": 2344,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYztcosNhYF/",
+   "transcript": null
+  },
+  {
+   "rank": 113,
+   "account": "dr_eman_alshafey",
+   "platform": "Instagram",
+   "date": "2026-04-04",
+   "topicAudio": "—",
+   "topicCaption": "Hormonal health",
+   "topicSource": "caption",
+   "caption": "الاكل هو علاجك الاساسي .. اتعلمي تاكلي ايه وامتا !! .. ايه اللي ينفعك وايه لا الإضطرابات الهرمونية كترت في جيلنا بشكل كبير .. انت طبيبة نفسك الاولى لو محتاجة مع",
+   "views": 0,
+   "likes": 2264,
+   "comments": 68,
+   "shares": 0,
+   "engagement": 2332,
+   "followers": 62292,
+   "postUrl": "https://www.instagram.com/p/DWuPsueDK2W/",
+   "transcript": null
+  },
+  {
+   "rank": 114,
+   "account": "dr.rania.said.sadawy",
+   "platform": "Instagram",
+   "date": "2024-02-03",
+   "topicAudio": "—",
+   "topicCaption": "Vitamins, supplements & absorption",
+   "topicSource": "caption",
+   "caption": "الكشف و المتابعة اونلاين #دكتورة_رانيا_سعيد #كشف_اونلاين #تغذية_علاجية #طب_وظيفي #امراض_الجهاز_الهضمي #امراض_مزمنه #الغدة_الدرقية #فيتامينات #جرثومةالمعدة #كاند",
+   "views": 35628,
+   "likes": 1286,
+   "comments": 1033,
+   "shares": 0,
+   "engagement": 2319,
+   "followers": 356000,
+   "postUrl": "https://www.instagram.com/p/C243SEHsjOj/",
+   "transcript": null
+  },
+  {
+   "rank": 115,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-03-09",
+   "topicAudio": "—",
+   "topicCaption": "Sugar & sweeteners",
+   "topicSource": "caption",
+   "caption": "الامساك عدو اي دايت مهما كنت ملتزم! ٣ حبات من الفاكهه دي : تقريبا نفس ألياف نصف كوب شوفان • تحتوي على Sorbitol وهو سكر كحولي (ملين طبيعي) يسحب الماء إلى القولون",
+   "views": 69436,
+   "likes": 2251,
+   "comments": 59,
+   "shares": 0,
+   "engagement": 2310,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DVrGq0riEun/",
+   "transcript": null
+  },
+  {
+   "rank": 116,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-02-23",
+   "topicAudio": "—",
+   "topicCaption": "Hormonal health",
+   "topicSource": "caption",
+   "caption": "Golden Cut Protocol ⚡️ لو وزنك أقل من 90 أو عندك مشاكل هرمونية ده مش ليكم لكن لو 90+ وعايز تخس 4–7 كيلو حقيقيين التزم بالبروتوكول",
+   "views": 43382,
+   "likes": 1946,
+   "comments": 362,
+   "shares": 0,
+   "engagement": 2308,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DVHVTkiiAtL/",
+   "transcript": null
+  },
+  {
+   "rank": 117,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-01-26",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ 😂😂😂😂 #دايت #تخسيس #صحي #اكسبلور #explore⁩",
+   "views": 105714,
+   "likes": 2238,
+   "comments": 58,
+   "shares": 0,
+   "engagement": 2296,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DT-34YRjDQW/",
+   "transcript": null
+  },
+  {
+   "rank": 118,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "You force yourself to go to the gym We force ourselves to recover 💀🦆",
+   "views": 53063,
+   "likes": 2245,
+   "comments": 25,
+   "shares": 0,
+   "engagement": 2270,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DYxnfCIoevY/",
+   "transcript": null
+  },
+  {
+   "rank": 119,
+   "account": "dr_neira_fahmy",
+   "platform": "Instagram",
+   "date": "2026-05-11",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "ما شاء الله❤️🫶 حبيت احكي الموقف دا رغم أنه لما فكرت لقيت أنه طبيعي جدا فعلا ؟! اصل كان ممكن يتعصب يقولها مثلا ايه خلاكي تيجي ب heals او ع الاقل كان ممكن توزن و",
+   "views": 35404,
+   "likes": 2207,
+   "comments": 42,
+   "shares": 0,
+   "engagement": 2249,
+   "followers": 46300,
+   "postUrl": "https://www.instagram.com/p/DYM3bKRto5Z/",
+   "transcript": null
+  },
+  {
+   "rank": 120,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-09",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "صباح الخير منظمة الصحة🤝 . . . #دايت #تخسيس #diet #تخسيس_الوزن #healthy",
+   "views": 82869,
+   "likes": 2117,
+   "comments": 61,
+   "shares": 0,
+   "engagement": 2178,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DW6HsW8D1Kz/",
+   "transcript": null
+  },
+  {
+   "rank": 121,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-04-01",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Gall bladder explained !",
+   "views": 100164,
+   "likes": 1926,
+   "comments": 241,
+   "shares": 0,
+   "engagement": 2167,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DWmjwWwiC6O/",
+   "transcript": null
+  },
+  {
+   "rank": 122,
+   "account": "dr_neira_fahmy",
+   "platform": "Instagram",
+   "date": "2026-05-07",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "Pt1 ✅,, Guysssss I got you some healthy low calorie snacks 🫶❤️❤️❤️#dr_neira_fahmy #viral_video #بدائل_صحية #خسي_بذكاء",
+   "views": 65303,
+   "likes": 2061,
+   "comments": 89,
+   "shares": 0,
+   "engagement": 2150,
+   "followers": 46300,
+   "postUrl": "https://www.instagram.com/p/DYC5N9GN4H5/",
+   "transcript": null
+  },
+  {
+   "rank": 123,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-19",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "الحمد لله في السراء والضراء .. دعواتكم بتمام الشفاء .. ممتنه ليكم يا أرقي وأجمل عيله 💚",
+   "views": 60967,
+   "likes": 1868,
+   "comments": 242,
+   "shares": 0,
+   "engagement": 2110,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYhBdgaCs7h/",
+   "transcript": null
+  },
+  {
+   "rank": 124,
+   "account": "drwaadamin",
+   "platform": "Instagram",
+   "date": "2026-05-10",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "اهم حاجة في الخروجات والعزومات",
+   "views": 28583,
+   "likes": 2060,
+   "comments": 45,
+   "shares": 0,
+   "engagement": 2105,
+   "followers": 482536,
+   "postUrl": "https://www.instagram.com/p/DYJ_jBJN6n4/",
+   "transcript": null
+  },
+  {
+   "rank": 125,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-04-14",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "@herbal.doses البراند اللي هيغير فكرتكوا عن الأعشاب 🤍 . . . . #diet #دايت_صحي #healthylifestyle #تغذية",
+   "views": 38883,
+   "likes": 2005,
+   "comments": 94,
+   "shares": 0,
+   "engagement": 2099,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DXG49WEj3A7/",
+   "transcript": null
+  },
+  {
+   "rank": 126,
+   "account": "dr.rahmaayman",
+   "platform": "Instagram",
+   "date": "2024-12-26",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "اكتر من ٤٠٪؜ من الناس عندهم طفرة جينية اسمها MTHFR mutation بمعنى ان جسمهم مش بيعرف يحول الفوليك اسيد ( الصيغة الغير فعالة) ⬅️ للفولات ( الصيغة الفعالة اللي الج",
+   "views": 93721,
+   "likes": 1955,
+   "comments": 134,
+   "shares": 0,
+   "engagement": 2089,
+   "followers": 64600,
+   "postUrl": "https://www.instagram.com/p/DEDbrJ_uLKB/",
+   "transcript": null
+  },
+  {
+   "rank": 127,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-14",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "وبعدين في التغفيله دي بقي 😂 لما بقول عليكم مش مجرد فولورز مش بكون ببالغ .. 🥺 أنا اتبعتلي امبارح كمية ڤيديوز منكم شوفت منها حقيقي كمية حب هتخليني أفضل أقول إنك",
+   "views": 88310,
+   "likes": 2022,
+   "comments": 53,
+   "shares": 0,
+   "engagement": 2075,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYVExC8tEjg/",
+   "transcript": null
+  },
+  {
+   "rank": 128,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-01-23",
+   "topicAudio": "—",
+   "topicCaption": "Metabolism",
+   "topicSource": "caption",
+   "caption": "Reset your metabolism | مرونة الحرق مرونة الحرق معناها إن جسمك يعرف: يحرق نشويات يحرق دهون ويحرق حتى وقت ما مفيش اي أكل (صيام) بدون اعراض مجهود او توتر مرونة ال",
+   "views": 26187,
+   "likes": 1760,
+   "comments": 263,
+   "shares": 0,
+   "engagement": 2023,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DT2d-ELCLEx/",
+   "transcript": null
+  },
+  {
+   "rank": 129,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-05-28",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "قاله مخه : افرح في العيد 🤡",
+   "views": 35071,
+   "likes": 2001,
+   "comments": 18,
+   "shares": 0,
+   "engagement": 2019,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DY4xJJbIGwo/",
+   "transcript": null
+  },
+  {
+   "rank": 130,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-05-12",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "شفاء من كل داء✅ موجود دلوقتي ف @herbal.doses . . . #دايت #diet #healthylifestyle #healthylifestyle #تخسيس",
+   "views": 43208,
+   "likes": 1927,
+   "comments": 82,
+   "shares": 0,
+   "engagement": 2009,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DYO8QiKv1Oe/",
+   "transcript": null
+  },
+  {
+   "rank": 131,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-01-12",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "لما الجسم يبدأ في حرق السكر الزائد خصوصا إذا كان عندك مقاومة انسولين هتظهر علامات واضحة خاصة في الايام الاولي من اتباعك لنظام غذائي مثلا صيام متقطع فهتظهر عندك ",
+   "views": 185718,
+   "likes": 1785,
+   "comments": 171,
+   "shares": 0,
+   "engagement": 1956,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DTbX5EgDJye/",
+   "transcript": null
+  },
+  {
+   "rank": 132,
+   "account": "dr.mohamed.massoud",
+   "platform": "Instagram",
+   "date": "2025-11-25",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "دايت الحرمان 🤷‍♂️",
+   "views": 98955,
+   "likes": 1846,
+   "comments": 75,
+   "shares": 0,
+   "engagement": 1921,
+   "followers": 30700,
+   "postUrl": "https://www.instagram.com/p/DReZtPjDUTC/",
+   "transcript": null
+  },
+  {
+   "rank": 133,
+   "account": "dr.rania.said.sadawy",
+   "platform": "Instagram",
+   "date": "2026-05-18",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 43238,
+   "likes": 1674,
+   "comments": 212,
+   "shares": 0,
+   "engagement": 1886,
+   "followers": 356000,
+   "postUrl": "https://www.instagram.com/p/DYemhnmIivM/",
+   "transcript": null
+  },
+  {
+   "rank": 134,
+   "account": "dr_shrouk_ali",
+   "platform": "Instagram",
+   "date": "2026-05-22",
+   "topicAudio": "—",
+   "topicCaption": "Anemia / iron absorption",
+   "topicSource": "caption",
+   "caption": "لسه عندك انيميا و تساقط شعر و دوخه مع انك بتاخدي حديد بس مفيش نتيجة !!",
+   "views": 0,
+   "likes": 1049,
+   "comments": 826,
+   "shares": 0,
+   "engagement": 1875,
+   "followers": 432000,
+   "postUrl": "https://www.instagram.com/p/DYpqIyFjPBw/",
+   "transcript": null
+  },
+  {
+   "rank": 135,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-19",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "بيحارب الشيخوخه والأمراض المزمنه .. ببساطه صومو تصحو 💚 #د_علا_مخيمر #وزع_طاقه",
+   "views": 28160,
+   "likes": 1761,
+   "comments": 113,
+   "shares": 0,
+   "engagement": 1874,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYg7xOGNpAO/",
+   "transcript": null
+  },
+  {
+   "rank": 136,
+   "account": "dt.maryam.belal",
+   "platform": "Instagram",
+   "date": "2026-04-20",
+   "topicAudio": "—",
+   "topicCaption": "Sugar & sweeteners",
+   "topicSource": "caption",
+   "caption": "📍 حسب التوصيات الأفضل نخلي السكر المضاف أقل من 5% من الاحتياج اليومي عشان نحافظ على توازننا الصحي بدون مبالغة أو تشدد. الهدف مش المنه بل وعي واختيار أذكى 🤍 اك",
+   "views": 56857,
+   "likes": 1106,
+   "comments": 720,
+   "shares": 0,
+   "engagement": 1826,
+   "followers": 55800,
+   "postUrl": "https://www.instagram.com/p/DXWnWpPDUwX/",
+   "transcript": null
+  },
+  {
+   "rank": 137,
+   "account": "dr.rahmaayman",
+   "platform": "Instagram",
+   "date": "2026-04-01",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "⁨ الاسباب ممكن تكون: • مقاومة إنسولين بتلخبط الإشارات بين المخ والمبيض • ارتفاع هرمون الحليب • إجهاد كظري وارتفاع كورتيزول • أمعاء ملتهبة بتزود الالتهاب العام •",
+   "views": 130574,
+   "likes": 1614,
+   "comments": 118,
+   "shares": 0,
+   "engagement": 1732,
+   "followers": 64600,
+   "postUrl": "https://www.instagram.com/p/DWmSx8MsbvV/",
+   "transcript": null
+  },
+  {
+   "rank": 138,
+   "account": "dr_summersheta",
+   "platform": "Instagram",
+   "date": "2026-05-17",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "Hi battota 🤫",
+   "views": 34399,
+   "likes": 1687,
+   "comments": 42,
+   "shares": 0,
+   "engagement": 1729,
+   "followers": 708562,
+   "postUrl": "https://www.instagram.com/p/DYcVWiaoLU2/",
+   "transcript": null
+  },
+  {
+   "rank": 139,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-27",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "⁨ ⁨ ملحقتش انزله بعد صلاة العيد .. اسكت .. لا هنزله تشوفوه قبل ما تنامو 😂 فرحة العيد وكل عيد .. الأطفال يا جماعه 💚🎈🎁 ‪@lillymahmouddraz‬ #د_علا_مخيمر⁩⁩",
+   "views": 51709,
+   "likes": 1671,
+   "comments": 42,
+   "shares": 0,
+   "engagement": 1713,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DY2pZHVtBbw/",
+   "transcript": null
+  },
+  {
+   "rank": 140,
+   "account": "dt.maryam.belal",
+   "platform": "Instagram",
+   "date": "2026-02-10",
+   "topicAudio": "—",
+   "topicCaption": "Appetite & satiety",
+   "topicSource": "caption",
+   "caption": "الصيام بيساعد اجسامنا على تحسين حساسية الإنسولين وتنظيم الشهية وتقليل الأكل العاطفي وبيعطي الجهاز الهضمي فرصة ليرتاح رمضان شهر مبارك لتزكية النفس وضبط الشهوات و",
+   "views": 0,
+   "likes": 1692,
+   "comments": 14,
+   "shares": 0,
+   "engagement": 1706,
+   "followers": 55800,
+   "postUrl": "https://www.instagram.com/p/DUlenvGjVje/",
+   "transcript": null
+  },
+  {
+   "rank": 141,
+   "account": "dr.radwanabil",
+   "platform": "Instagram",
+   "date": "2026-03-06",
+   "topicAudio": "—",
+   "topicCaption": "GLP-1 / weight-loss injections",
+   "topicSource": "caption",
+   "caption": "امتى ممكن نحول من المونجارو للويجوفي؟؟ شوفوا الريدز اللي جايه و مستنيه اسئلتكم #مونجارو #mounjaro #ريتاتروتيد #ويجوفي #wegovy @Radwa Nabil",
+   "views": 93170,
+   "likes": 1632,
+   "comments": 17,
+   "shares": 0,
+   "engagement": 1649,
+   "followers": 204000,
+   "postUrl": "https://www.instagram.com/p/DVjkNcFDTIN/",
+   "transcript": null
+  },
+  {
+   "rank": 142,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-24",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "انت مدرك انت دلوقتي دخلت أيام قدرها إيه؟ غدًا يوم التروية ويليه يوم عرفة ويوم النحر، أهم ثلاث أيام وأرفعها في حياتك كمسلم! أيام تتنزل فيها الرحمات وتضاعف فيها ا",
+   "views": 23698,
+   "likes": 1626,
+   "comments": 16,
+   "shares": 0,
+   "engagement": 1642,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYu7-WZt-al/",
+   "transcript": null
+  },
+  {
+   "rank": 143,
+   "account": "dr.mona.el.gezeiry.nutrition",
+   "platform": "Instagram",
+   "date": "2026-04-09",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 10140,
+   "likes": 1579,
+   "comments": 60,
+   "shares": 0,
+   "engagement": 1639,
+   "followers": 161000,
+   "postUrl": "https://www.instagram.com/p/DW6ulGwjBpz/",
+   "transcript": null
+  },
+  {
+   "rank": 144,
+   "account": "dr.janaabdelnasser",
+   "platform": "Instagram",
+   "date": "2026-04-15",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "1. المشروبات المنظمة للإنسولين والسكر بما أن مقاومة الإنسولين مرتبطة بتكيس المبايض، فإن هذه المشروبات تعد خياراً ممتازا • القرفة: تساعد بشكل فعال في تحسين حساسي",
+   "views": 89287,
+   "likes": 1604,
+   "comments": 21,
+   "shares": 0,
+   "engagement": 1625,
+   "followers": 21000,
+   "postUrl": "https://www.instagram.com/p/DXK2YnRjMUa/",
+   "transcript": null
+  },
+  {
+   "rank": 145,
+   "account": "dr.nadahefila",
+   "platform": "Instagram",
+   "date": "2026-05-22",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "استمرارية في شوية حاجات✅ . . . #دايت #healthy #weightloss #weightloss #healthylifestyle",
+   "views": 50759,
+   "likes": 1553,
+   "comments": 66,
+   "shares": 0,
+   "engagement": 1619,
+   "followers": 518991,
+   "postUrl": "https://www.instagram.com/p/DYo1whuP5dF/",
+   "transcript": null
+  },
+  {
+   "rank": 146,
+   "account": "dr_ola_mekhemer",
+   "platform": "Instagram",
+   "date": "2026-05-26",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "⁨ يللا اتشجعو وقومو اعملوه .. اللهم اجعل عملي هذا كله خالصا لوجهك الكريم 💚 #د_علا_مخيمر⁩",
+   "views": 30827,
+   "likes": 1583,
+   "comments": 34,
+   "shares": 0,
+   "engagement": 1617,
+   "followers": 1307329,
+   "postUrl": "https://www.instagram.com/p/DYzg4fli-do/",
+   "transcript": null
+  },
+  {
+   "rank": 147,
+   "account": "dr_shrouk_ali",
+   "platform": "Instagram",
+   "date": "2026-05-21",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "نظام وجبات يوم كامل لزيادة الوزن 💪🏻 ، اكتبي لي لو عايزة افكار لوجبات تانية 🤍",
+   "views": 34323,
+   "likes": 1281,
+   "comments": 332,
+   "shares": 0,
+   "engagement": 1613,
+   "followers": 432000,
+   "postUrl": "https://www.instagram.com/p/DYnTOf1Nu5M/",
+   "transcript": null
+  },
+  {
+   "rank": 148,
+   "account": "dr_mahmoud.elzayat",
+   "platform": "Instagram",
+   "date": "2026-05-12",
+   "topicAudio": "—",
+   "topicCaption": "Appetite & satiety",
+   "topicSource": "caption",
+   "caption": "سعراته خرافية والنتيجة في الشبع بجد صدمتني. #dr_mahmoudelzayat #دايت #تخسيس #تغذيه #weightlossdiet",
+   "views": 64165,
+   "likes": 1472,
+   "comments": 136,
+   "shares": 0,
+   "engagement": 1608,
+   "followers": 13800,
+   "postUrl": "https://www.instagram.com/p/DYPVDWwIfa_/",
+   "transcript": null
+  },
+  {
+   "rank": 149,
+   "account": "dr.mona.el.gezeiry.nutrition",
+   "platform": "Instagram",
+   "date": "2026-04-21",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 12681,
+   "likes": 1541,
+   "comments": 46,
+   "shares": 0,
+   "engagement": 1587,
+   "followers": 161000,
+   "postUrl": "https://www.instagram.com/p/DXZn8LTDOyy/",
+   "transcript": null
+  },
+  {
+   "rank": 150,
+   "account": "dr.radwanabil",
+   "platform": "Instagram",
+   "date": "2026-05-01",
+   "topicAudio": "—",
+   "topicCaption": "Unclassified",
+   "topicSource": "caption",
+   "caption": "عايزة حكاوي تانية، اقرأوا الكابشن 👇👇 💊 كنت بكلم وبتابع حالة أونلاين، ووصلت لجرعة ١٥ ملجم، والمصيبة إنها نسيت إنها أخدتها في اليوم اللي متعودة تاخدها فيه، فأخ",
+   "views": 106262,
+   "likes": 1553,
+   "comments": 31,
+   "shares": 0,
+   "engagement": 1584,
+   "followers": 204000,
+   "postUrl": "https://www.instagram.com/p/DXyifXqt71k/",
+   "transcript": null
+  },
+  {
+   "rank": 151,
+   "account": "drwaadamin",
+   "platform": "Instagram",
+   "date": "2026-04-18",
+   "topicAudio": "—",
+   "topicCaption": "Insulin resistance",
+   "topicSource": "caption",
+   "caption": "اعمل كده لمقاومة الانسولين",
+   "views": 25103,
+   "likes": 1558,
+   "comments": 23,
+   "shares": 0,
+   "engagement": 1581,
+   "followers": 482536,
+   "postUrl": "https://www.instagram.com/p/DXRhCEtDaGH/",
+   "transcript": null
+  },
+  {
+   "rank": 152,
+   "account": "dralaasabry.nourish",
+   "platform": "Instagram",
+   "date": "2025-07-13",
+   "topicAudio": "—",
+   "topicCaption": "Recipe / meal",
+   "topicSource": "caption",
+   "caption": "الجزء الثالث من نصائح الثلاثينات فما فوق ماتنسوش تشوفوا الجزء الاول و الثاني عشان تعرفوا ال١٢ نصيحة كلهم 🙏🏻 ايه اكتر نصيحة حساها بتفرق في سن ما بعد الثلاثين ؟",
+   "views": 8878,
+   "likes": 1487,
+   "comments": 51,
+   "shares": 0,
+   "engagement": 1538,
+   "followers": 106000,
+   "postUrl": "https://www.instagram.com/p/DMD44t0IQ0g/",
+   "transcript": null
+  },
+  {
+   "rank": 153,
+   "account": "dr_neira_fahmy",
+   "platform": "Instagram",
+   "date": "2026-05-14",
+   "topicAudio": "—",
+   "topicCaption": "Greeting / occasion",
+   "topicSource": "caption",
+   "caption": "Sorry but needed to mention this 😅❤️#dr_neira_fahmy #viral_video #يوم_عرفة#parents",
+   "views": 25640,
+   "likes": 1472,
+   "comments": 62,
+   "shares": 0,
+   "engagement": 1534,
+   "followers": 46300,
+   "postUrl": "https://www.instagram.com/p/DYUwiLtNLIC/",
+   "transcript": null
+  }
+ ],
+ "meta_total": 900
+}

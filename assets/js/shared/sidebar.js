@@ -14,7 +14,7 @@ window.MRSidebar = (function () {
       pages: [
         ["dashboard", "نظرة عامة"],
         ["doctors", "الأطباء والحسابات"],
-        ["posts", "المنشورات الفيروسية"],
+        ["posts", "المنشورات الأكثر انتشاراً"],
         ["topics", "المواضيع المقترحة"],
         ["vault", "مخزن البيانات"],
       ],
@@ -22,13 +22,14 @@ window.MRSidebar = (function () {
     {
       id: "nutrition",
       title: "التغذية",
-      badge: { text: "قيد الجمع", cls: "badge-soon" },
+      badge: { text: "لسه بنجمعها", cls: "badge-soon" },
       available: true,
       pages: [
         ["dashboard", "نظرة عامة"],
         ["doctors", "الأطباء والحسابات"],
-        ["posts", "المنشورات الفيروسية"],
+        ["posts", "المنشورات الأكثر انتشاراً"],
         ["topics", "المواضيع المقترحة"],
+        ["benchmark", "ترتيبنا مقابل السوق"],
         ["vault", "مخزن البيانات"],
       ],
     },
@@ -73,7 +74,7 @@ window.MRSidebar = (function () {
     if (!sidebar) return;
     const homeLink = ctx.current === "home"
       ? ""
-      : `<a class="back-home" href="${ctx.root}index.html">← الرئيسية</a>`;
+      : `<a class="back-home" href="${ctx.root}index.html">← الصفحة الرئيسية</a>`;
     sidebar.innerHTML = `
       <button class="close-sidebar" id="closeSidebar" aria-label="إغلاق القائمة">✕</button>
       <div class="sidebar-header">

@@ -17,16 +17,26 @@ window.MRResearchApp = (function () {
     els = {
       kpiGrid: document.getElementById("kpiGrid"),
       doctorsGrid: document.getElementById("doctorsGrid"),
+      doctorsCount: document.getElementById("doctorsCount"),
+      competitorsGrid: document.getElementById("competitorsGrid"),
+      competitorsCount: document.getElementById("competitorsCount"),
       doctorSortMetric: document.getElementById("doctorSortMetric"),
       postsList: document.getElementById("postsList"),
       postsCount: document.getElementById("postsCount"),
       postsPeriod: document.getElementById("postsPeriod"),
       postsAccountsTable: document.querySelector("#postsAccountsTable tbody"),
       postsTopicsList: document.getElementById("postsTopicsList"),
+      olderPostsTable: document.querySelector("#olderPostsTable tbody"),
       pinnedPostsTable: document.querySelector("#pinnedPostsTable tbody"),
       pinnedTopicsList: document.getElementById("pinnedTopicsList"),
       topicsList: document.getElementById("topicsList"),
       topicAuditTable: document.querySelector("#topicAuditTable tbody"),
+      benchmarkBusiness: document.getElementById("benchmarkBusiness"),
+      benchmarkHeadline: document.getElementById("benchmarkHeadline"),
+      benchmarkFullMarket: document.getElementById("benchmarkFullMarket"),
+      benchmarkTiers: document.getElementById("benchmarkTiers"),
+      benchmarkReachable: document.getElementById("benchmarkReachable"),
+      benchmarkRankingTable: document.querySelector("#benchmarkRankingTable tbody"),
       sortMetric: document.getElementById("sortMetric"),
       searchInput: document.getElementById("searchInput"),
       navBtns: document.querySelectorAll(".nav-btn"),
@@ -47,27 +57,33 @@ window.MRResearchApp = (function () {
     return `<div class="empty-state card"><p>${escapeHtml(msg)}</p></div>`;
   }
 
+  // Instagram only reports views for video/reels; image & carousel posts have no view
+  // count, so 0 means "not a video" rather than "unseen" — show a dash instead of 0.
+  function viewsLabel(v) {
+    return v && v > 0 ? formatNumber(v) : "—";
+  }
+
   function dashboardKpis() {
     const c = DATA.coverage || {};
     const totalEngagement = DATA.posts.reduce((sum, p) => sum + p.engagement, 0);
     const topDoctor = [...DATA.doctors].sort((a, b) => b.totalEngagement - a.totalEngagement)[0];
     const topTopic = [...DATA.topicRecommendations].sort((a, b) => b.score - a.score)[0];
     return [
-      { label: "أطباء مؤكدون", value: formatNumber(DATA.meta.totalDoctors) },
-      { label: "منشورات فيروسية", value: formatNumber(c.totalPosts ?? DATA.meta.totalPosts) },
+      { label: "أطباء مؤكدين", value: formatNumber(DATA.meta.totalDoctors) },
+      { label: "منشورات منتشرة", value: formatNumber(c.totalPosts ?? DATA.meta.totalPosts) },
       { label: "إجمالي التفاعل", value: formatNumber(totalEngagement) },
       { label: "أقوى حساب", value: topDoctor ? topDoctor.name : "-" },
       { label: "أعلى موضوع طبي", value: topTopic ? topTopic.topic : "-" },
       { label: "صفوف مواضيع", value: formatNumber(c.totalTopicAudit) },
       { label: "تفريغات صوتية", value: formatNumber(c.totalTranscripts) },
-      { label: "منشورات مرتبطة بتفريغ", value: formatNumber(c.postsWithTranscript) },
+      { label: "منشورات ليها نصوص", value: formatNumber(c.postsWithTranscript) },
     ];
   }
 
   function buildKpis() {
     if (!els.kpiGrid) return;
     if (!DATA.posts.length) {
-      els.kpiGrid.innerHTML = emptyState("لا توجد بيانات بعد — سيتم عرض المؤشرات عند اكتمال جمع البيانات.");
+      els.kpiGrid.innerHTML = emptyState("مفيش بيانات لسه — المؤشرات هتظهر أول ما نخلص جمع البيانات.");
       return;
     }
     els.kpiGrid.innerHTML = dashboardKpis()
@@ -78,11 +94,11 @@ window.MRResearchApp = (function () {
   function coverageItems() {
     const c = DATA.coverage || {};
     return [
-      { label: "منشورات فيروسية", value: c.totalPosts },
-      { label: "حسابات/كيانات", value: c.totalEntities },
+      { label: "منشورات منتشرة", value: c.totalPosts },
+      { label: "حسابات وجهات", value: c.totalEntities },
       { label: "صفوف مواضيع", value: c.totalTopicAudit },
       { label: "تفريغات صوتية", value: c.totalTranscripts },
-      { label: "منشورات مرتبطة بتفريغ", value: c.postsWithTranscript },
+      { label: "منشورات ليها نصوص", value: c.postsWithTranscript },
     ];
   }
 
@@ -222,32 +238,19 @@ window.MRResearchApp = (function () {
     });
   }
 
-  function renderDoctors() {
-    if (!els.doctorsGrid) return;
-    if (!DATA.doctors.length) {
-      els.doctorsGrid.innerHTML = emptyState("لا توجد حسابات بعد. سيتم عرض الأطباء والحسابات عند اكتمال جمع البيانات.");
-      return;
-    }
-    const metric = state.doctorSortMetric || "followers";
-    const sorted = DATA.doctors.slice().sort((a, b) => {
-      const diff = (b[metric] || 0) - (a[metric] || 0);
-      return diff !== 0 ? diff : (b.totalEngagement || 0) - (a.totalEngagement || 0);
-    });
-    els.doctorsGrid.innerHTML = sorted.map((doctor) => {
-      const metaChips = doctor.analyzed === false
-        ? [`<span class="chip chip--muted">منافس محتمل — لم يُحلّل بعد</span>`]
-        : [
-            `<span class="chip">متابعون: ${formatNumber(doctor.followers)}</span>`,
-            `<span class="chip">منشورات فيروسية: ${formatNumber(doctor.postCount)}</span>`,
-            `<span class="chip">تفاعل: ${formatNumber(doctor.totalEngagement)}</span>`,
-          ];
-
-      const socialLinks = doctor.accounts.length
-        ? doctor.accounts.map((acc) => socialLinkButton(acc, doctor)).join("")
-        : `<span class="muted">لا توجد روابط حسابات مؤكدة.</span>`;
-
-      return `
-      <article class="doctor-card">
+  function doctorCardHtml(doctor) {
+    const metaChips = doctor.analyzed === false
+      ? [`<span class="chip chip--muted">منافس محتمل — لسه متحللش</span>`]
+      : [
+          `<span class="chip">متابعين: ${formatNumber(doctor.followers)}</span>`,
+          `<span class="chip">منشورات منتشرة: ${formatNumber(doctor.postCount)}</span>`,
+          `<span class="chip">تفاعل: ${formatNumber(doctor.totalEngagement)}</span>`,
+        ];
+    const socialLinks = doctor.accounts.length
+      ? doctor.accounts.map((acc) => socialLinkButton(acc, doctor)).join("")
+      : `<span class="muted">مفيش روابط حسابات مؤكدة لسه.</span>`;
+    return `
+      <article class="doctor-card${doctor.analyzed === false ? " doctor-card--competitor" : ""}">
         <div class="doctor-head">
           <div class="doctor-info">
             <div class="doctor-name">${escapeHtml(doctor.name)}</div>
@@ -257,8 +260,135 @@ window.MRResearchApp = (function () {
         <div class="meta-row doctor-summary-metrics">${metaChips.join("")}</div>
         <div class="doctor-social-row">${socialLinks}</div>
       </article>`;
-    }).join("");
+  }
+
+  function renderDoctors() {
+    if (!els.doctorsGrid) return;
+    if (!DATA.doctors.length) {
+      els.doctorsGrid.innerHTML = emptyState("مفيش حسابات لسه. الأطباء والحسابات هتظهر أول ما نخلص جمع البيانات.");
+      return;
+    }
+    const analyzed = DATA.doctors.filter((d) => d.analyzed !== false);
+    const competitors = DATA.doctors
+      .filter((d) => d.analyzed === false)
+      .sort((a, b) => (b.followers || 0) - (a.followers || 0));
+
+    const metric = state.doctorSortMetric || "followers";
+    const sorted = analyzed.slice().sort((a, b) => {
+      const diff = (b[metric] || 0) - (a[metric] || 0);
+      return diff !== 0 ? diff : (b.totalEngagement || 0) - (a.totalEngagement || 0);
+    });
+    els.doctorsGrid.innerHTML = sorted.map(doctorCardHtml).join("");
     bindOpenAppButtons(els.doctorsGrid);
+
+    if (els.doctorsCount) els.doctorsCount.textContent = formatNumber(analyzed.length);
+    if (els.competitorsCount) els.competitorsCount.textContent = formatNumber(competitors.length);
+    if (els.competitorsGrid) {
+      els.competitorsGrid.innerHTML = competitors.length
+        ? competitors.map(doctorCardHtml).join("")
+        : emptyState("مفيش منافسين محتملين في القايمة دلوقتي.");
+      bindOpenAppButtons(els.competitorsGrid);
+    }
+  }
+
+  function renderBenchmark() {
+    const b = DATA.benchmark;
+    if (!b) return;
+    const bz = b.business;
+    const topName = (b.ranking[0] || {}).name || "";
+
+    if (els.benchmarkBusiness) {
+      const links = (bz.accounts || [])
+        .map((a) => `<a class="chip chip--link" href="${escapeHtml(a.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(a.platform)} ↗</a>`)
+        .join("");
+      els.benchmarkBusiness.innerHTML = `
+      <div class="biz-card">
+        <div class="biz-head">
+          <div><div class="biz-name">${escapeHtml(bz.name)}</div><div class="biz-handle">@${escapeHtml(bz.handle)}</div></div>
+          <span class="tier-badge tier-below">${escapeHtml(bz.tier)}</span>
+        </div>
+        <div class="biz-metrics">
+          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.followers)}</span><span class="bm-lbl">متابعون</span></div>
+          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.avgEng)}</span><span class="bm-lbl">متوسط التفاعل/منشور</span></div>
+          <div class="biz-metric"><span class="bm-val">${formatNumber(bz.avgViews)}</span><span class="bm-lbl">متوسط المشاهدات (ريلز)</span></div>
+          <div class="biz-metric"><span class="bm-val">${bz.engagementRatePct}%</span><span class="bm-lbl">معدل التفاعل</span></div>
+        </div>
+        <div class="biz-links">${links}</div>
+        <p class="biz-note">${escapeHtml(bz.note)}</p>
+      </div>`;
+    }
+
+    if (els.benchmarkHeadline) {
+      const fLow = Math.round(b.lowestAnalyzed / bz.avgEng);
+      const fMed = Math.round(b.medianAnalyzed / bz.avgEng);
+      els.benchmarkHeadline.innerHTML = `
+      <div class="rank-headline">
+        <div class="rank-big">#${b.businessRank}<span>/ ${b.total}</span></div>
+        <div class="rank-text">
+          <p>ترتيبنا الحالي هو <strong>الأخير</strong> من بين ${b.total} حساب، على أساس متوسط التفاعل لكل منشور.</p>
+          <ul>
+            <li>أقل حساب مُحلَّل متوسطه <strong>${formatNumber(b.lowestAnalyzed)}</strong> تفاعل/منشور — أعلى مننا بحوالي <strong>×${fLow}</strong>.</li>
+            <li>وسيط السوق <strong>${formatNumber(b.medianAnalyzed)}</strong> تفاعل/منشور — أعلى مننا بحوالي <strong>×${fMed}</strong>.</li>
+            <li>أعلى حساب (${escapeHtml(topName)}) متوسطه <strong>${formatNumber(b.topAnalyzed)}</strong> تفاعل/منشور.</li>
+          </ul>
+          <p class="rank-note">الفجوة كبيرة، لكنها فجوة <strong>نوع محتوى</strong> مش حجم جمهور — الحلّ في الأقسام التحت.</p>
+        </div>
+      </div>`;
+    }
+
+    if (els.benchmarkFullMarket && b.fullMarket) {
+      const fm = b.fullMarket;
+      els.benchmarkFullMarket.innerHTML = `
+      <div class="fm-grid">
+        <div class="fm-stat"><span class="fm-val">#${fm.followersRank}<span>/ ${fm.total}</span></span><span class="fm-lbl">ترتيبنا بعدد المتابعين (وسط القايمة)</span></div>
+        <div class="fm-stat fm-stat--bad"><span class="fm-val">#${b.total}<span>/ ${b.total}</span></span><span class="fm-lbl">ترتيبنا بالتفاعل (بين الـ${b.total} المُحلَّلين بعمق)</span></div>
+      </div>
+      <p class="fm-note">${escapeHtml(fm.note)}</p>`;
+    }
+
+    if (els.benchmarkTiers) {
+      els.benchmarkTiers.innerHTML = b.tiers
+        .map((t) => {
+          const mine = t.accounts.some((m) => m.isBusiness);
+          const chips = t.accounts
+            .map((m) => `<span class="tier-chip${m.isBusiness ? " tier-chip--me" : ""}">${escapeHtml(m.name)} · ${formatNumber(m.avgEng)}</span>`)
+            .join("");
+          return `<div class="tier-row${mine ? " tier-row--me" : ""}">
+        <div class="tier-meta"><span class="tier-name">${escapeHtml(t.name)}</span><span class="tier-range">${escapeHtml(t.range)} · ${t.count} حساب</span></div>
+        <div class="tier-chips">${chips}</div>
+      </div>`;
+        })
+        .join("");
+    }
+
+    if (els.benchmarkReachable) {
+      els.benchmarkReachable.innerHTML = b.reachable
+        .map((r) => `
+      <article class="reach-card">
+        <div class="reach-top"><span class="reach-acc">${escapeHtml(r.account)}</span><span class="tier-pill">${escapeHtml(r.tier)}</span></div>
+        <div class="reach-topic">${escapeHtml(r.exampleTopic)}</div>
+        <div class="reach-stats"><span>❤️ ${formatNumber(r.exampleEng)}</span><span>👁️ ${viewsLabel(r.exampleViews)}</span><span class="reach-avg">متوسط الحساب: ${formatNumber(r.avgEng)}</span></div>
+        <a class="reach-link" href="${escapeHtml(r.exampleUrl)}" target="_blank" rel="noopener noreferrer">شوف المنشور ↗</a>
+      </article>`)
+        .join("");
+    }
+
+    if (els.benchmarkRankingTable) {
+      // Show only a window of ±5 accounts around our rank (the rest is noise).
+      const idx = b.ranking.findIndex((r) => r.isBusiness);
+      const lo = Math.max(0, idx - 5);
+      const hi = Math.min(b.ranking.length, idx + 6);
+      els.benchmarkRankingTable.innerHTML = b.ranking
+        .slice(lo, hi)
+        .map((r) => `<tr class="${r.isBusiness ? "rank-me" : ""}">
+        <td>${r.rank}</td>
+        <td>${escapeHtml(r.name)}${r.isBusiness ? " <strong>(إحنا 🟢)</strong>" : ""}</td>
+        <td>${escapeHtml(r.tier)}</td>
+        <td>${formatNumber(r.avgEng)}</td>
+        <td>${formatNumber(r.followers)}</td>
+      </tr>`)
+        .join("");
+    }
   }
 
   function postMatchesFilters(post) {
@@ -282,8 +412,8 @@ window.MRResearchApp = (function () {
   function transcriptBlock(p) {
     if (!p.transcript) {
       const msg = p.topicSource === "caption"
-        ? "التصنيف مبني على الكابشن المفصّل لهذا الحساب، فلا يحتاج تفريغ صوتي."
-        : "لا يوجد تفريغ صوتي مرتبط بهذا المنشور (منشور صورة أو غير متوفر في مجموعة التفريغ).";
+        ? "التصنيف معمول بناءً على الكابشن المفصل للحساب ده، فمش محتاج تفريغ صوتي."
+        : "مفيش تفريغ صوتي للمنشور ده (ممكن يكون صورة أو مش موجود في مجموعة التفريغ).";
       return `<div class="transcript-block muted">${msg}</div>`;
     }
     const t = p.transcript;
@@ -293,7 +423,7 @@ window.MRResearchApp = (function () {
     const matchLabel = t.matchedBy === "caption-twin" ? "مطابقة عبر التوأم (Reel نفسه على إنستجرام)" : "مطابقة عبر رابط الفيديو";
     return `
     <details class="transcript-block">
-      <summary>التفريغ الصوتي الكامل (${(t.segments || []).length} مقطع) — ${matchLabel}</summary>
+      <summary>نص الفيديو الكامل (${(t.segments || []).length} مقطع) — ${matchLabel}</summary>
       <p class="transcript-full">${escapeHtml(t.text)}</p>
       <div class="segments">${segs}</div>
     </details>`;
@@ -302,22 +432,22 @@ window.MRResearchApp = (function () {
   function renderPosts() {
     if (!els.postsList) return;
     if (!DATA.posts.length) {
-      els.postsList.innerHTML = emptyState("لا توجد منشورات بعد.");
+      els.postsList.innerHTML = emptyState("مفيش منشورات لسه.");
       if (els.postsCount) els.postsCount.textContent = "";
       return;
     }
     const posts = DATA.posts.filter(postMatchesFilters).sort(comparePosts);
     if (els.postsCount) {
-      els.postsCount.textContent = `عرض ${formatNumber(posts.length)} من ${formatNumber(DATA.posts.length)} منشور`;
+      els.postsCount.textContent = `عرض ${formatNumber(posts.length)} من أصل ${formatNumber(DATA.posts.length)} منشور`;
     }
     if (els.postsPeriod) {
       const m = DATA.meta || {};
       els.postsPeriod.textContent = (m.dateFrom && m.dateTo)
-        ? `🗓️ فترة التحليل: من ${m.dateFrom} إلى ${m.dateTo} — بناءً على آخر منشورات الحسابات وقت السحب عبر Apify`
+        ? `🗓️ فترة التحليل (آخر ${m.windowDays || 90} يوم): من ${m.dateFrom} لحد ${m.dateTo} — بناءً على تواريخ المنشورات. المنشورات الأقدم موجودة في قسم لوحدها تحت.`
         : "";
     }
     if (!posts.length) {
-      els.postsList.innerHTML = `<div class="post-card">لا توجد نتائج مطابقة للبحث الحالي.</div>`;
+      els.postsList.innerHTML = `<div class="post-card">مفيش نتائج مطابقة للبحث ده.</div>`;
       return;
     }
     els.postsList.innerHTML = posts.map((p) => {
@@ -326,7 +456,7 @@ window.MRResearchApp = (function () {
       const hasCaption = p.topicCaption && p.topicCaption !== "Unclassified" && p.topicCaption !== "—";
       const topicLabel = hasAudio
         ? p.topicAudio
-        : (hasCaption ? p.topicCaption : "غير مصنّف — الموضوع في الفيديو (يحتاج تفريغ صوتي)");
+        : (hasCaption ? p.topicCaption : "غير مصنف — الموضوع جوه الفيديو (محتاج تفريغ صوتي)");
 
       return `
     <article class="post-card">
@@ -356,7 +486,7 @@ window.MRResearchApp = (function () {
             </div>
             <div class="stat-item" title="مشاهدات">
               <span class="stat-icon">${METRIC_ICONS.views}</span>
-              <span class="stat-value">${formatNumber(p.views)}</span>
+              <span class="stat-value">${viewsLabel(p.views)}</span>
             </div>
             <div class="stat-item" title="تعليقات">
               <span class="stat-icon">${METRIC_ICONS.comments}</span>
@@ -382,7 +512,7 @@ window.MRResearchApp = (function () {
               ? `<span class="chip">الموضوع: ${escapeHtml(p.topicCaption)}</span>`
               : `<span class="chip">موضوع الصوت: ${escapeHtml(p.topicAudio)}</span><span class="chip">موضوع الكابشن: ${escapeHtml(p.topicCaption)}</span>`}
           </div>
-          <p class="post-caption-text">${escapeHtml(p.caption) || "(لا يوجد نص متاح)"}</p>
+          <p class="post-caption-text">${escapeHtml(p.caption) || "(مفيش نص متاح)"}</p>
           ${transcriptBlock(p)}
         </div>
       </details>
@@ -406,28 +536,31 @@ window.MRResearchApp = (function () {
       </article>`;
   }
 
-  // Posts page only: the pinned/evergreen POSTS table (recent posts are in renderPosts;
-  // accounts live on the doctors page; topic recommendations live on the topics page).
-  function renderPinnedPosts() {
-    if (!els.pinnedPostsTable) return;
-    const pinned = DATA.pinnedPosts || [];
-    els.pinnedPostsTable.innerHTML = pinned.length
-      ? pinned.map((p, i) => {
+  // Posts page only: secondary post tables (older high-engagement + pinned/evergreen).
+  // Recent posts are in renderPosts; accounts live on the doctors page; topics on the topics page.
+  function postsTableHtml(list, emptyMsg) {
+    return list && list.length
+      ? list.map((p, i) => {
           const lab = (p.topicSource === "audio" && p.topicAudio && p.topicAudio !== "—")
             ? p.topicAudio
-            : (p.topicCaption && p.topicCaption !== "Unclassified" ? p.topicCaption : "غير مصنّف");
+            : (p.topicCaption && p.topicCaption !== "Unclassified" ? p.topicCaption : "غير مصنف");
           const link = p.postUrl
             ? `<a href="${escapeHtml(p.postUrl)}" target="_blank" rel="noopener">فتح ↗</a>`
             : `<span class="muted">—</span>`;
-          return `<tr><td>${i + 1}</td><td>${escapeHtml(p.account)}</td><td>${escapeHtml(p.date || "")}</td><td>${escapeHtml(lab)}</td><td>${formatNumber(p.views)}</td><td>${formatNumber(p.engagement)}</td><td>${link}</td></tr>`;
+          return `<tr><td>${i + 1}</td><td>${escapeHtml(p.account)}</td><td>${escapeHtml(p.date || "")}</td><td>${escapeHtml(lab)}</td><td>${viewsLabel(p.views)}</td><td>${formatNumber(p.engagement)}</td><td>${link}</td></tr>`;
         }).join("")
-      : `<tr><td colspan="7" class="muted">لا توجد منشورات مثبّتة.</td></tr>`;
+      : `<tr><td colspan="7" class="muted">${escapeHtml(emptyMsg)}</td></tr>`;
+  }
+
+  function renderPinnedPosts() {
+    if (els.olderPostsTable) els.olderPostsTable.innerHTML = postsTableHtml(DATA.olderPosts, "مفيش منشورات قديمة.");
+    if (els.pinnedPostsTable) els.pinnedPostsTable.innerHTML = postsTableHtml(DATA.pinnedPosts, "مفيش منشورات مثبتة.");
   }
 
   function renderTopics() {
     if (!els.topicsList) return;
     if (!DATA.topicRecommendations.length) {
-      els.topicsList.innerHTML = emptyState("لا توجد توصيات مواضيع بعد — ستظهر هنا بعد جمع البيانات وتحليلها.");
+      els.topicsList.innerHTML = emptyState("مفيش توصيات مواضيع لسه — هتظهر هنا أول ما نخلص جمع البيانات وتحليلها.");
     } else {
       els.topicsList.innerHTML = DATA.topicRecommendations.map((t) => {
         const evidence = DATA.posts
@@ -444,7 +577,7 @@ window.MRResearchApp = (function () {
           <span class="chip">تفاعل: ${formatNumber(t.engagement)}</span>
           <span class="chip">مشاهدات: ${formatNumber(t.views)}</span>
         </div>
-        ${evidence ? `<details class="sub-details"><summary>المنشورات الداعمة لهذا الموضوع</summary><ul class="linked-posts">${evidence}</ul></details>` : ""}
+        ${evidence ? `<details class="sub-details"><summary>المنشورات اللي بتدعم الموضوع ده</summary><ul class="linked-posts">${evidence}</ul></details>` : ""}
       </article>`;
       }).join("");
     }
@@ -452,7 +585,7 @@ window.MRResearchApp = (function () {
       const pt = DATA.pinnedTopics || [];
       els.pinnedTopicsList.innerHTML = pt.length
         ? pt.map(topicCardHtml).join("")
-        : emptyState("لا توجد مواضيع دائمة بعد.");
+        : emptyState("مفيش مواضيع دايمة لسه.");
     }
     if (els.topicAuditTable) {
       els.topicAuditTable.innerHTML = (DATA.topicAudit || [])
@@ -479,7 +612,7 @@ window.MRResearchApp = (function () {
         .map((p) => `<tr>
           <td>${p.rank}</td><td>${escapeHtml(p.account)}</td><td>${escapeHtml(p.platform)}</td>
           <td>${escapeHtml(p.date)}</td><td>${escapeHtml(p.topicAudio)}</td>
-          <td>${formatNumber(p.engagement)}</td><td>${formatNumber(p.views)}</td>
+          <td>${formatNumber(p.engagement)}</td><td>${viewsLabel(p.views)}</td>
           <td>${p.transcript ? "✓" : "—"}</td></tr>`)
         .join("");
     }
@@ -513,13 +646,13 @@ window.MRResearchApp = (function () {
             ${t.description ? `<p class="vault-desc">${escapeHtml(t.description)}</p>` : ""}
           </div></div>
           <details class="transcript-block">
-            <summary>عرض التفريغ (${(t.segments || []).length} مقطع)</summary>
+            <summary>عرض النص (${(t.segments || []).length} مقطع)</summary>
             <p class="transcript-full">${escapeHtml(t.text)}</p>
             <div class="segments">${segs}</div>
           </details>
         </article>`;
           }).join("")
-        : emptyState("لا توجد تفريغات صوتية بعد.");
+        : emptyState("مفيش تفريغات صوتية لسه.");
     }
   }
 
@@ -537,6 +670,7 @@ window.MRResearchApp = (function () {
     if (page === "doctors") renderDoctors();
     if (page === "posts") { renderPosts(); renderPinnedPosts(); }
     if (page === "topics") renderTopics();
+    if (page === "benchmark") renderBenchmark();
     if (page === "vault") { renderCoverage(); renderVault(); }
   }
 
