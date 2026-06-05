@@ -48,11 +48,18 @@ CLIN = [
     (r"حرق|الايض|الأيض|metabolism", "Metabolism"),
     (r"مونجارو|اوزمبك|ozempic|wegovy|ابر|حقن|ببتيد|peptide|glp|تنحيف", "GLP-1 / weight-loss injections"),
     (r"شبع|شهية|الجوع|appetite|satiety", "Appetite & satiety"),
+    (r"لقيمات|فثلث|ثلث للطعام|الكميات|portion|moderation|حجم الوجبة|نصف الكمية", "Portion control / moderation"),
+    (r"بالليل|قبل النوم|اكل بالليل|الاكل بالليل|late.?night|سهر|آخر الليل", "Late-night eating & sleep"),
     (r"سكر|محلي|محليات|sugar|sweetener", "Sugar & sweeteners"),
     (r"عيش|خبز|نشويات|كارب|bread|carb", "Bread & carbs (comparison)"),
     (r"احتباس|املاح|أملاح|retention", "Water retention"),
     (r"درقية|الغده|الغدة|thyroid", "Thyroid"),
     (r"انتفاخ|قولون|هضم|bloating|sibo", "Bloating / digestion"),
+    (r"دهون حشوية|الحشوية|visceral|الكرش|كرش|دهون البطن", "Belly & visceral fat"),
+    (r"الديدان|الجرثومة|طفيليات|h\.?\s*pylori|بكتيريا المعدة", "Gut parasites / H. pylori"),
+    (r"مرارة|gall\s*bladder|كبد دهني|الكبد الدهني|fatty liver", "Liver & gallbladder"),
+    (r"دواء.{0,6}وزن|أدوية.{0,6}وزن|حبوب.{0,6}تخسيس|حبوب.{0,6}وزن", "Weight-gain/loss drugs (warning)"),
+    (r"اكل صحي|أكل صحي|نظام غذائي|نمط حياة صحي|دايت صحي|اختيارات.{0,8}دايت|أنظمة دايت", "Healthy eating / diet basics"),
     (r"دوره|الدورة|period|menstr", "Cycle / menstrual health"),
     (r"نوم|sleep", "Sleep & stress"),
     (r"بروتين|protein", "Protein"),
@@ -232,19 +239,203 @@ def main():
     topicAudit, topicRecommendations = analyze(non_pinned)
     _, pinnedTopics = analyze(pinned_posts)
 
+    # ---------------------------------------------------------------------
+    # CROSS-PLATFORM "PROVEN TOPICS": pool Instagram + TikTok viral content,
+    # score each post by NORMALIZED virality (engagement ÷ that account's median),
+    # and validate a topic by how many DISTINCT accounts went viral with it.
+    # A topic is "proven/recreatable" only if 3+ independent accounts hit with it.
+    # ---------------------------------------------------------------------
+    import statistics as _stp
+    _recent = json.loads((REPO / "sources" / "recent_metrics.json").read_text(encoding="utf-8")) if (REPO / "sources" / "recent_metrics.json").exists() else {}
+    _ttm = json.loads((REPO / "sources" / "tt_metrics.json").read_text(encoding="utf-8")) if (REPO / "sources" / "tt_metrics.json").exists() else {}
+    _ctx = json.loads((REPO / "sources" / "cross_transcripts.json").read_text(encoding="utf-8")) if (REPO / "sources" / "cross_transcripts.json").exists() else {}
+    # classify a FB/TikTok post from caption + spoken transcript (when we have it).
+    def _xtopic(url, caption):
+        tr = _ctx.get(url, "")
+        return classify((caption or "") + " " + tr), tr
+
+    def _igh(d):
+        for a in d.get("accounts", []):
+            m = re.search(r"instagram\.com/([^/?#]+)", a.get("url", ""))
+            if m:
+                return m.group(1).lower().rstrip("/")
+        return None
+
+    name2h = {d["name"]: _igh(d) for d in doctors}
+    h2name = {_igh(d): d["name"] for d in doctors}
+    tt2h = {}
+    for d in doctors:
+        h = _igh(d)
+        for a in d.get("accounts", []):
+            m = re.search(r"tiktok\.com/@([^/?#]+)", a.get("url", "").lower())
+            if m:
+                tt2h[m.group(1)] = h
+
+    pool = []
+    for p in non_pinned:  # Instagram viral content
+        h = name2h.get(p.get("account"))
+        med = (_recent.get(h) or {}).get("median90") or 0
+        eng = p.get("engagement", 0)
+        pool.append({
+            "account": p.get("account"), "handle": h or p.get("account"), "platform": "Instagram",
+            "eng": eng, "topic": eff_topic(p), "clinical": is_clinical_post(p),
+            "url": p.get("postUrl", ""), "caption": (p.get("caption") or "")[:140],
+            "x": round(eng / med, 1) if med else None,
+            "video": bool((p.get("transcript") or {}).get("text")),
+            "likes": p.get("likes", 0), "comments": p.get("comments", 0),
+            "shares": p.get("shares", 0), "views": p.get("views", 0),
+        })
+    TTC = REPO / "sources" / "_tt_captions.txt"
+    if TTC.exists():
+        for line in TTC.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            o = json.loads(line)
+            if o.get("isPinned"):
+                continue
+            u = o["input"].lower()
+            h = tt2h.get(u)
+            eng = o.get("diggCount", 0) + o.get("commentCount", 0) + o.get("shareCount", 0)
+            med = (_ttm.get(h) or {}).get("median90") or 0
+            topic, clin = classify(o.get("text", ""))
+            pool.append({
+                "account": h2name.get(h, u), "handle": h or u, "platform": "TikTok",
+                "eng": eng, "topic": topic, "clinical": clin,
+                "url": o.get("webVideoUrl", ""), "caption": (o.get("text") or "")[:140],
+                "x": round(eng / med, 1) if med else None, "video": True,
+                "likes": o.get("diggCount", 0), "comments": o.get("commentCount", 0),
+                "shares": o.get("shareCount", 0), "views": o.get("playCount", 0),
+            })
+
+    # Facebook all-time virals (≥1000 likes) → topic pool + cross-platform hall of fame.
+    _fbm = json.loads((REPO / "sources" / "fb_metrics.json").read_text(encoding="utf-8")) if (REPO / "sources" / "fb_metrics.json").exists() else {}
+    fb_url2h = {}
+    for d in doctors:
+        h = _igh(d)
+        for a in d.get("accounts", []):
+            if "facebook" in a.get("url", "").lower():
+                fb_url2h[a["url"].rstrip("/").lower()] = h
+    FBV = REPO / "sources" / "_fb_virals.txt"
+    if FBV.exists():
+        for line in FBV.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            o = json.loads(line)
+            h = fb_url2h.get(o["inputUrl"].rstrip("/").lower())
+            eng = o.get("likes", 0) + o.get("comments", 0) + o.get("shares", 0)
+            med = (_fbm.get(h) or {}).get("median90") or 0
+            (topic, clin), tr = _xtopic(o.get("url", ""), o.get("text", ""))
+            pool.append({
+                "account": h2name.get(h, o["inputUrl"]), "handle": h or o["inputUrl"], "platform": "Facebook",
+                "eng": eng, "topic": topic, "clinical": clin, "url": o.get("url", ""),
+                "caption": (o.get("text") or "")[:140], "x": round(eng / med, 1) if med else None,
+                "video": bool(o.get("viewsCount")), "date": o.get("time", ""), "transcript": tr,
+                "likes": o.get("likes", 0), "comments": o.get("comments", 0),
+                "shares": o.get("shares", 0), "views": o.get("viewsCount", 0),
+            })
+
+    # TikTok all-time virals (with video links) → pool + hall of fame.
+    TTV = REPO / "sources" / "_tt_virals.txt"
+    if TTV.exists():
+        for line in TTV.read_text(encoding="utf-8").splitlines():
+            line = line.strip()
+            if not line:
+                continue
+            o = json.loads(line)
+            h = tt2h.get(o["input"].lower())
+            eng = o.get("diggCount", 0) + o.get("commentCount", 0) + o.get("shareCount", 0)
+            med = (_ttm.get(h) or {}).get("median90") or 0
+            (topic, clin), tr = _xtopic(o.get("url", ""), o.get("text", ""))
+            pool.append({
+                "account": h2name.get(h, o["input"]), "handle": h or o["input"], "platform": "TikTok",
+                "eng": eng, "topic": topic, "clinical": clin, "url": o.get("url", ""),
+                "caption": (o.get("text") or "")[:140], "x": round(eng / med, 1) if med else None,
+                "video": True, "date": o.get("date", ""), "transcript": tr,
+                "likes": o.get("diggCount", 0), "comments": o.get("commentCount", 0),
+                "shares": o.get("shareCount", 0), "views": o.get("playCount", 0),
+            })
+
+    # Cross-platform "hall of fame": FB + TikTok viral posts shaped like base posts, so they
+    # flow into the evergreen list and the vault alongside Instagram.
+    # Reach-weighted score uses ALL metrics: reactions + interaction + amplification + reach.
+    # likes×1 + comments×2 + shares×3 + views×0.05 (shares amplify most; views = passive reach).
+    def reach_score(likes, comments, shares, views):
+        return round((likes or 0) + (comments or 0) * 2 + (shares or 0) * 3 + (views or 0) * 0.05)
+
+    cross_posts = []
+    for it in pool:
+        if it["platform"] in ("Facebook", "TikTok") and it.get("url"):
+            cross_posts.append({
+                "account": it["account"], "platform": it["platform"], "date": it.get("date", ""),
+                "engagement": it["eng"], "views": it.get("views", 0), "postUrl": it["url"],
+                "topicAudio": it["topic"] if (it.get("transcript") and it["topic"] != "Unclassified") else "—",
+                "topicCaption": it["topic"] if it["topic"] != "Unclassified" else "غير مصنف",
+                "topicSource": "audio" if it.get("transcript") else "caption",
+                "transcript": ({"text": it["transcript"], "segments": [], "matchedBy": "video-url"} if it.get("transcript") else None),
+                "caption": it["caption"], "pinned": False,
+                "likes": it.get("likes", 0), "comments": it.get("comments", 0),
+                "shares": it.get("shares", 0), "followers": 0, "rank": 0,
+                "reachScore": reach_score(it.get("likes"), it.get("comments"), it.get("shares"), it.get("views")),
+            })
+    cross_posts.sort(key=lambda p: -p["engagement"])
+
+    _byt = defaultdict(lambda: {"accts": set(), "platforms": set(), "best": None, "viral": 0, "video": 0, "n": 0, "eng": 0})
+    for it in pool:
+        if not it["clinical"] or it["topic"] == "Unclassified":
+            continue
+        g = _byt[it["topic"]]
+        g["accts"].add(it["handle"]); g["platforms"].add(it["platform"]); g["n"] += 1; g["eng"] += it["eng"]
+        if it["video"]:
+            g["video"] += 1
+        if it.get("x") and it["x"] >= 3:
+            g["viral"] += 1
+        if not g["best"] or it["eng"] > g["best"]["eng"]:
+            g["best"] = {"eng": it["eng"], "account": it["account"], "platform": it["platform"],
+                         "url": it["url"], "caption": it["caption"], "x": it.get("x")}
+
+    provenTopics = sorted(
+        ({
+            "topic": t, "accountCount": len(v["accts"]), "proven": len(v["accts"]) >= 3,
+            "platforms": sorted(v["platforms"]), "posts": v["n"], "engagement": v["eng"],
+            "viralCount": v["viral"], "videoShare": round(v["video"] / v["n"] * 100) if v["n"] else 0,
+            "bestExample": v["best"],
+        } for t, v in _byt.items()),
+        key=lambda x: (-x["accountCount"], -x["engagement"]),
+    )
+    # Enrich the existing IG recommendations with the cross-platform validation.
+    _pt = {x["topic"]: x for x in provenTopics}
+    for r in topicRecommendations:
+        x = _pt.get(r["topic"])
+        if x:
+            r["accountCount"] = x["accountCount"]; r["proven"] = x["proven"]
+            r["platforms"] = x["platforms"]; r["viralCount"] = x["viralCount"]
+            r["bestExample"] = x["bestExample"]
+        else:
+            r["accountCount"] = 0; r["proven"] = False; r["platforms"] = ["Instagram"]
+            r["viralCount"] = 0; r["bestExample"] = None
+
     # Strict last-90-days window, relative to the most recent scraped post (≈ the scrape date).
     WINDOW = 90
     _alldates = [p.get("date") for p in non_pinned if p.get("date")]
     ref = max(_alldates) if _alldates else datetime.date.today().isoformat()
     cutoff = (datetime.date.fromisoformat(ref) - datetime.timedelta(days=WINDOW)).isoformat()
-    current_posts = [p for p in non_pinned if p.get("date", "") >= cutoff]
-    older_posts = [p for p in non_pinned if p.get("date", "") < cutoff]  # high-engagement but >90d — kept, not lost
+    # Split cross-platform (FB/TikTok) virals by date too: recent ones join the last-90-days
+    # page, older ones go to the all-time Hall of Fame — same rule as Instagram.
+    cross_recent = [p for p in cross_posts if (p.get("date") or "") >= cutoff]
+    cross_old = [p for p in cross_posts if (p.get("date") or "") < cutoff]
+    current_posts = [p for p in non_pinned if p.get("date", "") >= cutoff] + cross_recent
+    older_posts = [p for p in non_pinned if p.get("date", "") < cutoff] + cross_old  # >90d IG + older cross-platform virals
     for i, p in enumerate(current_posts, 1):
         p["rank"] = i
     for i, p in enumerate(older_posts, 1):
         p["rank"] = i
     for i, p in enumerate(pinned_posts, 1):
         p["rank"] = i
+    for p in current_posts + older_posts + pinned_posts:
+        if "reachScore" not in p:
+            p["reachScore"] = reach_score(p.get("likes"), p.get("comments"), p.get("shares"), p.get("views"))
 
     _cd = sorted(p.get("date") for p in current_posts if p.get("date"))
     date_from = _cd[0] if _cd else cutoff
@@ -400,26 +591,28 @@ def main():
                "Motivational / community", "Motivational / trend", "Unclassified",
                "Recipe / cooking", "Brand / product promo (peanut butter)",
                "Brand / product promo (healthy chocolate)"}
-        reach_names = {r["name"] for r in rows
-                       if not r["isBusiness"] and biz_eng < r["avgEng"] <= 1500}
-        avg_by_name = {r["name"]: r["avgEng"] for r in rows}
-        tier_by_name = {r["name"]: r["tier"] for r in rows}
-        cands = [p for p in posts
-                 if p.get("account") in reach_names and eff_topic(p) not in NON
-                 and "promo" not in eff_topic(p).lower()]
-        cands.sort(key=lambda p: -p.get("engagement", 0))
-        reachable, per_acc = [], defaultdict(int)
-        for p in cands:
-            acc = p.get("account")
-            if per_acc[acc] >= 2:
+        # Reach-up examples now come from the CROSS-PLATFORM pool, ranked by NORMALIZED
+        # virality (engagement ÷ that account's median). A post that beat its own account's
+        # norm by 3×+ is proof the *content* worked — recreatable regardless of follower count.
+        _plat_ar = {"Instagram": "إنستجرام", "TikTok": "تيك توك", "Facebook": "فيسبوك"}
+        cands = [it for it in pool
+                 if it["clinical"] and it["topic"] not in NON
+                 and "promo" not in it["topic"].lower() and it.get("url")]
+        cands.sort(key=lambda it: (-(it.get("x") or 0), -it["eng"]))
+        reachable, seen_topic, per_acc = [], set(), defaultdict(int)
+        for it in cands:
+            if it["topic"] in seen_topic:   # one best example per topic → diverse proven set
                 continue
-            per_acc[acc] += 1
+            if per_acc[it["handle"]] >= 2:
+                continue
+            seen_topic.add(it["topic"]); per_acc[it["handle"]] += 1
             reachable.append({
-                "account": acc, "avgEng": avg_by_name.get(acc, 0), "tier": tier_by_name.get(acc, ""),
-                "exampleTopic": eff_topic(p), "exampleEng": p.get("engagement", 0),
-                "exampleViews": p.get("views", 0), "exampleUrl": p.get("postUrl", ""),
+                "account": it["account"], "tier": _plat_ar.get(it["platform"], it["platform"]),
+                "platform": it["platform"], "normX": it.get("x"),
+                "exampleTopic": it["topic"], "exampleEng": it["eng"],
+                "exampleViews": 0, "exampleUrl": it["url"], "caption": it["caption"],
             })
-            if len(reachable) >= 6:
+            if len(reachable) >= 8:
                 break
 
         # Full-market context: we profile-scraped all 108 accounts for followers.
@@ -514,6 +707,7 @@ def main():
         "olderPosts": older_posts,
         "pinnedPosts": pinned_posts,
         "topicRecommendations": topicRecommendations,
+        "provenTopics": provenTopics,
         "pinnedTopics": pinnedTopics,
         "topicAudit": topicAudit,
         "benchmark": benchmark,
@@ -543,7 +737,7 @@ def main():
                     "Shares": str(p.get("shares", 0)), "Engagement": str(p.get("engagement", 0)),
                     "Followers": str(p.get("followers", 0)), "URL": p.get("postUrl", ""),
                 }
-                for p in posts
+                for p in posts + cross_posts
             ],
             "entities": [
                 {

@@ -52,7 +52,6 @@ window.MRPageTemplates = {
       <option value="likes">الإعجابات</option>
       <option value="comments">التعليقات</option>
     </select>
-    <input id="searchInput" type="search" placeholder="اسم الطبيب، الموضوع، المنصة، أو نص الفيديو..." aria-label="ابحث هنا" />
   </div>
   <div id="postsList" class="posts-list"></div>
 </section>`,
@@ -60,11 +59,12 @@ window.MRPageTemplates = {
   evergreen: `
 <section class="card">
   <div class="section-head">
-    <h3>فيروسي بشكل عام (خارج آخر 90 يوم) <span class="posts-title-count" id="evergreenCount"></span></h3>
+    <h3>فيروسي بشكل عام — أقدم من 90 يوم (كل المنصّات) 🏆 <span class="posts-title-count" id="evergreenCount"></span></h3>
+    <p style="color:var(--muted);font-size:0.85rem;margin-top:0.3rem">أقوى المنشورات <strong>الأقدم من 90 يوم</strong> على إنستجرام + فيسبوك + تيك توك (الأحدث موجود في صفحة «آخر 90 يوم»). مرتّبة بـ<strong>نقاط الوصول</strong> = إعجابات + تعليقات×2 + مشاركات×3 + مشاهدات×0.05، وكل منشور بمقاييسه التفصيلية.</p>
   </div>
   <div class="table-wrap">
     <table class="data-table sortable" id="evergreenTable">
-      <thead><tr><th>الحساب</th><th>المنصة</th><th>المشاهدات</th><th>التفاعل</th><th>#</th><th>التاريخ</th><th>الموضوع</th><th>النوع</th><th data-no-sort="1">الرابط</th></tr></thead>
+      <thead><tr><th>#</th><th>الحساب</th><th>المنصة</th><th>نقاط الوصول</th><th>التفاعل</th><th>❤ إعجابات</th><th>💬 تعليقات</th><th>🔁 مشاركات</th><th>👁 مشاهدات</th><th>التاريخ</th><th>الموضوع</th><th>النوع</th><th data-no-sort="1">الرابط</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
@@ -74,7 +74,7 @@ window.MRPageTemplates = {
 <section class="card" aria-labelledby="topicsHeading">
   <div class="section-head">
     <h3 id="topicsHeading">مواضيع مقترحة لصناعة المحتوى</h3>
-    <p>دي المواضيع الطبية اللي نقدر ننتج زيها، مترتبة حسب قوة النتائج (تفاعل ومشاهدات). استبعدنا الفيديوهات اللي مش طبية أو اللي من غير صوت عشان تكون التوصيات مركزة على محتوى مفيد وقابل للتكرار.</p>
+    <p>المواضيع الطبية اللي نقدر ننتج زيها، مرتّبة بحيث <strong>المواضيع المثبتة الأول</strong>. علامة <strong>✅ مثبت بـ N حساب</strong> معناها إن الموضوع ده اتعملّه فيرال من <strong>N حساب مستقل</strong> عبر إنستجرام وتيك توك — كل ما العدد أكبر، الموضوع أضمن (مش مجرد ضربة حظ لحساب واحد). كل موضوع معاه <strong>أقوى مثال حقيقي</strong> (بالرابط) و<strong>عدد المنشورات الفيرالية</strong> فيه.</p>
   </div>
   <div id="topicsList" class="topics-list"></div>
 </section>
@@ -139,8 +139,8 @@ window.MRPageTemplates = {
 
 <section class="card">
   <div class="section-head">
-    <h3>الطبقة اللي نقدر نوصلها — بأمثلة محتوى حقيقية ✅</h3>
-    <p>دي أقوى منشورات <strong>تعليمية</strong> من الحسابات اللي في الطبقات القريبة فوقنا مباشرة (ناشئ/متوسّط). أرقامها واقعية وقابلة للوصول، وموضوعاتها في صميم تخصص العيادة (إبر GLP-1، مقاومة الأنسولين، PCOS…). دي القوالب اللي نكرّرها.</p>
+    <h3>قوالب محتوى مثبتة نقدر نكرّرها ✅</h3>
+    <p>دي منشورات <strong>تعليمية</strong> من كل المنصّات (إنستجرام + تيك توك) مرتّبة بـ<strong>الفيرالية النسبية</strong> = تفاعل المنشور ÷ متوسط صاحب الحساب. منشور تجاوز متوسط صاحبه بـ <strong>×3 أو أكتر</strong> معناه إن <em>المحتوى نفسه</em> هو اللي اشتغل (مش حجم الحساب) — يعني قابل للتكرار عندنا. موضوع لكل قالب عشان تشكيلة متنوّعة في صميم تخصص العيادة (سكر/محليات، مقاومة الأنسولين، PCOS، إبر GLP-1…).</p>
   </div>
   <div id="benchmarkReachable" class="reach-grid"></div>
 </section>

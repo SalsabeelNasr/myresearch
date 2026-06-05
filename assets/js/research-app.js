@@ -434,7 +434,8 @@ window.MRResearchApp = (function () {
       <article class="reach-card">
         <div class="reach-top"><span class="reach-acc">${escapeHtml(r.account)}</span><span class="tier-pill">${escapeHtml(r.tier)}</span></div>
         <div class="reach-topic">${escapeHtml(r.exampleTopic)}</div>
-        <div class="reach-stats"><span>❤️ ${formatNumber(r.exampleEng)}</span><span>👁️ ${viewsLabel(r.exampleViews)}</span><span class="reach-avg">متوسط الحساب: ${formatNumber(r.avgEng)}</span></div>
+        <div class="reach-stats"><span>❤️ ${formatNumber(r.exampleEng)}</span>${r.normX ? `<span class="reach-avg" title="تجاوز متوسط صاحب الحساب بـ ${r.normX} ضعف — دليل إن المحتوى نفسه هو اللي اشتغل، مش حجم الحساب">🚀 ×${r.normX} من متوسطه</span>` : ""}</div>
+        ${r.caption ? `<div class="reach-cap muted">${escapeHtml(r.caption)}</div>` : ""}
         <a class="reach-link" href="${escapeHtml(r.exampleUrl)}" target="_blank" rel="noopener noreferrer">شوف المنشور ↗</a>
       </article>`)
         .join("");
@@ -495,7 +496,7 @@ window.MRResearchApp = (function () {
       els.postsList.innerHTML = `<div class="post-card">مفيش نتائج مطابقة للبحث ده.</div>`;
       return;
     }
-    els.postsList.innerHTML = posts.map((p) => {
+    els.postsList.innerHTML = posts.map((p, i) => {
       const hasAudio = p.topicSource === "audio" && p.topicAudio && p.topicAudio !== "—";
       const hasCaption = p.topicCaption && p.topicCaption !== "Unclassified" && p.topicCaption !== "—";
       const topicLabel = hasAudio
@@ -506,7 +507,7 @@ window.MRResearchApp = (function () {
     <article class="post-card">
       <div class="post-header">
         <div class="post-meta-left">
-          <span class="post-rank">#${p.rank}</span>
+          <span class="post-rank">#${i + 1}</span>
           <span class="post-date-tag">${escapeHtml(p.date)}</span>
         </div>
         <div class="engagement-stat" title="إجمالي التفاعل">
@@ -617,7 +618,7 @@ window.MRResearchApp = (function () {
     if (!els.evergreenTable) return;
     const older = (DATA.olderPosts || []).map((p) => ({ ...p, pinned: false }));
     const pinned = (DATA.pinnedPosts || []).map((p) => ({ ...p, pinned: true }));
-    const all = [...older, ...pinned].sort((a, b) => (b.engagement || 0) - (a.engagement || 0));
+    const all = [...older, ...pinned].sort((a, b) => ((b.reachScore || b.engagement || 0) - (a.reachScore || a.engagement || 0)));
     if (els.evergreenCount) els.evergreenCount.textContent = `(${formatNumber(all.length)})`;
     els.evergreenTable.innerHTML = all.length
       ? all.map((p, i) => {
@@ -628,9 +629,10 @@ window.MRResearchApp = (function () {
             ? `<a href="${escapeHtml(p.postUrl)}" target="_blank" rel="noopener noreferrer">فتح ↗</a>`
             : `<span class="muted">—</span>`;
           const type = p.pinned ? `<span class="chip chip--pin">مثبّت 📌</span>` : `قديم`;
-          return `<tr><td>${escapeHtml(p.account)}</td><td>${escapeHtml(p.platform || "—")}</td><td>${viewsLabel(p.views)}</td><td>${formatNumber(p.engagement)}</td><td>${i + 1}</td><td>${escapeHtml(p.date || "")}</td><td>${escapeHtml(lab)}</td><td>${type}</td><td>${link}</td></tr>`;
+          const reach = p.reachScore != null ? formatNumber(p.reachScore) : "—";
+          return `<tr><td>${i + 1}</td><td>${escapeHtml(p.account)}</td><td>${escapeHtml(p.platform || "—")}</td><td data-sort="${p.reachScore || 0}"><strong title="نقاط الوصول = إعجابات + تعليقات×2 + مشاركات×3 + مشاهدات×0.05">${reach}</strong></td><td>${formatNumber(p.engagement)}</td><td>${formatNumber(p.likes || 0)}</td><td>${formatNumber(p.comments || 0)}</td><td>${formatNumber(p.shares || 0)}</td><td>${viewsLabel(p.views)}</td><td>${escapeHtml(p.date || "")}</td><td>${escapeHtml(lab)}</td><td>${type}</td><td>${link}</td></tr>`;
         }).join("")
-      : `<tr><td colspan="9" class="muted">مفيش منشورات.</td></tr>`;
+      : `<tr><td colspan="13" class="muted">مفيش منشورات.</td></tr>`;
     makeSortable(els.evergreenTableEl);
   }
 
@@ -642,21 +644,35 @@ window.MRResearchApp = (function () {
       const effTopic = (p) => (p.topicSource === "audio" && p.topicAudio && p.topicAudio !== "—")
         ? p.topicAudio
         : (p.topicCaption || "");
-      els.topicsList.innerHTML = DATA.topicRecommendations.map((t) => {
+      const platAr = { Instagram: "إنستجرام", TikTok: "تيك توك", Facebook: "فيسبوك" };
+      // Proven topics first (validated by the most independent accounts going viral).
+      const recs = DATA.topicRecommendations.slice().sort((a, b) =>
+        (b.proven - a.proven) || ((b.accountCount || 0) - (a.accountCount || 0)) || (b.score - a.score));
+      els.topicsList.innerHTML = recs.map((t) => {
         const evidence = [...DATA.posts, ...(DATA.olderPosts || [])]
           .filter((p) => effTopic(p) === t.topic && p.postUrl)
           .sort((a, b) => b.engagement - a.engagement)
           .slice(0, 4)
           .map((p) => `<li><a href="${escapeHtml(p.postUrl)}" target="_blank" rel="noopener noreferrer">${escapeHtml(p.account)}</a> <span class="muted">(${formatNumber(p.engagement)} تفاعل${p.views ? " • " + formatNumber(p.views) + " مشاهدة" : ""})</span> — <a href="${escapeHtml(p.postUrl)}" target="_blank" rel="noopener noreferrer">فتح المنشور ↗</a></li>`)
           .join("");
+        const provenBadge = t.proven
+          ? `<span class="chip chip--strong" title="عدد الحسابات المستقلّة اللي اتعملها فيرال بنفس الموضوع — كل ما العدد أكبر، الموضوع مضمون أكتر">✅ مثبت بـ ${t.accountCount} حساب</span>`
+          : (t.accountCount ? `<span class="chip" title="عدد الحسابات اللي نجح معاها الموضوع">${t.accountCount} حساب</span>` : "");
+        const platBadges = (t.platforms || []).map((p) => `<span class="size-badge">${platAr[p] || p}</span>`).join(" ");
+        const be = t.bestExample;
+        const bestLink = (be && be.url)
+          ? `<div class="topic-best">أقوى مثال: <a href="${escapeHtml(be.url)}" target="_blank" rel="noopener noreferrer">${escapeHtml(be.account)}</a> <span class="muted">(${formatNumber(be.eng)} تفاعل على ${platAr[be.platform] || be.platform}${be.x ? ` · ×${be.x} من متوسطه` : ""})</span> — ${escapeHtml(be.caption || "")}</div>`
+          : "";
         return `
-      <article class="topic-card">
-        <div class="topic-name">${escapeHtml(t.topic)}</div>
+      <article class="topic-card${t.proven ? " topic-card--proven" : ""}">
+        <div class="topic-name">${escapeHtml(t.topic)} ${platBadges}</div>
         <div class="meta-row">
+          ${provenBadge}
           <span class="chip">منشورات: ${formatNumber(t.posts)}</span>
           <span class="chip">تفاعل: ${formatNumber(t.engagement)}</span>
-          <span class="chip">مشاهدات: ${formatNumber(t.views)}</span>
+          ${t.viralCount ? `<span class="chip" title="منشورات تجاوزت 3× متوسط صاحبها">🚀 ${t.viralCount} منشور فيرالي</span>` : ""}
         </div>
+        ${bestLink}
         ${evidence ? `<details class="sub-details"><summary>المنشورات اللي بتدعم الموضوع ده</summary><ul class="linked-posts">${evidence}</ul></details>` : ""}
       </article>`;
       }).join("");
