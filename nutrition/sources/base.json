@@ -91,24 +91,6 @@
    "transcriptCount": 0
   },
   {
-   "name": "dralaasabry.nourish",
-   "specializations": [
-    "Nutrition / weight-loss"
-   ],
-   "accounts": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/dralaasabry.nourish/",
-     "confidence": "HIGH (106K followers)"
-    }
-   ],
-   "image": "",
-   "postCount": 28,
-   "totalEngagement": 100721,
-   "followers": 106000,
-   "transcriptCount": 0
-  },
-  {
    "name": "drwaadamin",
    "specializations": [
     "Nutrition / weight-loss"
@@ -142,42 +124,6 @@
    "postCount": 30,
    "totalEngagement": 65008,
    "followers": 21000,
-   "transcriptCount": 0
-  },
-  {
-   "name": "dt.maryam.belal",
-   "specializations": [
-    "Nutrition / weight-loss"
-   ],
-   "accounts": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/dt.maryam.belal/",
-     "confidence": "HIGH (56K followers)"
-    }
-   ],
-   "image": "",
-   "postCount": 30,
-   "totalEngagement": 55992,
-   "followers": 55800,
-   "transcriptCount": 0
-  },
-  {
-   "name": "dr.moeatiya",
-   "specializations": [
-    "Nutrition / weight-loss"
-   ],
-   "accounts": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/dr.moeatiya/",
-     "confidence": "HIGH (51K followers)"
-    }
-   ],
-   "image": "",
-   "postCount": 30,
-   "totalEngagement": 37780,
-   "followers": 51200,
    "transcriptCount": 0
   },
   {
@@ -621,11 +567,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
-   "followers": 0,
+   "postCount": 30,
+   "totalEngagement": 510,
+   "followers": 11165,
    "transcriptCount": 0,
-   "analyzed": false
+   "analyzed": true,
+   "note": "حساب تغذية حقيقي بس تفاعله متواضع"
   },
   {
    "name": "Dr. Mohab Yehya",
@@ -698,11 +645,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 30,
+   "totalEngagement": 630,
    "followers": 0,
    "transcriptCount": 0,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false
   },
   {
    "name": "Dr. Nourhan Safwat",
@@ -746,11 +694,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
-   "followers": 0,
+   "postCount": 24,
+   "totalEngagement": 4536,
+   "followers": 53258,
    "transcriptCount": 0,
-   "analyzed": false
+   "analyzed": true,
+   "note": "حساب قوي ومعروف — ريلز توصل 700+ لايك. كانت تحت عتبة الـ30 في المسح السريع بس التحليل العميق أظهر تفاعلها القوي ✅",
+   "excluded": false
   },
   {
    "name": "Dr. Elsayed Abotorkya",
@@ -857,11 +807,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 30,
+   "totalEngagement": 540,
    "followers": 0,
    "transcriptCount": 0,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false
   },
   {
    "name": "Dr. Mohamed Husin",
@@ -934,11 +885,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 30,
+   "totalEngagement": 540,
    "followers": 0,
    "transcriptCount": 0,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false
   },
   {
    "name": "Dr. Sara Shawki",
@@ -1065,25 +1017,6 @@
    "analyzed": false
   },
   {
-   "name": "couch_monia",
-   "specializations": [
-    "Nutrition / weight-loss"
-   ],
-   "accounts": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/couch_monia",
-     "confidence": "821 متابع"
-    }
-   ],
-   "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
-   "transcriptCount": 0,
-   "followers": 821,
-   "analyzed": false
-  },
-  {
    "name": "dr.yassen_motamed",
    "specializations": [
     "Nutrition / weight-loss"
@@ -1096,11 +1029,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 28,
+   "totalEngagement": 280,
    "transcriptCount": 0,
    "followers": 11638,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false,
+   "note": "تفاعل ضعيف"
   },
   {
    "name": "dr_amrelshorbagy",
@@ -1138,7 +1073,9 @@
    "totalEngagement": 0,
    "transcriptCount": 0,
    "followers": 37705,
-   "analyzed": false
+   "analyzed": false,
+   "excluded": true,
+   "excludeReason": "📍 خارج مصر (تركيا)"
   },
   {
    "name": "dr.menna.elhabashy",
@@ -1267,11 +1204,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 26,
+   "totalEngagement": 4680,
    "transcriptCount": 0,
    "followers": 26510,
-   "analyzed": false
+   "analyzed": true,
+   "note": "تفاعل كومنتات عالي جداً (بوست 1732 لايك/1363 كومنت) — محتوى بيفتح نقاش"
   },
   {
    "name": "dr.nutrition_egypt_dnpeg",
@@ -1362,11 +1300,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 28,
+   "totalEngagement": 840,
    "transcriptCount": 0,
    "followers": 12215,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false
   },
   {
    "name": "dr_dinazayed",
@@ -1381,30 +1320,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 28,
+   "totalEngagement": 980,
    "transcriptCount": 0,
    "followers": 34987,
-   "analyzed": false
-  },
-  {
-   "name": "dr_aya_ali_",
-   "specializations": [
-    "Nutrition / weight-loss"
-   ],
-   "accounts": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/dr_aya_ali_",
-     "confidence": "11,380 متابع"
-    }
-   ],
-   "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
-   "transcriptCount": 0,
-   "followers": 11380,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false,
+   "note": "ريل فيروسي 955 لايك"
   },
   {
    "name": "dr_farahmehany",
@@ -1476,11 +1398,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 20,
+   "totalEngagement": 2800,
    "transcriptCount": 0,
    "followers": 11334,
-   "analyzed": false
+   "analyzed": true,
+   "note": "تفاعل ثابت عالي"
   },
   {
    "name": "maianter_nutritionspecialist",
@@ -1495,30 +1418,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 28,
+   "totalEngagement": 784,
    "transcriptCount": 0,
    "followers": 14049,
-   "analyzed": false
-  },
-  {
-   "name": "dr_wallid_shamhot",
-   "specializations": [
-    "Nutrition / weight-loss"
-   ],
-   "accounts": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/dr_wallid_shamhot",
-     "confidence": "187,669 متابع"
-    }
-   ],
-   "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
-   "transcriptCount": 0,
-   "followers": 187669,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false
   },
   {
    "name": "dr.amiradiab",
@@ -1533,11 +1438,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 26,
+   "totalEngagement": 2522,
    "transcriptCount": 0,
    "followers": 13086,
-   "analyzed": false
+   "analyzed": true,
+   "note": "تفاعل ثابت كويس"
   },
   {
    "name": "drraniaelalfy",
@@ -1594,7 +1500,9 @@
    "totalEngagement": 0,
    "transcriptCount": 0,
    "followers": 6025,
-   "analyzed": false
+   "analyzed": false,
+   "excluded": true,
+   "excludeReason": "🎯 تجميل/أسنان — مش تغذية"
   },
   {
    "name": "dr.nadawasfy",
@@ -1632,7 +1540,9 @@
    "totalEngagement": 0,
    "transcriptCount": 0,
    "followers": 31931,
-   "analyzed": false
+   "analyzed": false,
+   "excluded": true,
+   "excludeReason": "🎯 جهاز هضمي — مش تغذية"
   },
   {
    "name": "dr_nardeengamel",
@@ -1651,7 +1561,10 @@
    "totalEngagement": 0,
    "transcriptCount": 0,
    "followers": 15550,
-   "analyzed": false
+   "analyzed": false,
+   "note": "طب تجميل (فيلر) + بيخفي اللايكات — مش منافس تغذية",
+   "excluded": true,
+   "excludeReason": "🎯 طب تجميل (فيلر) — مش تغذية"
   },
   {
    "name": "bynadadowidar",
@@ -1723,11 +1636,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 30,
+   "totalEngagement": 1650,
    "transcriptCount": 0,
    "followers": 20232,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false,
+   "note": "كومنتات عالية + ريل فيروسي 1339 لايك"
   },
   {
    "name": "dr.alassal",
@@ -1780,11 +1695,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 20,
+   "totalEngagement": 140,
    "transcriptCount": 0,
    "followers": 14949,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false,
+   "note": "تفاعل ضعيف"
   },
   {
    "name": "diethubeg",
@@ -1796,6 +1713,16 @@
      "platform": "Instagram",
      "url": "https://www.instagram.com/diethubeg",
      "confidence": "332,525 متابع"
+    },
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/diethub.ar/",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "TikTok",
+     "url": "https://www.tiktok.com/@diethub",
+     "confidence": "USER-PROVIDED"
     }
    ],
    "image": "",
@@ -1837,11 +1764,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 30,
+   "totalEngagement": 600,
    "transcriptCount": 0,
    "followers": 43458,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false,
+   "note": "حساب كبير بتفاعل متوسط"
   },
   {
    "name": "dr.karim.elnagar",
@@ -1856,11 +1785,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 28,
+   "totalEngagement": 168,
    "transcriptCount": 0,
    "followers": 20010,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false,
+   "note": "أضعف مننا تقريباً"
   },
   {
    "name": "dr_mariam.mashhour",
@@ -1913,11 +1844,13 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 28,
+   "totalEngagement": 1260,
    "transcriptCount": 0,
    "followers": 27510,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false,
+   "note": "تفاعل كويس + كومنتات عالية"
   },
   {
    "name": "drhishamalwaseif",
@@ -1951,11 +1884,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 40,
+   "totalEngagement": 8200,
    "transcriptCount": 0,
    "followers": 8328,
-   "analyzed": false
+   "analyzed": true,
+   "note": "ريلز تعليمية وصلت 1240 لايك + 796 كومنت — أعلى قدرة فيروسية في حجمنا"
   },
   {
    "name": "dr_rowan_samer",
@@ -1974,25 +1908,6 @@
    "totalEngagement": 0,
    "transcriptCount": 0,
    "followers": 215633,
-   "analyzed": false
-  },
-  {
-   "name": "dr.sara_el_toukhy",
-   "specializations": [
-    "Nutrition / weight-loss"
-   ],
-   "accounts": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/dr.sara_el_toukhy",
-     "confidence": "98,333 متابع"
-    }
-   ],
-   "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
-   "transcriptCount": 0,
-   "followers": 98333,
    "analyzed": false
   },
   {
@@ -2027,30 +1942,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 28,
+   "totalEngagement": 3080,
    "transcriptCount": 0,
    "followers": 33764,
-   "analyzed": false
-  },
-  {
-   "name": "health_nutrition_thess",
-   "specializations": [
-    "Nutrition / weight-loss"
-   ],
-   "accounts": [
-    {
-     "platform": "Instagram",
-     "url": "https://www.instagram.com/health_nutrition_thess",
-     "confidence": "27,435 متابع"
-    }
-   ],
-   "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
-   "transcriptCount": 0,
-   "followers": 27435,
-   "analyzed": false
+   "analyzed": true,
+   "note": "ريلز 365-583 لايك"
   },
   {
    "name": "eat_fit_clinic",
@@ -2141,11 +2038,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 28,
+   "totalEngagement": 7140,
    "transcriptCount": 0,
    "followers": 30522,
-   "analyzed": false
+   "analyzed": true,
+   "note": "ريل وصل 71 ألف لايك / 5 مليون مشاهدة — قدرة فيروسية عالية"
   },
   {
    "name": "gohealthyclinic_dr.dinaselim",
@@ -2255,11 +2153,12 @@
     }
    ],
    "image": "",
-   "postCount": 0,
-   "totalEngagement": 0,
+   "postCount": 24,
+   "totalEngagement": 312,
    "transcriptCount": 0,
    "followers": 9864,
-   "analyzed": false
+   "analyzed": true,
+   "excluded": false
   },
   {
    "name": "dr_mhussein",
@@ -2278,7 +2177,9 @@
    "totalEngagement": 0,
    "transcriptCount": 0,
    "followers": 1753,
-   "analyzed": false
+   "analyzed": false,
+   "excluded": true,
+   "excludeReason": "🎯 جهاز هضمي — مش تغذية"
   },
   {
    "name": "drabdelfatahdiet",
@@ -2298,6 +2199,84 @@
    "transcriptCount": 0,
    "followers": 72356,
    "analyzed": false
+  },
+  {
+   "name": "Dr. Walaa Elkobessy",
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/drwalaaelkobessy/",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/DrwalaaElkobessyLifeStyleClinic/",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/p/DrWalaa-Elkobessy-100088348810518/",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "image": "",
+   "postCount": 26,
+   "totalEngagement": 598,
+   "transcriptCount": 0,
+   "followers": 2807,
+   "analyzed": true,
+   "note": "حساب صغير، تفاعل متواضع ✅ تحليل عميق",
+   "excluded": false
+  },
+  {
+   "name": "Dr. Nilly Shams",
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/nillyshams/",
+     "confidence": "USER-PROVIDED"
+    },
+    {
+     "platform": "Facebook",
+     "url": "https://www.facebook.com/DrNillyShams/",
+     "confidence": "USER-PROVIDED"
+    }
+   ],
+   "specializations": [
+    "Nutrition / weight-loss"
+   ],
+   "image": "",
+   "postCount": 25,
+   "totalEngagement": 7175,
+   "transcriptCount": 0,
+   "followers": 611511,
+   "analyzed": true,
+   "note": "قوية جداً + قدرة فيروسية (ريلز 1000-1500 لايك) ✅ تحليل عميق",
+   "excluded": false
+  },
+  {
+   "name": "dt.maryam.belal",
+   "specializations": [
+    "—"
+   ],
+   "accounts": [
+    {
+     "platform": "Instagram",
+     "url": "https://www.instagram.com/dt.maryam.belal/",
+     "confidence": "55,767 متابع"
+    }
+   ],
+   "image": "",
+   "postCount": 0,
+   "totalEngagement": 0,
+   "transcriptCount": 0,
+   "followers": 55767,
+   "analyzed": false,
+   "excluded": true,
+   "excludeReason": "📍 خارج مصر (السعودية/الأردن)"
   }
  ],
  "posts": [
@@ -2371,42 +2350,6 @@
    "engagement": 59061,
    "followers": 1307329,
    "postUrl": "https://www.instagram.com/p/DBi1pYtNhPO/",
-   "transcript": null
-  },
-  {
-   "rank": 5,
-   "account": "dralaasabry.nourish",
-   "platform": "Instagram",
-   "date": "2025-06-17",
-   "topicAudio": "—",
-   "topicCaption": "Unclassified",
-   "topicSource": "caption",
-   "caption": "البنات في التلاتينات الجزء الاول بتعملي كام حاجة من النقاط دي في ال٣٠ ؟",
-   "views": 205973,
-   "likes": 44968,
-   "comments": 679,
-   "shares": 0,
-   "engagement": 45647,
-   "followers": 106000,
-   "postUrl": "https://www.instagram.com/p/DLA937lzHaj/",
-   "transcript": null
-  },
-  {
-   "rank": 6,
-   "account": "dr.moeatiya",
-   "platform": "Instagram",
-   "date": "2025-07-01",
-   "topicAudio": "—",
-   "topicCaption": "Motivational",
-   "topicSource": "caption",
-   "caption": "إيجابية، لطيفة، متواضعة وضحكتها ما بتهزرش هاد سر حبنا وحبكم ل الراقية @yasmine_sabri تشرفنا بزيارتها اليوم بعيادة @dao_dubai #ياسمين #dubai #aesthetic #dermatol",
-   "views": 303213,
-   "likes": 33374,
-   "comments": 486,
-   "shares": 0,
-   "engagement": 33860,
-   "followers": 51200,
-   "postUrl": "https://www.instagram.com/p/DLkIAvdPR4g/",
    "transcript": null
   },
   {
@@ -2536,24 +2479,6 @@
    "transcript": null
   },
   {
-   "rank": 14,
-   "account": "dralaasabry.nourish",
-   "platform": "Instagram",
-   "date": "2025-07-04",
-   "topicAudio": "—",
-   "topicCaption": "Unclassified",
-   "topicSource": "caption",
-   "caption": "استنوا الجزء الثالث 🤝 دي نصائح ما بعد الثلاثين 🤓و دة جزء الثاني #ابوظبي #الامارات #nourish #دبي #صحة #ابوظبي🇦🇪 بتعملي كام حاجة من النصائح دي ؟",
-   "views": 95353,
-   "likes": 14202,
-   "comments": 373,
-   "shares": 0,
-   "engagement": 14575,
-   "followers": 106000,
-   "postUrl": "https://www.instagram.com/p/DLsTHpyIioJ/",
-   "transcript": null
-  },
-  {
    "rank": 15,
    "account": "dr.mohamed.massoud",
    "platform": "Instagram",
@@ -2644,24 +2569,6 @@
    "transcript": null
   },
   {
-   "rank": 20,
-   "account": "dralaasabry.nourish",
-   "platform": "Instagram",
-   "date": "2026-01-09",
-   "topicAudio": "—",
-   "topicCaption": "Unclassified",
-   "topicSource": "caption",
-   "caption": "حمد الله عل سلامة 😁 ان شاء الله الي جي احسن و باقي الدول هتقلد بس تقليد مفيد المرة دي 🤩 #صحة #معلومات #علم #غذاء #nourish #ابوظبي🇦🇪 #الامارات #السعودية #الد",
-   "views": 168097,
-   "likes": 11560,
-   "comments": 196,
-   "shares": 0,
-   "engagement": 11756,
-   "followers": 106000,
-   "postUrl": "https://www.instagram.com/p/DTTSYeuk0j8/",
-   "transcript": null
-  },
-  {
    "rank": 21,
    "account": "drwaadamin",
    "platform": "Instagram",
@@ -2698,24 +2605,6 @@
    "transcript": null
   },
   {
-   "rank": 23,
-   "account": "dt.maryam.belal",
-   "platform": "Instagram",
-   "date": "2026-03-30",
-   "topicAudio": "—",
-   "topicCaption": "Unclassified",
-   "topicSource": "caption",
-   "caption": "💌 @dt.maryam.belal . #اكل_صحي #حياة_صحية #healthylifestyle #healthyfood",
-   "views": 37192,
-   "likes": 10858,
-   "comments": 69,
-   "shares": 0,
-   "engagement": 10927,
-   "followers": 55800,
-   "postUrl": "https://www.instagram.com/p/DWgfUM4jcTP/",
-   "transcript": null
-  },
-  {
    "rank": 24,
    "account": "dr_summersheta",
    "platform": "Instagram",
@@ -2731,24 +2620,6 @@
    "engagement": 10700,
    "followers": 708562,
    "postUrl": "https://www.instagram.com/p/DTkl8OkiAwX/",
-   "transcript": null
-  },
-  {
-   "rank": 25,
-   "account": "dt.maryam.belal",
-   "platform": "Instagram",
-   "date": "2026-02-04",
-   "topicAudio": "—",
-   "topicCaption": "Appetite & satiety",
-   "topicSource": "caption",
-   "caption": "الصيام بيساعد اجسامنا على تحسين حساسية الإنسولين وتنظيم الشهية وتقليل الأكل العاطفي وبيعطي الجهاز الهضمي فرصة ليرتاح رمضان شهر مبارك لتزكية النفس وضبط الشهوات و",
-   "views": 0,
-   "likes": 10575,
-   "comments": 44,
-   "shares": 0,
-   "engagement": 10619,
-   "followers": 55800,
-   "postUrl": "https://www.instagram.com/p/DUWCdF4jWfI/",
    "transcript": null
   },
   {
@@ -2788,24 +2659,6 @@
    "transcript": null
   },
   {
-   "rank": 28,
-   "account": "dralaasabry.nourish",
-   "platform": "Instagram",
-   "date": "2025-07-19",
-   "topicAudio": "—",
-   "topicCaption": "Insulin resistance",
-   "topicSource": "caption",
-   "caption": "⁨ تمرينات منزلية سهلة و مؤثرة على زيادة الكتلة العضلية 💪🏼 فوائد تمرينات المقاومة اليومية: ١- زيادة القوة العضلية ٢- علاج مقاومة الانسولين في العضلات ٣- بناء ع",
-   "views": 210421,
-   "likes": 8470,
-   "comments": 287,
-   "shares": 0,
-   "engagement": 8757,
-   "followers": 106000,
-   "postUrl": "https://www.instagram.com/p/DMTYrCdIdXm/",
-   "transcript": null
-  },
-  {
    "rank": 29,
    "account": "dr.janaabdelnasser",
    "platform": "Instagram",
@@ -2821,24 +2674,6 @@
    "engagement": 8371,
    "followers": 21000,
    "postUrl": "https://www.instagram.com/p/DYLBAkGMw_e/",
-   "transcript": null
-  },
-  {
-   "rank": 30,
-   "account": "dt.maryam.belal",
-   "platform": "Instagram",
-   "date": "2026-05-19",
-   "topicAudio": "—",
-   "topicCaption": "Unclassified",
-   "topicSource": "caption",
-   "caption": "Daily routine vlog 💫 الحمد لله 💌 @dt.maryam.belal . . #اكل_صحي #healthylifestyle #تطوير_الذات #فطور #healthy",
-   "views": 23917,
-   "likes": 8264,
-   "comments": 39,
-   "shares": 0,
-   "engagement": 8303,
-   "followers": 55800,
-   "postUrl": "https://www.instagram.com/p/DYhoF41N72q/",
    "transcript": null
   },
   {
@@ -3004,24 +2839,6 @@
    "transcript": null
   },
   {
-   "rank": 40,
-   "account": "dralaasabry.nourish",
-   "platform": "Instagram",
-   "date": "2026-05-18",
-   "topicAudio": "—",
-   "topicCaption": "Insulin resistance",
-   "topicSource": "caption",
-   "caption": "استنوا تفاصيل اكتر عن طريقة العلاج المظبوطة من المتخصصين لتكيسات المبايض و مقاومة الانسولين🤝#pcos #pmos #weightlossdiet #insulineresistant #womensupportingwome",
-   "views": 90588,
-   "likes": 6520,
-   "comments": 135,
-   "shares": 0,
-   "engagement": 6655,
-   "followers": 106000,
-   "postUrl": "https://www.instagram.com/p/DYeSCCVomw9/",
-   "transcript": null
-  },
-  {
    "rank": 41,
    "account": "dr_summersheta",
    "platform": "Instagram",
@@ -3091,24 +2908,6 @@
    "engagement": 6150,
    "followers": 518991,
    "postUrl": "https://www.instagram.com/p/DXWVJPaj2Ju/",
-   "transcript": null
-  },
-  {
-   "rank": 45,
-   "account": "dt.maryam.belal",
-   "platform": "Instagram",
-   "date": "2026-04-28",
-   "topicAudio": "—",
-   "topicCaption": "Unclassified",
-   "topicSource": "caption",
-   "caption": "وجباتي الصحية للأسابيع الماضية 💕 ‏@dt.maryam.belal طريقة الوافل الصحي 🧇🍓 ٣ معالق من طحين الحمص او طحين الحبة الكاملة بيضة ٣٠ مل حليب كامل الدسم نصف علبة لبن ",
-   "views": 0,
-   "likes": 6098,
-   "comments": 48,
-   "shares": 0,
-   "engagement": 6146,
-   "followers": 55800,
-   "postUrl": "https://www.instagram.com/p/DXr34b1ja9t/",
    "transcript": null
   },
   {
@@ -3289,24 +3088,6 @@
    "engagement": 4883,
    "followers": 303000,
    "postUrl": "https://www.instagram.com/p/DOOKzWhCqZi/",
-   "transcript": null
-  },
-  {
-   "rank": 56,
-   "account": "dt.maryam.belal",
-   "platform": "Instagram",
-   "date": "2026-03-15",
-   "topicAudio": "—",
-   "topicCaption": "Unclassified",
-   "topicSource": "caption",
-   "caption": "وجباتي الصحية للأسابيع الماضية 💕 @dt.maryam.belal . . #اكل #تغذية #حياة_صحية #دايت #اكل_صحي #وصفات #healthfood #healthyeating #healthy #healthylifestyle #healt",
-   "views": 0,
-   "likes": 4852,
-   "comments": 30,
-   "shares": 0,
-   "engagement": 4882,
-   "followers": 55800,
-   "postUrl": "https://www.instagram.com/p/DV6jeBFjZyO/",
    "transcript": null
   },
   {
@@ -3616,24 +3397,6 @@
    "transcript": null
   },
   {
-   "rank": 74,
-   "account": "dt.maryam.belal",
-   "platform": "Instagram",
-   "date": "2025-12-25",
-   "topicAudio": "—",
-   "topicCaption": "Protein",
-   "topicSource": "caption",
-   "caption": "البدائل ⬇️ بروتينات حقيقية 🥩 دجاج أو لحوم طبيعية تونة أو سردين محفوظ بالماء أو الزيت بيض بقوليات: حمص / فول / عدس بدائل قهوة سريعة التحضير او الكابتشينو ☕️ قهو",
-   "views": 92863,
-   "likes": 3693,
-   "comments": 63,
-   "shares": 0,
-   "engagement": 3756,
-   "followers": 55800,
-   "postUrl": "https://www.instagram.com/p/DSslXf1jYHE/",
-   "transcript": null
-  },
-  {
    "rank": 75,
    "account": "dr.nadahefila",
    "platform": "Instagram",
@@ -3667,24 +3430,6 @@
    "engagement": 3572,
    "followers": 708562,
    "postUrl": "https://www.instagram.com/p/DEugFcWs9dp/",
-   "transcript": null
-  },
-  {
-   "rank": 77,
-   "account": "dralaasabry.nourish",
-   "platform": "Instagram",
-   "date": "2026-04-03",
-   "topicAudio": "—",
-   "topicCaption": "Insulin resistance",
-   "topicSource": "caption",
-   "caption": "⁨ تمرينات المقاومة تعالج السكري ، مقاومة الانسولين ، الساركوبينيا (تكسير العضلات الذاتي) ، الفايبروميلجيا ، تحسّن القدرة القلبية و ترفع معدلات الايض (حرق الجسم)",
-   "views": 74655,
-   "likes": 3367,
-   "comments": 151,
-   "shares": 0,
-   "engagement": 3518,
-   "followers": 106000,
-   "postUrl": "https://www.instagram.com/p/DWrNKUbiLtk/",
    "transcript": null
   },
   {
@@ -4171,24 +3916,6 @@
    "engagement": 2489,
    "followers": 708562,
    "postUrl": "https://www.instagram.com/p/DTfnAY2iATI/",
-   "transcript": null
-  },
-  {
-   "rank": 105,
-   "account": "dralaasabry.nourish",
-   "platform": "Instagram",
-   "date": "2025-08-17",
-   "topicAudio": "—",
-   "topicCaption": "Unclassified",
-   "topicSource": "caption",
-   "caption": "اسهل مشروب تحضره في البيت . فوائد كتير ، رخيص و طعمه حلو 😋#ابوظبي #الامارات #صحة #دبي #ابوظبي🇦🇪 #العين #الشارقة #nourish #مصر #الخُبر",
-   "views": 50650,
-   "likes": 2398,
-   "comments": 75,
-   "shares": 0,
-   "engagement": 2473,
-   "followers": 106000,
-   "postUrl": "https://www.instagram.com/p/DNd_6Oro6nv/",
    "transcript": null
   },
   {
@@ -4732,24 +4459,6 @@
    "transcript": null
   },
   {
-   "rank": 136,
-   "account": "dt.maryam.belal",
-   "platform": "Instagram",
-   "date": "2026-04-20",
-   "topicAudio": "—",
-   "topicCaption": "Sugar & sweeteners",
-   "topicSource": "caption",
-   "caption": "📍 حسب التوصيات الأفضل نخلي السكر المضاف أقل من 5% من الاحتياج اليومي عشان نحافظ على توازننا الصحي بدون مبالغة أو تشدد. الهدف مش المنه بل وعي واختيار أذكى 🤍 اك",
-   "views": 56857,
-   "likes": 1106,
-   "comments": 720,
-   "shares": 0,
-   "engagement": 1826,
-   "followers": 55800,
-   "postUrl": "https://www.instagram.com/p/DXWnWpPDUwX/",
-   "transcript": null
-  },
-  {
    "rank": 137,
    "account": "dr.rahmaayman",
    "platform": "Instagram",
@@ -4801,24 +4510,6 @@
    "engagement": 1713,
    "followers": 1307329,
    "postUrl": "https://www.instagram.com/p/DY2pZHVtBbw/",
-   "transcript": null
-  },
-  {
-   "rank": 140,
-   "account": "dt.maryam.belal",
-   "platform": "Instagram",
-   "date": "2026-02-10",
-   "topicAudio": "—",
-   "topicCaption": "Appetite & satiety",
-   "topicSource": "caption",
-   "caption": "الصيام بيساعد اجسامنا على تحسين حساسية الإنسولين وتنظيم الشهية وتقليل الأكل العاطفي وبيعطي الجهاز الهضمي فرصة ليرتاح رمضان شهر مبارك لتزكية النفس وضبط الشهوات و",
-   "views": 0,
-   "likes": 1692,
-   "comments": 14,
-   "shares": 0,
-   "engagement": 1706,
-   "followers": 55800,
-   "postUrl": "https://www.instagram.com/p/DUlenvGjVje/",
    "transcript": null
   },
   {
@@ -5020,24 +4711,6 @@
    "transcript": null
   },
   {
-   "rank": 152,
-   "account": "dralaasabry.nourish",
-   "platform": "Instagram",
-   "date": "2025-07-13",
-   "topicAudio": "—",
-   "topicCaption": "Recipe / meal",
-   "topicSource": "caption",
-   "caption": "الجزء الثالث من نصائح الثلاثينات فما فوق ماتنسوش تشوفوا الجزء الاول و الثاني عشان تعرفوا ال١٢ نصيحة كلهم 🙏🏻 ايه اكتر نصيحة حساها بتفرق في سن ما بعد الثلاثين ؟",
-   "views": 8878,
-   "likes": 1487,
-   "comments": 51,
-   "shares": 0,
-   "engagement": 1538,
-   "followers": 106000,
-   "postUrl": "https://www.instagram.com/p/DMD44t0IQ0g/",
-   "transcript": null
-  },
-  {
    "rank": 153,
    "account": "dr_neira_fahmy",
    "platform": "Instagram",
@@ -5054,6 +4727,992 @@
    "followers": 46300,
    "postUrl": "https://www.instagram.com/p/DYUwiLtNLIC/",
    "transcript": null
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-02-23",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1538,
+   "likes": 19,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 21,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DVFoI6_jJM_/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-06-02",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 68,
+   "comments": 9,
+   "shares": 0,
+   "engagement": 77,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DZE7coVswTg/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-06-02",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 568,
+   "comments": 83,
+   "shares": 0,
+   "engagement": 651,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DZEmtHws9_R/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-06-03",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 5084,
+   "likes": 273,
+   "comments": 23,
+   "shares": 0,
+   "engagement": 296,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DZHNZLfsOhz/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-06-04",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 110,
+   "comments": 11,
+   "shares": 0,
+   "engagement": 121,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DZJwSnhjEOi/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-06-01",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 12803,
+   "likes": 712,
+   "comments": 32,
+   "shares": 0,
+   "engagement": 744,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DZCNggbsdSY/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-26",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 39,
+   "comments": 1,
+   "shares": 0,
+   "engagement": 40,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYzHdETMdVz/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-30",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 556,
+   "likes": 22,
+   "comments": 1,
+   "shares": 0,
+   "engagement": 23,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DY98uKWDkyP/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-29",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 96,
+   "comments": 10,
+   "shares": 0,
+   "engagement": 106,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DY6joJPMtv7/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-26",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 36,
+   "comments": 6,
+   "shares": 0,
+   "engagement": 42,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYz0ElbMK_G/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-30",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 3489,
+   "likes": 171,
+   "comments": 24,
+   "shares": 0,
+   "engagement": 195,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DY9JIClsSXG/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-26",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 2627,
+   "likes": 129,
+   "comments": 1,
+   "shares": 0,
+   "engagement": 130,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYynUbhsPSv/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 5737,
+   "likes": 420,
+   "comments": 34,
+   "shares": 0,
+   "engagement": 454,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYwJhJnM5EC/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-27",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 2964,
+   "likes": 102,
+   "comments": 4,
+   "shares": 0,
+   "engagement": 106,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DY1uHllAZyp/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-28",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 297,
+   "comments": 23,
+   "shares": 0,
+   "engagement": 320,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DY4UJhdjKPL/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-21",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 194,
+   "comments": 10,
+   "shares": 0,
+   "engagement": 204,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYmTJhnjFMG/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-24",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1830,
+   "likes": 55,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 57,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYudQtvCCLI/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-23",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 3436,
+   "likes": 163,
+   "comments": 7,
+   "shares": 0,
+   "engagement": 170,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYrF8_UMvA1/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-22",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 33,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 35,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYoaaXYDCYW/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-24",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 3480,
+   "likes": 192,
+   "comments": 20,
+   "shares": 0,
+   "engagement": 212,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYt9kaYKmqM/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-22",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 3052,
+   "likes": 174,
+   "comments": 17,
+   "shares": 0,
+   "engagement": 191,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DYotk21gZpI/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-05-31",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 5109,
+   "likes": 257,
+   "comments": 35,
+   "shares": 0,
+   "engagement": 292,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DY_o--cMqqu/"
+  },
+  {
+   "rank": 0,
+   "account": "dr.doaazakaria",
+   "platform": "Instagram",
+   "date": "2026-06-02",
+   "topicAudio": "—",
+   "topicCaption": "تغذية وطب وظيفي (د. دعاء زكريا)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1019,
+   "likes": 39,
+   "comments": 12,
+   "shares": 0,
+   "engagement": 51,
+   "followers": 53258,
+   "postUrl": "https://www.instagram.com/p/DZFrFVgDKRW/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-11",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 36,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 38,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYMl5Jeja2d/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-18",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1475,
+   "likes": 26,
+   "comments": 1,
+   "shares": 0,
+   "engagement": 27,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYexvSmOS3I/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-05",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 36,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 38,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DX87SESAEJg/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-20",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1496,
+   "likes": 50,
+   "comments": 0,
+   "shares": 0,
+   "engagement": 50,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYj57iaNmnG/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-26",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 42,
+   "comments": 0,
+   "shares": 0,
+   "engagement": 42,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYzzp9kDRLp/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 6000,
+   "likes": 117,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 119,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYwxryJIzov/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-27",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 39,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 41,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DY2Q-O3tZZb/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-10",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 12,
+   "comments": 0,
+   "shares": 0,
+   "engagement": 12,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYJ7FPXgF76/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-13",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 9027,
+   "likes": 492,
+   "comments": 43,
+   "shares": 0,
+   "engagement": 535,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYR44AnN2Kw/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-28",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 4625,
+   "likes": 222,
+   "comments": 10,
+   "shares": 0,
+   "engagement": 232,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DY5BPRIACbt/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-11",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 2846,
+   "likes": 81,
+   "comments": 0,
+   "shares": 0,
+   "engagement": 81,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYM98IGOSEQ/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-22",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 41953,
+   "likes": 846,
+   "comments": 31,
+   "shares": 0,
+   "engagement": 877,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXcQoa8uce0/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-15",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 24053,
+   "likes": 1536,
+   "comments": 37,
+   "shares": 0,
+   "engagement": 1573,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXKRaFmjbPe/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-05-03",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 3392,
+   "likes": 91,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 93,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DX4et6_NiSt/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-16",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1740,
+   "likes": 89,
+   "comments": 7,
+   "shares": 0,
+   "engagement": 96,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXM0UJ5DaBN/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-20",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 3714,
+   "likes": 190,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 192,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXW6cHjCN4U/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-28",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 2340,
+   "likes": 88,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 90,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXrYGBIjbph/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-29",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 23,
+   "comments": 1,
+   "shares": 0,
+   "engagement": 24,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXttJ_ljQqW/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-24",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1962,
+   "likes": 63,
+   "comments": 0,
+   "shares": 0,
+   "engagement": 63,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXhFijfO8TI/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-12",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 13188,
+   "likes": 389,
+   "comments": 29,
+   "shares": 0,
+   "engagement": 418,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXDCbcwDQVT/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-03-28",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 382,
+   "comments": 23,
+   "shares": 0,
+   "engagement": 405,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DWcNZeVgBOw/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-04",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 5908,
+   "likes": 306,
+   "comments": 4,
+   "shares": 0,
+   "engagement": 310,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DWtpJSbDSlX/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-13",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 15576,
+   "likes": 733,
+   "comments": 26,
+   "shares": 0,
+   "engagement": 759,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXElmXpDf8o/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-04-01",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 15251,
+   "likes": 985,
+   "comments": 23,
+   "shares": 0,
+   "engagement": 1008,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DWmhWcJgBTP/"
+  },
+  {
+   "rank": 0,
+   "account": "nillyshams",
+   "platform": "Instagram",
+   "date": "2026-06-05",
+   "topicAudio": "—",
+   "topicCaption": "بودكاست دايت (نيللى وحكايات الدايت)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 39,
+   "comments": 1,
+   "shares": 0,
+   "engagement": 40,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DZNM6CtoB0-/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-06-02",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 6,
+   "comments": 0,
+   "shares": 0,
+   "engagement": 6,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DZFWeRojuxQ/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-05-23",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 152,
+   "likes": 7,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 9,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYr0wHekzdi/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-05-29",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 3,
+   "comments": 0,
+   "shares": 0,
+   "engagement": 3,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DY7TnDoDgps/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-05-25",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 202,
+   "likes": 11,
+   "comments": 2,
+   "shares": 0,
+   "engagement": 13,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYxMmqdgp6m/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-05-30",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 0,
+   "likes": 15,
+   "comments": 0,
+   "shares": 0,
+   "engagement": 15,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DY9nU9WjkpW/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-05-28",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 265,
+   "likes": 28,
+   "comments": 4,
+   "shares": 0,
+   "engagement": 32,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DY4q0mcj8hV/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-05-11",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1138,
+   "likes": 74,
+   "comments": 8,
+   "shares": 0,
+   "engagement": 82,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYNL36qD-4B/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-05-31",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 993,
+   "likes": 31,
+   "comments": 14,
+   "shares": 0,
+   "engagement": 45,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DZBMqdakdd7/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-05-18",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 1242,
+   "likes": 31,
+   "comments": 5,
+   "shares": 0,
+   "engagement": 36,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DYfBXspgGRz/"
+  },
+  {
+   "rank": 0,
+   "account": "drwalaaelkobessy",
+   "platform": "Instagram",
+   "date": "2026-04-20",
+   "topicAudio": "—",
+   "topicCaption": "تغذية عامة (د. ولاء القبيصي)",
+   "topicSource": "caption",
+   "caption": "",
+   "views": 460,
+   "likes": 45,
+   "comments": 20,
+   "shares": 0,
+   "engagement": 65,
+   "followers": 0,
+   "postUrl": "https://www.instagram.com/p/DXWzznPCmLk/"
   }
  ],
  "meta_total": 900

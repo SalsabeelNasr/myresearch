@@ -117,8 +117,13 @@ def load_transcripts(path):
 
 def main():
     base = json.loads(BASE.read_text(encoding="utf-8"))
-    doctors = base["doctors"]
-    posts = base["posts"]
+    all_doctors = base["doctors"]
+    # Sanitization: off-niche (not nutrition/weight-loss) or off-location (outside Egypt)
+    # accounts are kept in the report but split out so they never pollute the analysis.
+    excluded_docs = [d for d in all_doctors if d.get("excluded")]
+    excluded_names = {d.get("name", "") for d in excluded_docs}
+    doctors = [d for d in all_doctors if not d.get("excluded")]
+    posts = [p for p in base["posts"] if p.get("account", "") not in excluded_names]
 
     tpath = find_transcript_csv()
     transcripts = load_transcripts(tpath)
@@ -395,6 +400,7 @@ def main():
             "windowDays": WINDOW,
         },
         "doctors": doctors,
+        "excludedDoctors": excluded_docs,
         "posts": current_posts,
         "olderPosts": older_posts,
         "pinnedPosts": pinned_posts,

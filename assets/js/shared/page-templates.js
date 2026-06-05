@@ -15,7 +15,6 @@ window.MRPageTemplates = {
         <option value="followers">عدد المتابعين</option>
         <option value="totalEngagement">إجمالي التفاعل</option>
         <option value="postCount">المنشورات الأكثر انتشاراً</option>
-        <option value="transcriptCount">عدد النصوص المفرغة</option>
       </select>
     </label>
   </div>
@@ -28,56 +27,41 @@ window.MRPageTemplates = {
     <p>حسابات أضفتها كمنافسين محتملين بس لسه متعملّهمش تحليل عميق (ماصرفناش رصيد Apify على كشط محتواهم). معروضين هنا منفصلين عشان أرقام التحليل تفضل دقيقة. كل حساب وروابطه على المنصّات المختلفة تحت بعض.</p>
   </div>
   <div id="competitorsGrid" class="doctors-grid"></div>
+</section>
+
+<section class="card" aria-labelledby="excludedHeading" id="excludedSection">
+  <div class="section-head">
+    <h3 id="excludedHeading">مستبعدون من التحليل (<span id="excludedCount"></span>)</h3>
+    <p>حسابات موجودة في القائمة الأصلية بس استبعدناها من التحليل عشان <strong>خارج تخصص التغذية/التخسيس</strong> (تجميل، جلدية، جهاز هضمي) أو <strong>خارج السوق المصري</strong>. بنعرضها هنا للشفافية (التقرير = مصدر واحد للحقيقة) بس أرقامها مش داخلة في أي ترتيب أو مقارنة.</p>
+  </div>
+  <div id="excludedGrid" class="doctors-grid"></div>
 </section>`,
 
   posts: `
 <section class="card" aria-labelledby="postsHeading">
-  <div class="section-head">
-    <h3 id="postsHeading">المنشورات الأكثر انتشاراً</h3>
-    <p>رتب حسب أي مؤشر عشان تفهم أنماط المحتوى الأفضل أداءً</p>
-    <p class="analysis-period" id="postsPeriod"></p>
+  <div class="section-head section-head--stacked">
+    <h3 id="postsHeading">الأكثر انتشاراً — آخر 90 يوم <span class="posts-title-count" id="postsCount"></span></h3>
   </div>
   <div class="toolbar">
-    <label>
-      رتب حسب
-      <select id="sortMetric">
-        <option value="engagement">إجمالي التفاعل</option>
-        <option value="views">المشاهدات</option>
-        <option value="likes">الإعجابات</option>
-        <option value="comments">التعليقات</option>
-        <option value="shares">المشاركات</option>
-      </select>
-    </label>
-    <label>
-      ابحث هنا
-      <input id="searchInput" type="search" placeholder="اسم الطبيب، الموضوع، المنصة، أو نص الفيديو..." />
-    </label>
+    <select id="sortMetric" aria-label="رتب حسب">
+      <option value="engagement">إجمالي التفاعل</option>
+      <option value="views">المشاهدات</option>
+      <option value="likes">الإعجابات</option>
+      <option value="comments">التعليقات</option>
+    </select>
+    <input id="searchInput" type="search" placeholder="اسم الطبيب، الموضوع، المنصة، أو نص الفيديو..." aria-label="ابحث هنا" />
   </div>
-  <p class="results-count" id="postsCount"></p>
   <div id="postsList" class="posts-list"></div>
-</section>
+</section>`,
 
-<section class="card" aria-labelledby="olderHeading" id="olderSection">
+  evergreen: `
+<section class="card">
   <div class="section-head">
-    <h3 id="olderHeading">منشورات قديمة حققت انتشار (أكتر من 90 يوم)</h3>
-    <p>دي منشورات مش مثبتة وأقدم من 90 يوم، بس احتفظنا بيها لأن تفاعلها كان عالي وبتعتبر دليل مفيد للمواضيع الناجحة، لكنها مش داخلة في ترتيب الأداء الحالي.</p>
+    <h3>فيروسي بشكل عام (خارج آخر 90 يوم) <span class="posts-title-count" id="evergreenCount"></span></h3>
   </div>
   <div class="table-wrap">
-    <table class="data-table" id="olderPostsTable">
-      <thead><tr><th>#</th><th>الحساب</th><th>التاريخ</th><th>الموضوع</th><th>المشاهدات</th><th>التفاعل</th><th>الرابط</th></tr></thead>
-      <tbody></tbody>
-    </table>
-  </div>
-</section>
-
-<section class="card" aria-labelledby="pinnedHeading" id="pinnedSection">
-  <div class="section-head">
-    <h3 id="pinnedHeading">المنشورات المثبتة (Evergreen)</h3>
-    <p>دي المنشورات اللي صاحب الحساب ثبتها في بروفايله (مش شرط تكون جديدة). جمعت مشاهدات كتير على مدار وقت طويل، فعشان كدة استبعدناها من ترتيب الأداء الحالي عشان الأرقام تكون دقيقة. مواضيعها موجودة في صفحة «المواضيع».</p>
-  </div>
-  <div class="table-wrap">
-    <table class="data-table" id="pinnedPostsTable">
-      <thead><tr><th>#</th><th>الحساب</th><th>التاريخ</th><th>الموضوع</th><th>المشاهدات</th><th>التفاعل</th><th>الرابط</th></tr></thead>
+    <table class="data-table sortable" id="evergreenTable">
+      <thead><tr><th>الحساب</th><th>المنصة</th><th>المشاهدات</th><th>التفاعل</th><th>#</th><th>التاريخ</th><th>الموضوع</th><th>النوع</th><th data-no-sort="1">الرابط</th></tr></thead>
       <tbody></tbody>
     </table>
   </div>
@@ -220,7 +204,7 @@ window.MRPageTemplates = {
     <div class="details-content">
       <div class="table-wrap">
         <table class="data-table" id="vaultPostsTable">
-          <thead><tr><th>#</th><th>الحساب</th><th>المنصة</th><th>التاريخ</th><th>موضوع الصوت</th><th>التفاعل</th><th>المشاهدات</th><th>فيه نص؟</th></tr></thead>
+          <thead><tr><th>#</th><th>الحساب</th><th>المنصة</th><th>التاريخ</th><th>موضوع الصوت</th><th>التفاعل</th><th>المشاهدات</th><th>فيه نص؟</th><th>الرابط</th></tr></thead>
           <tbody></tbody>
         </table>
       </div>
